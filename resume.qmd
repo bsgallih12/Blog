@@ -14,8 +14,11 @@ editor:
   markdown: 
     wrap: 72
 ---
+<h2 style="color:#084232;">
 
-## Brier Gallihugh, M.S.
+Brier Gallihugh, M.S.
+
+</h2>
 
 I am a third year experimental psychology doctoral candidate at Ohio
 University. I bring over 5 years of detail oriented experience using
