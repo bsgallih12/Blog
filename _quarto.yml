@@ -6,8 +6,8 @@ website:
   navbar:
     right:
       - about.qmd
-      - resume.qmd
-    text: "Resume"
+      - text: "Resume"
+        file: resume.qmd
       - icon: github
         href: https://github.com/bsgallih12
       - icon: twitter
