@@ -15,8 +15,6 @@ editor:
     wrap: 72
 ---
 
-# Personal Summary
-
 I am a third year experimental psychology doctoral candidate at Ohio
 University. I bring over 5 years of detail oriented experience using
 various quantitative research methodologies (e.g., experimental design
