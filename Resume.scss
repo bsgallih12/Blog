@@ -31,8 +31,8 @@
   
   // Body
 
-$body-bg:                   #FFFFFF !default;
-$body-color:                $black !default;
+$body-bg:                   $gray-900 !default;
+$body-color:                $white !default;
 @function body-mix($weight) {
   @return mix($body-bg, $body-color, $weight);
 }
