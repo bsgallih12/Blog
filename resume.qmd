@@ -1,5 +1,4 @@
 ---
-title: "Resume"
 links:
     - icon: twitter
       text: Twitter
@@ -15,6 +14,13 @@ editor:
   markdown: 
     wrap: 72
 ---
+<h1 style="color:#084232;">
+
+Brier Gallihugh, M.S
+
+</h1>
+
+
 <h3 style="color:#084232;">
 
 Personal Summary
