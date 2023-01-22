@@ -1,0 +1,20 @@
+project:
+  type: website
+
+website:
+  title: "The R Nerd Blog"
+  navbar:
+    right:
+      - about.qmd
+      - resume.qmd
+      - icon: github
+        href: https://github.com/bsgallih12
+      - icon: twitter
+        href: https://twitter.com/Brier_Gallihugh
+      - icon: linkedin
+        href: https://linkedin.com/in/brier-gallihugh
+format:
+  html:
+    theme: custom.scss
+
+
