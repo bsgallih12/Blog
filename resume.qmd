@@ -13,48 +13,61 @@ links:
 ---
 
 # Personal Summary											
-<br>
 I am a third year experimental psychology doctoral candidate at Ohio University. I bring over 5 years of detail oriented experience using various quantitative research methodologies (e.g., experimental design and survey development) and conducting various statistical analyses (e.g., ANOVA, regression, moderation and mediation, meta-analysis, factor analysis, structural equation modeling, etc.) to understand human behavior. Further I also have some experience with semi-structured interviewing. I am proficient in the use of both SPSS and R for data analysis and ggplot2 for data visualization. 
 <br>
 Relevant Soft Skills <br>
 •	Communication <br>
+<br>
 •	Collaboration <br>
+<br>
 •	Project Management <br>
+<br>
 •	Oral Presentation <br>
 <br>
-# Experience												
 <br>
+# Experience												
 **Principle Psychology Researcher-Ohio University** <br>
 Conformity, Attitudes, Threat and Stereotypes (CATS) Lab <br>
 *August 2020 - Present* <br>
 <br>
 •	Designed, developed and administered studies pertaining to insights regarding psychological topics of human behavior including prejudice, discrimination, and attitudes as they related to racial, ethnic and religious minorities in addition to political affiliation
 <br>
+<br>
 •	Cleaned and analyzed data using statistical procedures including ANOVA, t-tests, regression, multiple regression, moderation, mediation, and sentiment analysis using R statistical software with the RStudio IDE
+<br>
 <br>
 •	Incorporated version control for statistical analyses using Git and GitHub to ensure data reproducibility
 <br>
+<br>
 •	Research resulted in 13 research studies across 6 projects resulting in a conference poster, departmental talk, and a manuscript currently in progress
 <br>
+<br>
 •	Collaborated with other researchers to analyze data and parse out insights regarding human morality
+<br>
 <br>
 **Instructor of Record-Ohio University** <br>
 *January 2022 – Present* <br>
 <br>
 •	Designed slide decks and presented course content via lecture format related to social cognition, the self, prejudice and discrimination, research design, etc. to 90 students across 2 semesters
 <br>
+<br>
 •	Assessed students on their course knowledge by designing 4 tests, 10 quizzes, and requiring a written final paper to demonstrate critical thinking and reflection
+<br>
 <br>
 •	Student evaluations indicated a high degree overall quality for both the instructor [4.58/5.0] and the course [4.31/5.0].
 <br>
 **Principle Psychology Researcher-Eastern Michigan University** <br>
 *August 2017 – August 2021* <br>
 <br>
+<br>
 •	Designed, developed and administered studies pertaining to insights regarding psychological topics involving prejudice and attitudes as they related to racial and religious minorities in addition to voting behavior involving sexual misconduct allegations 
+<br>
 <br>
 •	Cleaned and analyzed data using statistical procedures including ANOVA, t-tests, correlation, mediation, exploratory factor analysis using R statistical software with the RStudio IDE
 <br>
+<br>
 •	Research resulted in 5 studies across 4 projects resulting in a 3 conference posters, a master’s thesis proposal, and thesis defense
+<br>
 <br>
 ## Selected Projects											
 <br>
