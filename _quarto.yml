@@ -3,6 +3,14 @@ project:
 
 website:
   title: "The R Nerd Blog"
+  page-footer:
+    center: |
+      
+    left: |
+      <span class="container"><strong>Made with [Posit Quarto](https://quarto.org/){target="_blank"}</strong></span>
+    right: |
+      
+    background: "#054231"
   navbar:
     right:
       - text: "Blog"
