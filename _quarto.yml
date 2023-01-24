@@ -4,12 +4,10 @@ project:
 website:
   title: "The R Nerd Blog"
   page-footer:
-    center: |
-      
-    left: |
-      <span class="container"><strong>Made with [Posit Quarto](https://quarto.org/){target="_blank"}</strong></span>
-    right: |
-      
+    center: ""
+    left:
+      "Made with [Posit Quarto](https://quarto.org/)"
+    right: "[Github](https://github.com/bsgallih12)"
     background: "#054231"
   navbar:
     right:
