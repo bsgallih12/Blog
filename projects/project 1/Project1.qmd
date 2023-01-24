@@ -1,0 +1,7 @@
+---
+title: "Project 1"
+author: "Brier S. Gallihugh"
+date: "2023-01-24"
+categories: [R]
+draft: true
+---
