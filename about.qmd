@@ -1,5 +1,5 @@
 ---
-title: "About This Blog"
+title: "About Me"
 image: profile.png
 about:
   template: solana

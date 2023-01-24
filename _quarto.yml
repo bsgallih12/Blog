@@ -8,7 +8,9 @@ website:
       - about.qmd
       - text: "Resume"
         file: resume.qmd
-      - text: "DA/DS Projects"
+      - text: "Tidy Tuesday Projects"
+        file: tidytuesday.qmd
+      - text: "Projects"
         file: projects.qmd
       - icon: github
         href: https://github.com/bsgallih12
@@ -18,6 +20,8 @@ website:
         href: https://linkedin.com/in/brier-gallihugh
 format:
   html:
-    theme: custom.scss
+    theme:
+      light: custom.scss
+      dark: [darkly,custom.scss]
 
 

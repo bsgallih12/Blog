@@ -23,7 +23,7 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About This Blog",
+    "title": "About Me",
     "section": "",
     "text": "Hi! My name is Brier Gallihugh and I am currently a social psychology doctoral student who studies prejudice and discrimination directed toward various religious, political and racial/ethnic groups. I am a huge R enthusiast. Upon completion of my Ph.D. I hope to go into either UXR or DS/DA.\n\n\n\n\n\n\nTip\n\n\n\nWhile certainly not required, these blog posts do take some time to put together. If you would like to support this blog, feel free to donate using the following button"
   },
@@ -226,7 +226,21 @@
   {
     "objectID": "projects.html",
     "href": "projects.html",
-    "title": "DA/DS Projects",
+    "title": "Projects",
+    "section": "",
+    "text": "Project 1\n\n\n\n\n\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nJan 24, 2023\n\n\nBrier S. Gallihugh\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts2/project 1/index.html",
+    "href": "posts2/project 1/index.html",
+    "title": "Project 1",
+    "section": "",
+    "text": "Draft example here"
+  },
+  {
+    "objectID": "tidytuesday.html",
+    "href": "tidytuesday.html",
+    "title": "Tidy Tuesday Projects",
     "section": "",
     "text": "No matching items"
   }
