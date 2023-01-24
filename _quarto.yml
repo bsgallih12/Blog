@@ -8,6 +8,8 @@ website:
       - about.qmd
       - text: "Resume"
         file: resume.qmd
+      - text: "DA/DS Projects"
+        file: projects.qmd
       - icon: github
         href: https://github.com/bsgallih12
       - icon: twitter
