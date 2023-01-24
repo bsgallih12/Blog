@@ -19,6 +19,9 @@ website:
         href: https://twitter.com/Brier_Gallihugh
       - icon: linkedin
         href: https://linkedin.com/in/brier-gallihugh
+      - icon: envelope
+        text: "Email"
+        href: mailto:bg464219@ohio.edu
 format:
   html:
     theme: 

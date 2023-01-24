@@ -13,6 +13,9 @@ about:
     - icon: github
       text: Github
       href: https://github.com
+    - icon: envelope
+      text: "Email"
+      href: mailto:bg464219@ohio.edu
 ---
 
 Hi! My name is Brier Gallihugh and I am currently a social psychology doctoral student who studies prejudice and discrimination directed toward various religious, political and racial/ethnic groups. I am a huge *R* enthusiast. Upon completion of my Ph.D. I hope to go into either UXR or DS/DA. 
