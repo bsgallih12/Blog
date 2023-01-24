@@ -5,7 +5,8 @@ website:
   title: "The R Nerd Blog"
   navbar:
     right:
-      - about.qmd
+      - text: "Blog"
+        file: blog.qmd
       - text: "Resume"
         file: resume.qmd
       - text: "Tidy Tuesday Projects"
