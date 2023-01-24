@@ -20,7 +20,9 @@ website:
         href: https://linkedin.com/in/brier-gallihugh
 format:
   html:
-    theme: custom.scss
+    theme: 
+      light: [custom.scss]
+      dark: [custom.scss,light_custom.scss]
     code-link: true
     code-fold: show
     

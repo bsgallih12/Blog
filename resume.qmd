@@ -11,27 +11,12 @@ links:
     href: https://github.com\
 theme: Resume.scss
 ---
-<h3 style="color:#084232;">
 
-Brier Gallihugh, M.S.
+## Brier Gallihugh, M.S.
 
-</h3>
+### Personal Summary
 
-<h3 style="color:#084232;">
-
-Personal Summary
-
-</h3>
-
-I am a third year experimental psychology doctoral candidate at Ohio
-University. I bring over 5 years of detail oriented experience using
-various quantitative research methodologies (e.g., experimental design
-and survey development) and conducting various statistical analyses
-(e.g., ANOVA, regression, moderation and mediation, meta-analysis,
-factor analysis, structural equation modeling, etc.) to understand human
-behavior. Further I also have some experience with semi-structured
-interviewing. I am proficient in the use of both SPSS and R for data
-analysis and ggplot2 for data visualization.
+I am a third year experimental psychology doctoral candidate at Ohio University. I bring over 5 years of detail oriented experience using various quantitative research methodologies (e.g., experimental design and survey development) and conducting various statistical analyses (e.g., ANOVA, regression, moderation and mediation, meta-analysis, factor analysis, structural equation modeling, etc.) to understand human behavior. Further I also have some experience with semi-structured interviewing. I am proficient in the use of both SPSS and R for data analysis and ggplot2 for data visualization.
 
 Relevant Soft Skills
 
@@ -43,11 +28,7 @@ Relevant Soft Skills
 
 • Oral Presentation
 
-<h3 style="color:#084232;">
-
-Experience
-
-</h3>
+### Experience
 
 |                                     |                         |
 |-------------------------------------|------------------------:|
@@ -57,24 +38,15 @@ Experience
 
 **Conformity, Attitudes, Threat and Stereotypes (CATS) Lab**
 
-• Designed, developed and administered studies pertaining to insights
-regarding psychological topics of human behavior including prejudice,
-discrimination, and attitudes as they related to racial, ethnic and
-religious minorities in addition to political affiliation
+• Designed, developed and administered studies pertaining to insights regarding psychological topics of human behavior including prejudice, discrimination, and attitudes as they related to racial, ethnic and religious minorities in addition to political affiliation
 
-• Cleaned and analyzed data using statistical procedures including
-ANOVA, t-tests, regression, multiple regression, moderation, mediation,
-and sentiment analysis using R statistical software with the RStudio IDE
+• Cleaned and analyzed data using statistical procedures including ANOVA, t-tests, regression, multiple regression, moderation, mediation, and sentiment analysis using R statistical software with the RStudio IDE
 
-• Incorporated version control for statistical analyses using Git and
-GitHub to ensure data reproducibility
+• Incorporated version control for statistical analyses using Git and GitHub to ensure data reproducibility
 
-• Research resulted in 13 research studies across 6 projects resulting
-in a conference poster, departmental talk, and a manuscript currently in
-progress
+• Research resulted in 13 research studies across 6 projects resulting in a conference poster, departmental talk, and a manuscript currently in progress
 
-• Collaborated with other researchers to analyze data and parse out
-insights regarding human morality
+• Collaborated with other researchers to analyze data and parse out insights regarding human morality
 
 |                          |                          |
 |--------------------------|-------------------------:|
@@ -84,16 +56,11 @@ insights regarding human morality
 
 **PSY 2510: Social Psychology**
 
-• Designed slide decks and presented course content via lecture format
-related to social cognition, the self, prejudice and discrimination,
-research design, etc. to 90 students across 2 semesters
+• Designed slide decks and presented course content via lecture format related to social cognition, the self, prejudice and discrimination, research design, etc. to 90 students across 2 semesters
 
-• Assessed students on their course knowledge by designing 4 tests, 10
-quizzes, and requiring a written final paper to demonstrate critical
-thinking and reflection
+• Assessed students on their course knowledge by designing 4 tests, 10 quizzes, and requiring a written final paper to demonstrate critical thinking and reflection
 
-• Student evaluations indicated a high degree overall quality for both
-the instructor \[4.58/5.0\] and the course \[4.31/5.0\].
+• Student evaluations indicated a high degree overall quality for both the instructor \[4.58/5.0\] and the course \[4.31/5.0\].
 
 |                                     |                             |
 |:------------------------------------|----------------------------:|
@@ -101,72 +68,33 @@ the instructor \[4.58/5.0\] and the course \[4.31/5.0\].
 
 **Eastern Michigan University**
 
-• Designed, developed and administered studies pertaining to insights
-regarding psychological topics involving prejudice and attitudes as they
-related to racial and religious minorities in addition to voting
-behavior involving sexual misconduct allegations
+• Designed, developed and administered studies pertaining to insights regarding psychological topics involving prejudice and attitudes as they related to racial and religious minorities in addition to voting behavior involving sexual misconduct allegations
 
-• Cleaned and analyzed data using statistical procedures including
-ANOVA, t-tests, correlation, mediation, exploratory factor analysis
-using R statistical software with the RStudio IDE
+• Cleaned and analyzed data using statistical procedures including ANOVA, t-tests, correlation, mediation, exploratory factor analysis using R statistical software with the RStudio IDE
 
-• Research resulted in 5 studies across 4 projects resulting in a 3
-conference posters, a master's thesis proposal, and thesis defense
+• Research resulted in 5 studies across 4 projects resulting in a 3 conference posters, a master's thesis proposal, and thesis defense
 
-<h3 style="color:#084232;">
-
-Selected Projects
-
-</h3>
+### Selected Projects
 
 **Black Lives Matter**
 
-• This research looked to investigate the role that multicultural
-attitudes (i.e., celebration of differences) and colorblind attitudes
-(i.e., avoiding differences) play in predicting support for Black Lives
-Matter (and All Lives Matter) using a series of multiple regressions and
-experimental manipulations. The results largely indicate that support
-for Black Lives Matter is positive associated with endorsement of
-multicultural attitudes and negatively associated with endorsement of
-colorblind attitudes. By comparison, All Lives Matter support is
-positively associated with endorsement of colorblind attitudes and
-negatively associated with endorsement of multicultural attitudes. This
-work suggests that organizations who wish to increase support for Black
-Lives Matter would be wise to focus on interventions which increase
-one's positive attitudes toward a multicultural society.
+• This research looked to investigate the role that multicultural attitudes (i.e., celebration of differences) and colorblind attitudes (i.e., avoiding differences) play in predicting support for Black Lives Matter (and All Lives Matter) using a series of multiple regressions and experimental manipulations. The results largely indicate that support for Black Lives Matter is positive associated with endorsement of multicultural attitudes and negatively associated with endorsement of colorblind attitudes. By comparison, All Lives Matter support is positively associated with endorsement of colorblind attitudes and negatively associated with endorsement of multicultural attitudes. This work suggests that organizations who wish to increase support for Black Lives Matter would be wise to focus on interventions which increase one's positive attitudes toward a multicultural society.
 
-• This research has resulted in one departmental talk and one research
-manuscript
+• This research has resulted in one departmental talk and one research manuscript
 
 **The Marley Hypothesis: A Gender Extension**
 
-• This research looked to investigate the role of historical literacy
-(with respect to women's rights) on the relationship between gender and
-willingness to identify a situation as sexist using a series of
-mediation analyses. The results largely indicate that historical
-literacy does not impact the relationship between gender and willingness
-to identify a situation as sexist.
+• This research looked to investigate the role of historical literacy (with respect to women's rights) on the relationship between gender and willingness to identify a situation as sexist using a series of mediation analyses. The results largely indicate that historical literacy does not impact the relationship between gender and willingness to identify a situation as sexist.
 
-• This research has resulted in a proposed conference poster
-presentation. The poster can be found here
+• This research has resulted in a proposed conference poster presentation. The poster can be found here
 
 **Christian Privilege Awareness**
 
-• This research looked to create a scale measure to assess the level of
-Christian privilege awareness among self-professed Christians through
-the use of scale development principles (i.e., theory development) and
-statistical analysis (e.g., exploratory factor analysis). The results
-largely indicate a good measure of Christian privilege awareness with a
-high degree of internal reliability.
+• This research looked to create a scale measure to assess the level of Christian privilege awareness among self-professed Christians through the use of scale development principles (i.e., theory development) and statistical analysis (e.g., exploratory factor analysis). The results largely indicate a good measure of Christian privilege awareness with a high degree of internal reliability.
 
-• This research was my master's thesis final project and resulted in a
-conference poster presentation
+• This research was my master's thesis final project and resulted in a conference poster presentation
 
-<h3 style="color:#084232;">
-
-Skills
-
-</h3>
+### Skills
 
 Statistical Procedure Experience
 
@@ -204,11 +132,7 @@ Other Software
 
 -   Git & GitHub
 
-<h3 style="color:#084232;">
-
-Education
-
-</h3>
+### Education
 
 |                     |                         |
 |---------------------|------------------------:|
