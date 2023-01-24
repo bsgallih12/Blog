@@ -20,6 +20,6 @@ website:
         href: https://linkedin.com/in/brier-gallihugh
 format:
   html:
-    theme: darkly
+    theme: custom.scss
 
 
