@@ -7,7 +7,7 @@ website:
     center: ""
     left:
       "Made with [Posit Quarto](https://quarto.org/)"
-    right: "[Github](https://github.com/bsgallih12)"
+    right: ""
     background: "#054231"
   navbar:
     right:
