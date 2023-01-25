@@ -4,7 +4,7 @@ author: "Brier S. Gallihugh"
 date: "2023-01-25"
 categories: [Alone,R,TidyTuesday]
 draft: false
-image: TT_1_25_23.png
+image: twitter_upload_tt_1_25_23.png
 image-alt: "A word cloud of mostly commonly discarded items on Alone"
 description: "A #TidyTuesday data visualization of Alone TV data for 1-24-23"
 ---
@@ -63,12 +63,12 @@ To add the title, caption and alt text, we can use the code shown below
 #| echo: true
 #| output: false
 p <- p  + 
-  labs(title = "**Figure 1**. Word Cloud of Commonly Used Items in *Alone*",
+  labs(title = "**Word Cloud of Commonly Used Items in Alone TV Series**",
        caption = "Note: Data courtesy of Daniel Oehm",
        alt = paste("A word cloud of mostly commonly discarded items on Alone")) + 
   theme_minimal() + 
-  theme(plot.title = element_markdown()) +
-  theme(plot.caption = element_text(hjust = 0))
+  theme(plot.title = element_markdown(hjust = 0),
+        plot.caption = element_text(hjust = 0))
 ```
 
 The above code gets us the following graphic. Quite honestly I think this looks good
@@ -78,6 +78,8 @@ The above code gets us the following graphic. Quite honestly I think this looks 
 #| output: true
 #| fig-alt: "A word cloud of mostly commonly discarded items on Alone"
 p
+
+ggsave(filename = "twitter_upload_tt_1_25_23.png", height = 6, width = 8, units = "in")
 ```
 
 I hope you've enjoyed this quick data visualization. Let me know what changes you might make in the comments below
