@@ -11,12 +11,6 @@ links:
     href: https://github.com\
 theme: Resume.scss
 ---
-<div style="text-align: center;">
-    <span style="border:1px solid black;">
-        Resume
-    </span>
-</div>
-
 ### Brier Gallihugh, M.S.
 
 ### Personal Summary

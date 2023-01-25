@@ -3,6 +3,7 @@ project:
 
 website:
   title: "The R Nerd Blog"
+  favicon: favicon.png
   page-footer:
     center: ""
     left:
