@@ -51,7 +51,7 @@ Relevant Soft Skills
 
 • Student evaluations indicated a high degree overall quality for both the instructor \[4.58/5.0\] and the course \[4.31/5.0\].
 
-[Principle Psychology Researcher: Eastern Michigan University]{.left-subheader} [August 2017-August 2021]{.right-subheader} <br> <br>
+[Psychology Researcher: Eastern Michigan University]{.left-subheader} [August 2017-August 2021]{.right-subheader} <br> <br>
 • Designed, developed and administered studies pertaining to insights regarding psychological topics involving prejudice and attitudes as they related to racial and religious minorities in addition to voting behavior involving sexual misconduct allegations
 
 • Cleaned and analyzed data using statistical procedures including ANOVA, t-tests, correlation, mediation, exploratory factor analysis using R statistical software with the RStudio IDE
