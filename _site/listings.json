@@ -11,7 +11,9 @@
   },
   {
     "listing": "/tidytuesday.html",
-    "items": []
+    "items": [
+      "/tidytuesday/1_25_23/index.html"
+    ]
   },
   {
     "listing": "/blog.html",
