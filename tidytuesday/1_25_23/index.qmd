@@ -6,7 +6,7 @@ categories: [Alone,R,TidyTuesday]
 draft: false
 ---
 
-For today's #TidyTuesday (January 25, 2023)[^1], we are looking at the survival TV series *Alone* which has run since 2015 across 10 seasons. The premise of the show is to put individuals into sparsely populated areas as they try to survive. For today's visualization we will be looking at the `loadouts` data set in the `alone` package[^2]. This data set contains information on the participant, the season in which the participant appeared on the show, and the discarded items.
+For today's #TidyTuesday (January 25, 2023)[^1], we are looking at the survival TV series *Alone* which has run since 2015 across 10 seasons. The premise of the show is to put individuals into sparsely populated areas as they try to survive. For today's visualization we will be looking at the `loadouts` data set in the `alone` package[^2]. This data set contains information on the participant, the season in which the participant appeared on the show, and the most commonly used items.
 
 For this visualization, creating a word cloud would be a very interesting way to visualize which items are most commonly discarded. To attempt this visualization we will need the `tidyverse`,`ggtext`, and `ggwordcloud` packages. To start we want to download the data. You can find the file [here](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-01-24/loadouts.csv). The code below shows loading in the appropriate packages and reading in the data
 
@@ -20,7 +20,7 @@ library(ggwordcloud)
 data <- read.csv("loadouts.csv")
 ```
 
-After we have downloaded the data, we will need to modify the data a little bit to get some of the information that we will need in the format that we need it in. For the word cloud we need to aggregate the items and count the number of times said item was discarded. To do this we will need to sum the number of items by group. That code can be shown below
+After we have downloaded the data, we will need to modify the data a little bit to get some of the information that we will need in the format that we need it in. For the word cloud we need to aggregate the items and count the number of times said item taken. To do this we will need to sum the number of items by group. That code can be shown below
 
 ```{r initial data wrangling}
 data <- data %>% 
@@ -60,7 +60,7 @@ To add the title, caption and alt text, we can use the code shown below
 #| echo: true
 #| output: false
 p <- p  + 
-  labs(title = "**Figure 1**. Word Cloud of Commonly Discarded Items in *Alone*",
+  labs(title = "**Figure 1**. Word Cloud of Commonly Used Items in *Alone*",
        caption = "Note: Data courtesy of Daniel Oehm",
        alt = paste("A word cloud of mostly commonly discarded items on Alone")) + 
   theme_minimal() + 
