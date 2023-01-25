@@ -242,7 +242,7 @@
     "href": "tidytuesday.html",
     "title": "Tidy Tuesday Projects",
     "section": "",
-    "text": "No matching items"
+    "text": "Tidy Tuesday 1-25-23\n\n\n\n\n\n\n\nAlone\n\n\nR\n\n\nTidyTuesday\n\n\n\n\n\n\n\n\n\n\n\nJan 25, 2023\n\n\nBrier S. Gallihugh\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog.html",
@@ -250,5 +250,12 @@
     "title": "Posts",
     "section": "",
     "text": "Welcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 22, 2023\n\n\nBrier S. Gallihugh\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "tidytuesday/1_25_23/index.html",
+    "href": "tidytuesday/1_25_23/index.html",
+    "title": "Tidy Tuesday 1-25-23",
+    "section": "",
+    "text": "For today’s #TidyTuesday (January 25, 2023)1, we are looking at the survival TV series Alone which has run since 2015 across 10 seasons. The premise of the show is to put individuals into sparsely populated areas as they try to survive. For today’s visualization we will be looking at the loadouts data set in the alone package2. This data set contains information on the participant, the season in which the participant appeared on the show, and the discarded items.\nFor this visualization, creating a word cloud would be a very interesting way to visualize which items are most commonly discarded. To attempt this visualization we will need the tidyverse,ggtext, and ggwordcloud packages. To start we want to download the data. You can find the file here. The code below shows loading in the appropriate packages and reading in the data\n\nlibrary(tidyverse)\nlibrary(ggtext)\nlibrary(ggwordcloud)\n\ndata <- read.csv(\"loadouts.csv\")\n\nAfter we have downloaded the data, we will need to modify the data a little bit to get some of the information that we will need in the format that we need it in. For the word cloud we need to aggregate the items and count the number of times said item was discarded. To do this we will need to sum the number of items by group. That code can be shown below\n\ndata <- data %>% \n  mutate(item = as.factor(item)) %>%\n  group_by(item) %>% summarize(n_item = sum(item_number),.groups = \"drop\") %>% \n  mutate(color = rep(c(\"darkgreen\",\"darkred\",\"darkblue\"),9)) \n\n\nI have added a color variable to add color to the word cloud labels later\n\nOnce initial data wrangling has been done, it is time to actually start the visualization. To do this we are going to feed our data into a ggplot2 pipeline. We will be assigning the item variable to the label argument and the n_item variable to the size argument. This will tell ggplot to label the word cloud with the appropriate labeling convention while mapping the size of the word to the number of times it is discarded in total across the 10 seasons.\nFor aesthetic purposes, I’ve decided to make the word cloud figure diamond shaped but there are multiple shapes one could use (e.g., a circle).\n\np <- data %>% ggplot(aes(label = item, size = n_item, color = color)) + \n  geom_text_wordcloud_area(show_boxes = FALSE,\n                           shape = \"diamond\") + \n  scale_size_area(max_size = 12)\n\nBelow we see what the code above generates. This looks reasonably good but we can do some more with this graphic such as adding a title, doing some theme changes, adding a caption, and ensuring there is some alt text describing the graphic embedded in the webpage that should be available if one inspects the HTML\n\n\n\n\n\nTo add the title, caption and alt text, we can use the code shown below\n\np <- p  + \n  labs(title = \"**Figure 1**. Word Cloud of Commonly Discarded Items in *Alone*\",\n       caption = \"Note: Data courtesy of Daniel Oehm\",\n       alt = paste(\"A word cloud of mostly commonly discarded items on Alone\")) + \n  theme_minimal() + \n  theme(plot.title = element_markdown()) +\n  theme(plot.caption = element_text(hjust = 0))\n\nThe above code gets us the following graphic. Quite honestly I think this looks good\n\n\n\n\n\nI hope you’ve enjoyed this quick data visualization. Let me know what changes you might make in the comments below\n\n\nFootnotes\n\nYou can find out more about #TidyTuesday by going here.↩︎\nThe alone package was created by Daniel Oehm. You can find his package documentation here and access his here↩︎"
   }
 ]
