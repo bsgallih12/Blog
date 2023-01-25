@@ -9,36 +9,47 @@ draft: false
 For today's #TidyTuesday (January 25, 2023)[^1], we are looking at the survival TV series *Alone* which has run since 2015 across 10 seasons. The premise of the show is to put individuals into sparsely populated areas as they try to survive. For today's visualization we will be looking at the `loadouts` data set in the `alone` package[^2]. This data set contains information on the participant, the season in which the participant appeared on the show, and the discarded items.
 
 ```{r}
+#| echo: true
+#| output: false
 library(tidyverse)
 library(ggtext)
 library(ggwordcloud)
 
 data <- read.csv("loadouts.csv")
 
-data %>% 
+p <-data %>% 
   mutate(item = as.factor(item)) %>%
   group_by(item) %>% summarize(n = n(),.groups = "drop") %>% 
   mutate(color = rep(c("darkgreen","darkred","darkblue"),9)) %>% 
   ggplot(aes(label = item, size = n, color = color)) + 
   geom_text_wordcloud_area(show_boxes = FALSE,
                            shape = "diamond") + 
-  scale_size_area(max_size = 12) + 
+  scale_size_area(max_size = 12)
+```
+
+```{r basic plot output}
+#| echo: false
+#| output: true
+p
+```
+
+```{r plot additions}
+#| echo: true
+#| output: false
+p <- p  + 
   labs(title = "**Figure 1**. Word Cloud of Commonly Discarded Items in *Alone*",
-       caption = "Note: Data courtesy of [insert here]") + 
+       caption = "Note: Data courtesy of Daniel Oehm") + 
   theme_minimal() + 
   theme(plot.title = element_markdown()) +
   theme(plot.caption = element_text(hjust = 0))
 ```
 
 ```{r}
-
+#| echo: false
+#| output: true
+#| fig-alt: "A word cloud of mostly commonly discarded items on Alone"
+p
 ```
 
-```{r}
-#| fig-alt: ""
-#| fig-cap-location: bottom
-#| fig-cap: ""
-```
-
-[^1]: Here is the footnote.
-[^2]: The `alone` package was created by Daniel Oehm. You can find his package documentation [here](https://gradientdescending.com/alone-r-package-datasets-from-the-survival-tv-series/) and access his `r fontawesome::fa(name = "r-project")` [here](https://github.com/doehm)
+[^1]: You can find out more about #TidyTuesday by going [here](https://github.com/rfordatascience/tidytuesday).
+[^2]: The `alone` package was created by Daniel Oehm. You can find his package documentation [here](https://gradientdescending.com/alone-r-package-datasets-from-the-survival-tv-series/) and access his `r fontawesome::fa(name = "github",height = "1.25em",width = "1.25em")` [here](https://github.com/doehm)
