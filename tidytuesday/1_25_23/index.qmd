@@ -6,6 +6,7 @@ categories: [Alone,R,TidyTuesday]
 draft: false
 image: TT_1_25_23.png
 image-alt: "A word cloud of mostly commonly discarded items on Alone"
+description: "A #TidyTuesday data visualization of Alone TV data for 1-24-23"
 ---
 
 For today's #TidyTuesday (January 25, 2023)[^1], we are looking at the survival TV series *Alone* which has run since 2015 across 10 seasons. The premise of the show is to put individuals into sparsely populated areas as they try to survive. For today's visualization we will be looking at the `loadouts` data set in the `alone` package[^2]. This data set contains information on the participant, the season in which the participant appeared on the show, and the most commonly used items.
