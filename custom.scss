@@ -186,6 +186,24 @@ $pre-color:                         inherit !default;
   font-weight: bold;
 }
 
+.left-subheader {
+  display: block;
+  text-align: left;
+  float: left;
+  font-size: 16pt;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.right-subheader {
+  display: block;
+  text-align: right;
+  float: right;
+  font-size: 16pt;
+  font-weight: bold;
+  font-style: italic;
+}
+
 /*-- scss:rules --*/
   
   
