@@ -11,9 +11,12 @@ links:
     href: https://github.com\
 theme: Resume.scss
 ---
-### Brier Gallihugh, M.S.
 
-### Personal Summary
+[Brier Gallihugh, M.S.]{.center-twenty}  
+[Data Analysis | UXR | Data Science]{.center-twenty}
+
+
+[Personal Summary]{.left-header}
 
 I am a third year experimental psychology doctoral candidate at Ohio University. I bring over 5 years of detail oriented experience using various quantitative research methodologies (e.g., experimental design and survey development) and conducting various statistical analyses (e.g., ANOVA, regression, moderation and mediation, meta-analysis, factor analysis, structural equation modeling, etc.) to understand human behavior. Further I also have some experience with semi-structured interviewing. I am proficient in the use of both SPSS and R for data analysis and ggplot2 for data visualization.
 
@@ -27,7 +30,7 @@ Relevant Soft Skills
 
 • Oral Presentation
 
-### Experience
+[Experience]{.left-header}
 
 |                                     |                         |
 |-------------------------------------|------------------------:|
@@ -73,7 +76,7 @@ Relevant Soft Skills
 
 • Research resulted in 5 studies across 4 projects resulting in a 3 conference posters, a master's thesis proposal, and thesis defense
 
-### Selected Projects
+[Selected Projects]{.left-header}
 
 **Black Lives Matter**
 
@@ -93,7 +96,7 @@ Relevant Soft Skills
 
 • This research was my master's thesis final project and resulted in a conference poster presentation
 
-### Skills
+[Skills]{.left-header}
 
 Statistical Procedure Experience
 
@@ -131,7 +134,7 @@ Other Software
 
 -   Git & GitHub
 
-### Education
+[Education]{.left-header}
 
 |                     |                         |
 |---------------------|------------------------:|

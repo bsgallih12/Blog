@@ -1,1 +1,6 @@
 /* css styles */
+
+.center-menu {
+  display: block;
+  text-align: center;
+}
