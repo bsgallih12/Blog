@@ -28,6 +28,10 @@ While certainly not required, these blog posts do take some time to put together
 
 :::
 
+::: {.callout-note}
 
+The photo used for the above image in the tab was taken from My Great Learning. You can find the website [here](https://www.mygreatlearning.com/blog/what-is-data-science/#what-is-data-science).
+
+:::
 
 
