@@ -31,9 +31,7 @@ Relevant Soft Skills
 
 [Experience]{.left-header}
 
-[Principle Psychology Researcher: Ohio University]{.left-subheader} [August 2020-Present]{.right-subheader} <br>
-<br>
-• Designed, developed and administered studies pertaining to insights regarding psychological topics of human behavior including prejudice, discrimination, and attitudes as they related to racial, ethnic and religious minorities in addition to political affiliation
+[Principle Psychology Researcher]{.left-subheader} [August 2020-Present]{.right-subheader} <br> <br> [Ohio University]{.left-subheadernofloat} <br> <br> • Designed, developed and administered studies pertaining to insights regarding psychological topics of human behavior including prejudice, discrimination, and attitudes as they related to racial, ethnic and religious minorities in addition to political affiliation
 
 • Cleaned and analyzed data using statistical procedures including ANOVA, t-tests, regression, multiple regression, moderation, mediation, and sentiment analysis using R statistical software with the RStudio IDE
 
@@ -43,16 +41,17 @@ Relevant Soft Skills
 
 • Collaborated with other researchers to analyze data and parse out insights regarding human morality
 
-[Instructor of Record: Ohio University]{.left-subheader} [January 2022-Present]{.right-subheader} <br>
-<br>
+[Instructor of Record]{.left-subheader} [January 2022-Present]{.right-subheader} <br> <br> [Ohio University]{.left-subheadernofloat} <br>
+
+• Taught courses on social psychology
+
 • Designed slide decks and presented course content via lecture format related to social cognition, the self, prejudice and discrimination, research design, etc. to 90 students across 2 semesters
 
 • Assessed students on their course knowledge by designing 4 tests, 10 quizzes, and requiring a written final paper to demonstrate critical thinking and reflection
 
 • Student evaluations indicated a high degree overall quality for both the instructor \[4.58/5.0\] and the course \[4.31/5.0\].
 
-[Psychology Researcher: Eastern Michigan University]{.left-subheader} [August 2017-August 2021]{.right-subheader} <br> <br>
-• Designed, developed and administered studies pertaining to insights regarding psychological topics involving prejudice and attitudes as they related to racial and religious minorities in addition to voting behavior involving sexual misconduct allegations
+[Principle Psychology Researcher]{.left-subheader} [August 2017-August 2021]{.right-subheader} <br> <br> [Eastern Michigan University]{.left-subheadernofloat} <br> <br> • Designed, developed and administered studies pertaining to insights regarding psychological topics involving prejudice and attitudes as they related to racial and religious minorities in addition to voting behavior involving sexual misconduct allegations
 
 • Cleaned and analyzed data using statistical procedures including ANOVA, t-tests, correlation, mediation, exploratory factor analysis using R statistical software with the RStudio IDE
 
@@ -128,13 +127,13 @@ Expected Graduation: May 2025
 
 <br>
 
-[Eastern Michigan University]{.left-subheader} [August 2017-August 2021]{.right-subheader} <br> 
+[Eastern Michigan University]{.left-subheader} [August 2017-August 2021]{.right-subheader} <br>
 
 Master of Science (M.S) in General Experimental Psychology
 
 <br>
 
-[Saginaw Valley State University]{.left-subheader} [August 2012-May 2017]{.right-subheader} <br> 
+[Saginaw Valley State University]{.left-subheader} [August 2012-May 2017]{.right-subheader} <br>
 
 Bachelor of Arts (B.A) in Psychology
 

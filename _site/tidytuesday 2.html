@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The R Nerd Blog – resume</title>
+<title>The R Nerd Blog - Tidy Tuesday Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,11 +63,41 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -86,11 +118,11 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./resume.html" aria-current="page">
+    <a class="nav-link" href="./resume.html">
  <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./tidytuesday.html">
+    <a class="nav-link active" href="./tidytuesday.html" aria-current="page">
  <span class="menu-text">Tidy Tuesday Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -131,89 +163,46 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Tidy Tuesday Projects</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
-<p><span class="center-twenty">Brier Gallihugh, M.S.</span><br>
-<span class="center-twenty">Data Analysis | UXR | Data Science</span></p>
-<p><span class="left-header">Personal Summary</span></p>
-<p>I am a third year experimental psychology doctoral candidate at Ohio University. I bring over 5 years of detail oriented experience using various quantitative research methodologies (e.g., experimental design and survey development) and conducting various statistical analyses (e.g., ANOVA, regression, moderation and mediation, meta-analysis, factor analysis, structural equation modeling, etc.) to understand human behavior. Further I also have some experience with semi-structured interviewing. I am proficient in the use of both SPSS and R for data analysis and ggplot2 for data visualization.</p>
-<p>Relevant Soft Skills</p>
-<p>• Communication</p>
-<p>• Collaboration</p>
-<p>• Project Management</p>
-<p>• Oral Presentation</p>
-<p><span class="left-header">Experience</span></p>
-<p><span class="left-subheader">Principle Psychology Researcher</span> <span class="right-subheader">August 2020-Present</span> <br> <br> <span class="left-subheadernofloat">Ohio University</span> <br> <br> • Designed, developed and administered studies pertaining to insights regarding psychological topics of human behavior including prejudice, discrimination, and attitudes as they related to racial, ethnic and religious minorities in addition to political affiliation</p>
-<p>• Cleaned and analyzed data using statistical procedures including ANOVA, t-tests, regression, multiple regression, moderation, mediation, and sentiment analysis using R statistical software with the RStudio IDE</p>
-<p>• Incorporated version control for statistical analyses using Git and GitHub to ensure data reproducibility</p>
-<p>• Research resulted in 13 research studies across 6 projects resulting in a conference poster, departmental talk, and a manuscript currently in progress</p>
-<p>• Collaborated with other researchers to analyze data and parse out insights regarding human morality</p>
-<p><span class="left-subheader">Instructor of Record</span> <span class="right-subheader">January 2022-Present</span> <br> <br> <span class="left-subheadernofloat">Ohio University</span> <br></p>
-<p>• Taught courses on social psychology</p>
-<p>• Designed slide decks and presented course content via lecture format related to social cognition, the self, prejudice and discrimination, research design, etc. to 90 students across 2 semesters</p>
-<p>• Assessed students on their course knowledge by designing 4 tests, 10 quizzes, and requiring a written final paper to demonstrate critical thinking and reflection</p>
-<p>• Student evaluations indicated a high degree overall quality for both the instructor [4.58/5.0] and the course [4.31/5.0].</p>
-<p><span class="left-subheader">Principle Psychology Researcher</span> <span class="right-subheader">August 2017-August 2021</span> <br> <br> <span class="left-subheadernofloat">Eastern Michigan University</span> <br> <br> • Designed, developed and administered studies pertaining to insights regarding psychological topics involving prejudice and attitudes as they related to racial and religious minorities in addition to voting behavior involving sexual misconduct allegations</p>
-<p>• Cleaned and analyzed data using statistical procedures including ANOVA, t-tests, correlation, mediation, exploratory factor analysis using R statistical software with the RStudio IDE</p>
-<p>• Research resulted in 5 studies across 4 projects resulting in a 3 conference posters, a master’s thesis proposal, and thesis defense</p>
-<p><span class="left-header">Selected Projects</span></p>
-<p><span class="left-subheader">Black Lives Matter</span> <br></p>
-<p>• This research looked to investigate the role that multicultural attitudes (i.e., celebration of differences) and colorblind attitudes (i.e., avoiding differences) play in predicting support for Black Lives Matter (and All Lives Matter) using a series of multiple regressions and experimental manipulations. The results largely indicate that support for Black Lives Matter is positive associated with endorsement of multicultural attitudes and negatively associated with endorsement of colorblind attitudes. By comparison, All Lives Matter support is positively associated with endorsement of colorblind attitudes and negatively associated with endorsement of multicultural attitudes. This work suggests that organizations who wish to increase support for Black Lives Matter would be wise to focus on interventions which increase one’s positive attitudes toward a multicultural society.</p>
-<p>• This research has resulted in one departmental talk and one research manuscript</p>
-<p><span class="left-subheader">The Marley Hypothesis: A Gender Extension</span> <br></p>
-<p>• This research looked to investigate the role of historical literacy (with respect to women’s rights) on the relationship between gender and willingness to identify a situation as sexist using a series of mediation analyses. The results largely indicate that historical literacy does not impact the relationship between gender and willingness to identify a situation as sexist.</p>
-<p>• This research has resulted in a proposed conference poster presentation. The poster can be found here</p>
-<p><span class="left-subheader">Christian Privilege Awareness</span> <br></p>
-<p>• This research looked to create a scale measure to assess the level of Christian privilege awareness among self-professed Christians through the use of scale development principles (i.e., theory development) and statistical analysis (e.g., exploratory factor analysis). The results largely indicate a good measure of Christian privilege awareness with a high degree of internal reliability.</p>
-<p>• This research was my master’s thesis final project and resulted in a conference poster presentation</p>
-<p><span class="left-header">Skills</span></p>
-<p><span class="left-subheader">Statistical Procedure Experience</span> <br></p>
-<ul>
-<li><p>Regression</p></li>
-<li><p>ANOVA</p></li>
-<li><p>ANCOVA</p></li>
-<li><p>EFA &amp; CFA</p></li>
-<li><p>Mediation &amp; Moderation</p></li>
-<li><p>SEM</p></li>
-<li><p>Meta-Analysis</p></li>
-</ul>
-<p><span class="left-subheader">Statistical Software and Visualizations</span> <br></p>
-<ul>
-<li><p>R &amp; RStudio</p></li>
-<li><p>SPSS</p></li>
-<li><p>G*Power</p></li>
-<li><p>ggplot2</p></li>
-</ul>
-<p><span class="left-subheader">Other Software</span> <br></p>
-<ul>
-<li><p>Qualtrics</p></li>
-<li><p>Office Suite</p></li>
-<li><p>Google Suite</p></li>
-<li><p>Git &amp; GitHub</p></li>
-</ul>
-<p><span class="left-header">Education</span></p>
-<p><span class="left-subheader">Ohio University</span> <span class="right-subheader">August 2020-Present</span> <br></p>
-<p>Doctorate of Philosophy (Ph.D) in Experimental Psychology</p>
-<p>Concentration: Social Psychology (4.00 GPA)</p>
-<p>Expected Graduation: May 2025</p>
-<p><br></p>
-<p><span class="left-subheader">Eastern Michigan University</span> <span class="right-subheader">August 2017-August 2021</span> <br></p>
-<p>Master of Science (M.S) in General Experimental Psychology</p>
-<p><br></p>
-<p><span class="left-subheader">Saginaw Valley State University</span> <span class="right-subheader">August 2012-May 2017</span> <br></p>
-<p>Bachelor of Arts (B.A) in Psychology</p>
-<p>Minor: Biology</p>
 
 
 
-</main> <!-- /main -->
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

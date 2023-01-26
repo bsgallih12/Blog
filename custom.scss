@@ -195,6 +195,15 @@ $pre-color:                         inherit !default;
   font-style: italic;
 }
 
+.left-subheadernofloat {
+  display: block;
+  text-align: left;
+  float: left;
+  font-size: 16pt;
+  font-weight: bold;
+  font-style: italic;
+}
+
 .right-subheader {
   display: block;
   text-align: right;
