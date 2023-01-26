@@ -3,7 +3,7 @@ title: "An Introduction to R and RStudio"
 format: 
   revealjs:
     slide-number: true
-    self-contained: true
+    embed-resources: true
     theme: moon
 image: twitter_upload_tt_1_25_23.png
 ---
