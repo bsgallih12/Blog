@@ -73,9 +73,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -184,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Alone">Alone <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TidyTuesday">TidyTuesday <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -197,7 +197,47 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="Alone,R,TidyTuesday" data-listing-date-sort="1674622800000" data-listing-file-modified-sort="1674694645452" data-listing-reading-time-sort="3.36">
+<div class="thumbnail">
+<p><a href="./tidytuesday/1_25_23/index.html"> <img src="./tidytuesday/1_25_23/twitter_upload_tt_1_25_23.png" class="thumnail-image" alt="A word cloud of mostly commonly discarded items on Alone"> </a></p>
+</div>
+<div class="body">
+<a href="./tidytuesday/1_25_23/index.html">
+<h3 class="no-anchor listing-title">
+Tidy Tuesday 1-25-23
+</h3>
+<div class="listing-subtitle">
 
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Alone'); return false;">
+Alone
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('TidyTuesday'); return false;">
+TidyTuesday
+</div>
+</div>
+<a href="./tidytuesday/1_25_23/index.html">
+<div class="listing-description">
+<p>A #TidyTuesday data visualization of Alone TV data for 1-24-23</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./tidytuesday/1_25_23/index.html">
+<div class="listing-date">
+Jan 25, 2023
+</div>
+<div class="listing-author">
+Brier S. Gallihugh
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
