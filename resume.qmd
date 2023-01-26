@@ -31,7 +31,11 @@ Relevant Soft Skills
 
 [Experience]{.left-header}
 
-[Principle Psychology Researcher]{.left-subheader} [August 2020-Present]{.right-subheader} <br> <br> [Ohio University]{.left-subheadernofloat} <br> <br> • Designed, developed and administered studies pertaining to insights regarding psychological topics of human behavior including prejudice, discrimination, and attitudes as they related to racial, ethnic and religious minorities in addition to political affiliation
+[Principle Psychology Researcher]{.left-subheader} [August 2020-Present]{.right-subheader}
+<br>
+<br>
+[Ohio University]{.left-subheadernofloat} <br> <br> 
+• Designed, developed and administered studies pertaining to insights regarding psychological topics of human behavior including prejudice, discrimination, and attitudes as they related to racial, ethnic and religious minorities in addition to political affiliation
 
 • Cleaned and analyzed data using statistical procedures including ANOVA, t-tests, regression, multiple regression, moderation, mediation, and sentiment analysis using R statistical software with the RStudio IDE
 
@@ -41,8 +45,12 @@ Relevant Soft Skills
 
 • Collaborated with other researchers to analyze data and parse out insights regarding human morality
 
-[Instructor of Record]{.left-subheader} [January 2022-Present]{.right-subheader} <br> <br> [Ohio University]{.left-subheadernofloat} <br>
-
+[Instructor of Record]{.left-subheader} [January 2022-Present]{.right-subheader}
+<br>
+<br>
+[Ohio University]{.left-subheadernofloat}
+<br>
+<br>
 • Taught courses on social psychology
 
 • Designed slide decks and presented course content via lecture format related to social cognition, the self, prejudice and discrimination, research design, etc. to 90 students across 2 semesters
@@ -51,7 +59,13 @@ Relevant Soft Skills
 
 • Student evaluations indicated a high degree overall quality for both the instructor \[4.58/5.0\] and the course \[4.31/5.0\].
 
-[Principle Psychology Researcher]{.left-subheader} [August 2017-August 2021]{.right-subheader} <br> <br> [Eastern Michigan University]{.left-subheadernofloat} <br> <br> • Designed, developed and administered studies pertaining to insights regarding psychological topics involving prejudice and attitudes as they related to racial and religious minorities in addition to voting behavior involving sexual misconduct allegations
+[Principle Psychology Researcher]{.left-subheader} [August 2017-August 2021]{.right-subheader}
+<br>
+<br>
+[Eastern Michigan University]{.left-subheadernofloat}
+<br>
+<br>
+• Designed, developed and administered studies pertaining to insights regarding psychological topics involving prejudice and attitudes as they related to racial and religious minorities in addition to voting behavior involving sexual misconduct allegations
 
 • Cleaned and analyzed data using statistical procedures including ANOVA, t-tests, correlation, mediation, exploratory factor analysis using R statistical software with the RStudio IDE
 
@@ -59,27 +73,31 @@ Relevant Soft Skills
 
 [Selected Projects]{.left-header}
 
-[Black Lives Matter]{.left-subheader} <br>
-
+[Black Lives Matter]{.left-subheader}
+<br>
+<br>
 • This research looked to investigate the role that multicultural attitudes (i.e., celebration of differences) and colorblind attitudes (i.e., avoiding differences) play in predicting support for Black Lives Matter (and All Lives Matter) using a series of multiple regressions and experimental manipulations. The results largely indicate that support for Black Lives Matter is positive associated with endorsement of multicultural attitudes and negatively associated with endorsement of colorblind attitudes. By comparison, All Lives Matter support is positively associated with endorsement of colorblind attitudes and negatively associated with endorsement of multicultural attitudes. This work suggests that organizations who wish to increase support for Black Lives Matter would be wise to focus on interventions which increase one's positive attitudes toward a multicultural society.
 
 • This research has resulted in one departmental talk and one research manuscript
 
-[The Marley Hypothesis: A Gender Extension]{.left-subheader} <br>
-
+[The Marley Hypothesis: A Gender Extension]{.left-subheader}
+<br>
+<br>
 • This research looked to investigate the role of historical literacy (with respect to women's rights) on the relationship between gender and willingness to identify a situation as sexist using a series of mediation analyses. The results largely indicate that historical literacy does not impact the relationship between gender and willingness to identify a situation as sexist.
 
 • This research has resulted in a proposed conference poster presentation. The poster can be found here
 
-[Christian Privilege Awareness]{.left-subheader} <br>
-
+[Christian Privilege Awareness]{.left-subheader}
+<br>
+<br>
 • This research looked to create a scale measure to assess the level of Christian privilege awareness among self-professed Christians through the use of scale development principles (i.e., theory development) and statistical analysis (e.g., exploratory factor analysis). The results largely indicate a good measure of Christian privilege awareness with a high degree of internal reliability.
 
 • This research was my master's thesis final project and resulted in a conference poster presentation
 
 [Skills]{.left-header}
 
-[Statistical Procedure Experience]{.left-subheader} <br>
+[Statistical Procedure Experience]{.left-subheader}
+<br>
 
 -   Regression
 
@@ -95,7 +113,8 @@ Relevant Soft Skills
 
 -   Meta-Analysis
 
-[Statistical Software and Visualizations]{.left-subheader} <br>
+[Statistical Software and Visualizations]{.left-subheader}
+<br>
 
 -   R & RStudio
 
@@ -105,7 +124,8 @@ Relevant Soft Skills
 
 -   ggplot2
 
-[Other Software]{.left-subheader} <br>
+[Other Software]{.left-subheader}
+<br>
 
 -   Qualtrics
 
@@ -117,8 +137,9 @@ Relevant Soft Skills
 
 [Education]{.left-header}
 
-[Ohio University]{.left-subheader} [August 2020-Present]{.right-subheader} <br>
-
+[Ohio University]{.left-subheader} [August 2020-Present]{.right-subheader}
+<br>
+<br>
 Doctorate of Philosophy (Ph.D) in Experimental Psychology
 
 Concentration: Social Psychology (4.00 GPA)
@@ -127,13 +148,15 @@ Expected Graduation: May 2025
 
 <br>
 
-[Eastern Michigan University]{.left-subheader} [August 2017-August 2021]{.right-subheader} <br>
+[Eastern Michigan University]{.left-subheader} [August 2017-August 2021]{.right-subheader}
+<br>
 
 Master of Science (M.S) in General Experimental Psychology
 
 <br>
 
-[Saginaw Valley State University]{.left-subheader} [August 2012-May 2017]{.right-subheader} <br>
+[Saginaw Valley State University]{.left-subheader} [August 2012-May 2017]{.right-subheader}
+<br>
 
 Bachelor of Arts (B.A) in Psychology
 
