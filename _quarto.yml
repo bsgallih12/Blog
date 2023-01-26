@@ -20,6 +20,8 @@ website:
         file: tidytuesday.qmd
       - text: "Projects"
         file: projects.qmd
+      - text: "Presentations"
+        file: presentations.qmd
       - icon: github
         href: https://github.com/bsgallih12
       - icon: twitter

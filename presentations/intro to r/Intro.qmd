@@ -1,0 +1,143 @@
+---
+title: "An Introduction to R and RStudio"
+format: 
+  revealjs:
+    slide-number: true
+    self-contained: true
+    theme: moon
+image: twitter_upload_tt_1_25_23.png
+---
+
+## What Is R?
+
+- *R* is a statistical software package at its core
+- Main purpose is for use doing statistical analysis
+- However, package extensions allow it to be incorporated into various workflows
+  - E.g., Creating Exams, Visualizations, Data Analysis, Tweeting, Presentation Creation
+
+## What Is RStudio?
+
+- RStudio is what is known as an IDE (i.e., integrative development environment) that is compatible with *R* and other languages (e.g., Python, Julia, C++, etc) developed by Posit (formerly RStudio)
+- The most popular interface for using R for data analysis, package development, etc.
+- Particularly nice for data analysis and statistics
+
+## Installing R on Your Computer 
+
+- You can find R on [CRAN](https://cran.r-project.org)
+- You'll want to download this first prior to downloadinng RStudio
+
+## Installing RStudio on Your Computer 
+
+- You can find RStudio [here](https://posit.co) at the Posit website
+- You can download this after you've downloaded R
+
+## RStudio Menu Basics
+
+![RStudio Menu Basics](Menu_Basics.png)
+
+## RStudio Panel Basics
+
+![RStudio Panel Basics](Panel_Basics.png)
+
+# A Brief Tutorial on Using R
+
+
+## Star Wars Data Set
+
+![Star Wars Data Set](StarWars.png)
+
+## Code
+
+```{r library code stats}
+#| echo: true
+#| output: false
+library(tidyverse)
+library(ggtext)
+library(psych)
+
+# Pull Out Only M & F Sex Participants
+data <- starwars %>% 
+  filter(sex == "male" |
+           sex == "female")
+
+#Run t-test (ANOVA)
+summary(aov(mass ~ sex, data))
+```
+
+::: {.callout-note}
+You have access to the *starwars* data set when you install the `tidyverse` package.
+:::
+
+## Output
+
+```{r code output stats}
+#| output: true
+#| echo: false
+summary(aov(mass ~ sex, data))
+```
+
+## A Brief Tutorial on Using R with RStudio (Graphics)
+
+### Code
+
+```{r library code graphics}
+#| echo: true
+#| output: false
+library(tidyverse)
+library(ggtext)
+library(psych)
+library(plotrix)
+
+# Data Formatting (Sex as Categorical & Conditional Recode)
+data <- data %>% 
+  mutate(sex = as.factor(sex)) %>% 
+  mutate(sex = if_else(sex == "male","Male","Female"))
+
+graph <- data %>% 
+  group_by(sex) %>% 
+  summarize(mean = mean(height, na.rm = TRUE),
+            se = std.error(height),
+            t = qt(.95/2 + .5, 76 - 1),
+            ci = se * t) %>% 
+  ggplot(data = .,aes(x = sex, 
+                      y = mean, 
+                      fill = sex)) + 
+  geom_col() + 
+  scale_fill_manual(values = c("lightblue","pink")) + 
+  labs(x = "Sex",
+       y = "Mean Height",
+       title = "Figure 1. Mean Star Wars Height By Sex") + 
+  theme_classic() + guides(fill = "none")
+```
+
+## Output
+
+```{r code graph output}
+#| output: true
+#| echo: false
+graph
+```
+
+## Error Bars?
+
+```{r code graph eb}
+#| echo: true
+#| output: false
+graph <- graph + 
+  geom_errorbar(aes(y = mean, 
+                    ymax = mean + ci, 
+                    ymin = mean - ci), width = .75)
+```
+
+## Output
+
+```{r eb output}
+graph
+```
+
+## Final Thoughts and Future
+
+- *R* can have a relatively steep learning curve. It can take time, repititon and practice to get proficient at
+- However, the fact that it is free, used in industry, and has a vast online community willing to help make it a better long term endeavour than sticking with other programs like SPSS, SAS, MPlus, etc
+- Worth noting some may prefer Python for data analysis, RStudio will work well with Python code however, this channel will be focused on R as it applies to statistics, data analysis, and visualization
+
