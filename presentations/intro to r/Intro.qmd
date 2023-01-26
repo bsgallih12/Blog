@@ -5,7 +5,7 @@ format:
     slide-number: true
     embed-resources: true
     theme: moon
-image: twitter_upload_tt_1_25_23.png
+image: thumbnail.png
 ---
 
 ## What Is R?
