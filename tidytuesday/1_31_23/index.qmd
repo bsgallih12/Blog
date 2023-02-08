@@ -1,0 +1,47 @@
+---
+title: "CATS"
+author: "Brier Gallihugh, M.S."
+date: today
+format: html
+draft: true
+echo: false
+warning: false
+output: false
+categories: [TidyTuesday,PackageName,CATS]
+---
+
+```{r library}
+#| output: false
+library(tidyverse) # Basic Data Manipulation and Data Viz
+library(showtext) # Add Custom Font
+library(jtools) # APA Format Theme (apa_theme)
+
+cats_uk <- read.csv("Cats_UK.csv") 
+
+cats_uk_ref <- read.csv("Cats_UK_Ref.csv") 
+```
+
+```{r exploratory}
+# Change Variable Types
+
+cats_uk_ref <- cats_uk_ref  %>% 
+  mutate(across(.cols = c(n_cats, age_years),.fns = as.numeric)) %>% 
+  mutate(across(.cols = c(tag_id,animal_taxon,prey_p_month,animal_reproductive_condition,study_site, animal_sex),.fns = as.factor)) %>% 
+  select(hunt,prey_p_month,animal_reproductive_condition,animal_sex,
+         hrs_indoors,food_dry,food_wet,age_years) %>% 
+  mutate(hrs_outdoors = 24- hrs_indoors) %>% 
+  mutate(across(.cols = c(food_dry,food_wet,hunt),.fns = as.factor)) %>% 
+  mutate(hunt = if_else(hunt == "FALSE",0,1),
+         food_dry = if_else(food_dry == "FALSE",0,1),
+         food_wet = if_else(food_wet == "FALSE",0,1)) %>% 
+  mutate(across(.cols = c(hunt,food_dry,food_wet),.fns = as.numeric))
+```
+
+
+
+
+
+
+
+
+
