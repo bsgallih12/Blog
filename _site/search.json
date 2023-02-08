@@ -263,7 +263,7 @@
     "href": "presentations.html",
     "title": "Presentations",
     "section": "",
-    "text": "An Introduction to R and RStudio\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nExploratory Data Analysis: The Basics\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nR Packages: The Basics\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nThe Marley Hypothesis: A Gender Extension\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 1, 2023\n\n\nBrier Gallihugh, M.S & Kimberly Rios, Ph.D.  Ohio University\n\n\n\n\n\n\nNo matching items"
+    "text": "An Introduction to R and RStudio\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nExploratory Data Analysis: The Basics\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nR Packages: The Basics\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "presentations/intro to r/Intro.html#what-is-r",
@@ -558,82 +558,5 @@
     "title": "R Packages: The Basics",
     "section": "Example",
     "text": "Example\n\nlibrary(tidyverse)\nlibrary(psych)\n\ndescribe(starwars$mass)\n\n   vars  n  mean     sd median trimmed   mad min  max range skew kurtosis    se\nX1    1 59 97.31 169.46     79   75.44 16.31  15 1358  1343 6.97    48.93 22.06"
-  },
-  {
-    "objectID": "presentations/spsp2023/index.html#section",
-    "href": "presentations/spsp2023/index.html#section",
-    "title": "The Marley Hypothesis: A Gender Extension",
-    "section": "",
-    "text": "Past research has demonstrated that Black Americans have a greater tendency to perceive individual and systemic racism compared to White Americans, due in part to Black Americans’ better understanding of the history of racism within the United States (i.e., The Marley Effect; Nelson et al., 2012; but see Strickhouser et al., 2019).  However, racism is not the only plight faced by many Americans; sexism also has a long history within the United States (e.g., voting rights). Similarities between women’s and Black Americans’ oppression could suggest a sexism-based Marley Effect."
-  },
-  {
-    "objectID": "presentations/spsp2023/index.html#section-1",
-    "href": "presentations/spsp2023/index.html#section-1",
-    "title": "The Marley Hypothesis: A Gender Extension",
-    "section": "",
-    "text": "While the evidence for this Marley Effect is mixed, it does raise the question as to whether or not such an effect has analogous parallels in other minority groups  This line of research will look to examine the extent to which the Marley Effect generalizes to gender"
-  },
-  {
-    "objectID": "presentations/spsp2023/index.html#section-2",
-    "href": "presentations/spsp2023/index.html#section-2",
-    "title": "The Marley Hypothesis: A Gender Extension",
-    "section": "",
-    "text": "Historical knowledge of sexism will mediate the relationship between gender and willingness to identify various acts as sexist"
-  },
-  {
-    "objectID": "presentations/spsp2023/index.html#section-3",
-    "href": "presentations/spsp2023/index.html#section-3",
-    "title": "The Marley Hypothesis: A Gender Extension",
-    "section": "",
-    "text": "Demographics\n\n362 Participants (202 Females & 160 Males)\nAgeMean = 21.9 (SD = 6.52, Range = 17 to 53)\n\nMeasures\n\nItem\nItem\nItem\nItem"
-  },
-  {
-    "objectID": "presentations/spsp2023/index.html#section-4",
-    "href": "presentations/spsp2023/index.html#section-4",
-    "title": "The Marley Hypothesis: A Gender Extension",
-    "section": "",
-    "text": "Participants went through the following experimental procedure:\n\n\nDemographic Survey\nInsert Here\nInsert Here\nInsert Here\nDebrief"
-  },
-  {
-    "objectID": "presentations/spsp2023/index.html#hypotheses-1",
-    "href": "presentations/spsp2023/index.html#hypotheses-1",
-    "title": "The Marley Hypothesis: A Gender Extension",
-    "section": "Hypotheses",
-    "text": "Hypotheses\nReplication of Study 1 with a non-college sample"
-  },
-  {
-    "objectID": "presentations/spsp2023/index.html#section-6",
-    "href": "presentations/spsp2023/index.html#section-6",
-    "title": "The Marley Hypothesis: A Gender Extension",
-    "section": "",
-    "text": "Demographics\n\n427 Participants (216 Males & 211 Females)\nAgeMean = 36.2 (SD = 13.4, Range = 18 to 79)\n\nMeasures\n\nSame as Study 1"
-  },
-  {
-    "objectID": "presentations/spsp2023/index.html#section-7",
-    "href": "presentations/spsp2023/index.html#section-7",
-    "title": "The Marley Hypothesis: A Gender Extension",
-    "section": "",
-    "text": "Procedure\n\nSame as Study 1"
-  },
-  {
-    "objectID": "presentations/spsp2023/index.html#section-9",
-    "href": "presentations/spsp2023/index.html#section-9",
-    "title": "The Marley Hypothesis: A Gender Extension",
-    "section": "",
-    "text": "Item\nItem"
-  },
-  {
-    "objectID": "presentations/spsp2023/index.html#section-10",
-    "href": "presentations/spsp2023/index.html#section-10",
-    "title": "The Marley Hypothesis: A Gender Extension",
-    "section": "",
-    "text": "Item\nItem"
-  },
-  {
-    "objectID": "presentations/spsp2023/index.html#section-11",
-    "href": "presentations/spsp2023/index.html#section-11",
-    "title": "The Marley Hypothesis: A Gender Extension",
-    "section": "",
-    "text": "Item\nItem"
   }
 ]
