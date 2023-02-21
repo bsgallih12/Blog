@@ -1,0 +1,58 @@
+---
+title: "R Workshop"
+author: "Brier Gallihugh, M.S."
+date: today
+date-format: "MMMM YYYY"
+format:
+  revealjs:
+    theme: dark
+    self-contained: true
+    multiplex: true
+warning: FALSE
+---
+
+## Downloading R
+
+:::: {.columns}
+::: {.column width="50%"}
+![](rlogo.png)
+:::
+
+::: {.column width="50%"}
+You'll want to download R first before downloading any additional software
+
+You can download the newest version of R (4.2) [here](https://cran.rstudio.com)
+:::
+::::
+
+## Downloading RStudio
+
+:::: {.columns}
+::: {.column width="50%"}
+![](rstudiologo.png)
+:::
+
+::: {.column width="50%"}
+RStudio is the last software program you'll need to get started
+
+You can download the newest version of RStudio (Dec 2022) [here](https://posit.co/download/rstudio-desktop/)
+:::
+::::
+
+## R "Quirks"
+
+:::: {.columns}
+::: {.column width="50%"}
+Column 1
+:::
+
+::: {.column width="50%"}
+Column 2
+:::
+::::
+
+## Installing and Loading Packages
+
+::: {.callout-important}
+**A new install of R will remove all installed and loaded packages. You must either re-install the packages or save them prior to a new R installation**
+:::
