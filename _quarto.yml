@@ -15,10 +15,12 @@ website:
       - text: "Blog"
         file: blog.qmd
       - text: "Resume"
-        file: resume.qmd
-      - text: "Tidy Tuesday Projects"
+        file: Gallihugh_Resume.pdf
+      - text: "Academic CV"
+        file: CV.pdf
+      - text: "Data Visualization Projects"
         file: tidytuesday.qmd
-      - text: "Projects"
+      - text: "Data Portfolio"
         file: projects.qmd
       - text: "Presentations"
         file: presentations.qmd
