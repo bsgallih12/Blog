@@ -620,7 +620,7 @@
     "href": "presentations/workshop/index.html#liveish-coding",
     "title": "R Workshop",
     "section": "“Live”ish Coding",
-    "text": "“Live”ish Coding\n\nGo back to the data_clean.R file provided. We’re going to walk through some example code and then live code a little bit"
+    "text": "“Live”ish Coding\n\nGo back to the data_clean.qmd file provided. We’re going to walk through some example code and then live code a little bit"
   },
   {
     "objectID": "presentations/workshop/index.html#uses-for-the-stringr-package",
@@ -809,56 +809,56 @@
     "href": "presentations/workshop/index.html#live-ish-coding",
     "title": "R Workshop",
     "section": "Live-ish Coding",
-    "text": "Live-ish Coding\n\nOpen the data_clean.R file provided. We’re going to walk through some example code and then live code a little bit"
+    "text": "Live-ish Coding\n\nOpen the data_clean.qmd file provided. We’re going to walk through some example code and then live code a little bit"
   },
   {
     "objectID": "presentations/workshop/index.html#live-ish-coding-1",
     "href": "presentations/workshop/index.html#live-ish-coding-1",
     "title": "R Workshop",
     "section": "Live-ish Coding",
-    "text": "Live-ish Coding\n\nGo back to the data_clean.R file provided. We’re going to walk through some example code and then live code a little bit"
+    "text": "Live-ish Coding\n\nGo back to the data_clean.qmd file provided. We’re going to walk through some example code and then live code a little bit"
   },
   {
     "objectID": "presentations/workshop/index.html#live-ish-coding-2",
     "href": "presentations/workshop/index.html#live-ish-coding-2",
     "title": "R Workshop",
     "section": "Live-ish Coding",
-    "text": "Live-ish Coding\n\nGo back to the data_clean.R file provided. We’re going to walk through some example code and then live code a little bit"
+    "text": "Live-ish Coding\n\nGo back to the data_clean.qmd file provided. We’re going to walk through some example code and then live code a little bit"
   },
   {
     "objectID": "presentations/workshop/index.html#live-ish-coding-3",
     "href": "presentations/workshop/index.html#live-ish-coding-3",
     "title": "R Workshop",
     "section": "Live-ish Coding",
-    "text": "Live-ish Coding\n\nPlease see correlation.R file provided"
+    "text": "Live-ish Coding\n\nPlease see correlation.qmd file provided"
   },
   {
     "objectID": "presentations/workshop/index.html#live-ish-coding-4",
     "href": "presentations/workshop/index.html#live-ish-coding-4",
     "title": "R Workshop",
     "section": "Live-ish Coding",
-    "text": "Live-ish Coding\n\nPlease see the correlation.R file provided"
+    "text": "Live-ish Coding\n\nPlease see the ttest.qmd file provided"
   },
   {
     "objectID": "presentations/workshop/index.html#live-ish-coding-5",
     "href": "presentations/workshop/index.html#live-ish-coding-5",
     "title": "R Workshop",
     "section": "Live-ish Coding",
-    "text": "Live-ish Coding"
+    "text": "Live-ish Coding\n\nPlease open the regression.qmd file provided"
   },
   {
     "objectID": "presentations/workshop/index.html#live-ish-coding-6",
     "href": "presentations/workshop/index.html#live-ish-coding-6",
     "title": "R Workshop",
     "section": "Live-ish Coding",
-    "text": "Live-ish Coding\n\nPlease open the anova.R file provided"
+    "text": "Live-ish Coding\n\nPlease open the anova.qmd file provided"
   },
   {
     "objectID": "presentations/workshop/index.html#live-ish-coding-7",
     "href": "presentations/workshop/index.html#live-ish-coding-7",
     "title": "R Workshop",
     "section": "Live-ish Coding",
-    "text": "Live-ish Coding\n\nPlease open the non_parametric.R file"
+    "text": "Live-ish Coding\n\nPlease open the nonparametric.qmd file"
   },
   {
     "objectID": "presentations/workshop/index.html#cfa-assumptions",
@@ -872,7 +872,7 @@
     "href": "presentations/workshop/index.html#live-ish-coding-8",
     "title": "R Workshop",
     "section": "Live-ish Coding",
-    "text": "Live-ish Coding\n\nPlease open the efa_cfa.R file"
+    "text": "Live-ish Coding\n\nPlease open the factor_analysis.qmd file"
   },
   {
     "objectID": "presentations/workshop/index.html#assumptions-to-test-kaplan-2001-p.-15218",
@@ -886,20 +886,34 @@
     "href": "presentations/workshop/index.html#live-ish-coding-9",
     "title": "R Workshop",
     "section": "Live-ish Coding",
-    "text": "Live-ish Coding\n\nPlease open the sem.R file"
+    "text": "Live-ish Coding\n\nPlease open the sem.qmd file"
   },
   {
     "objectID": "presentations/workshop/index.html#live-ish-coding-10",
     "href": "presentations/workshop/index.html#live-ish-coding-10",
     "title": "R Workshop",
     "section": "Live-ish Coding",
-    "text": "Live-ish Coding\n\nPlease open the mlm.R file"
+    "text": "Live-ish Coding\n\nPlease open the mlm.qmd file"
   },
   {
     "objectID": "presentations/workshop/index.html#lets-talk-about-quarto",
     "href": "presentations/workshop/index.html#lets-talk-about-quarto",
     "title": "R Workshop",
     "section": "Let’s Talk About Quarto",
-    "text": "Let’s Talk About Quarto\n\nPlease open the quarto.qmd file"
+    "text": "Let’s Talk About Quarto\n\nPlease open the intro_quarto.qmd file"
+  },
+  {
+    "objectID": "presentations/workshop/index.html#downloading-materials-for-day-1",
+    "href": "presentations/workshop/index.html#downloading-materials-for-day-1",
+    "title": "R Workshop",
+    "section": "Downloading Materials For Day 1",
+    "text": "Downloading Materials For Day 1\nYou can download all the materials for Day 1 of this workshop here * You want the correlation.qmd, data_clean.qmd, ttest.qmd, and regression.qmd files"
+  },
+  {
+    "objectID": "presentations/workshop/index.html#downloading-material-for-day-2",
+    "href": "presentations/workshop/index.html#downloading-material-for-day-2",
+    "title": "R Workshop",
+    "section": "Downloading Material For Day 2",
+    "text": "Downloading Material For Day 2\nYou can download all the materials for Day 2 of this workshop here * You want the anova.qmd, nonparametric.qmd, intro_qarto.qmd, mlm.qmd, sem.qmd and factor_analysis.qmd"
   }
 ]
