@@ -263,7 +263,7 @@
     "href": "presentations.html",
     "title": "Presentations",
     "section": "",
-    "text": "An Introduction to R and RStudio\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nExploratory Data Analysis: The Basics\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nR Packages: The Basics\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nR Workshop\n\n\n\n\n\n\n\n\n\n\n\n\nMay 1, 2023\n\n\nBrier Gallihugh, M.S.\n\n\n\n\n\n\nNo matching items"
+    "text": "R Workshop\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nAn Introduction to R and RStudio\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nExploratory Data Analysis: The Basics\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nR Packages: The Basics\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "presentations/intro to r/Intro.html#what-is-r",
@@ -606,7 +606,7 @@
     "href": "presentations/workshop/index.html#variable-types",
     "title": "R Workshop",
     "section": "Variable Types",
-    "text": "Variable Types\n\nNumerical\n\nA positive or negative number between (- \\(\\infty\\), \\(\\infty\\))\n\nInteger\n\nA positive or negative whole number between (- \\(\\infty\\), \\(\\infty\\))\n\nFactor\n\nA grouping category\n\nCharacter\n\nA text string\n\nLogical\n\nA TRUE or FALSE value (e.g., Is X &gt; 1?)"
+    "text": "Variable Types\n\nNumerical\n\nA positive or negative number between (- \\(\\infty\\), \\(\\infty\\))\n\nInteger\n\nA positive or negative whole number between (- \\(\\infty\\), \\(\\infty\\))\n\nFactor\n\nA grouping category\n\nCharacter\n\nA text string\n\nLogical\n\nA TRUE or FALSE value (e.g., Is X &gt; 1?)\n\nDate\n\nExactly what you think it is"
   },
   {
     "objectID": "presentations/workshop/index.html#uses-for-the-dplyr-package",
@@ -620,7 +620,7 @@
     "href": "presentations/workshop/index.html#liveish-coding",
     "title": "R Workshop",
     "section": "“Live”ish Coding",
-    "text": "“Live”ish Coding\n\nOpen the data_clean.R file provided. We’re going to walk through some example code and then live code a little bit"
+    "text": "“Live”ish Coding\n\nGo back to the data_clean.R file provided. We’re going to walk through some example code and then live code a little bit"
   },
   {
     "objectID": "presentations/workshop/index.html#uses-for-the-stringr-package",
@@ -739,7 +739,7 @@
     "href": "presentations/workshop/index.html#efa-assumptions-fields-et-al-2012",
     "title": "R Workshop",
     "section": "EFA Assumptions (Fields et al, 2012)",
-    "text": "EFA Assumptions (Fields et al, 2012)\n\nSufficient Sample Size\nNormality of Items\nCorrelation Between Items*\nAppropriate Determinant (Det \\(&gt;\\) 1 x 10-5)\n\n\n\n\n\n\n\nImportant\n\n\nWe want variables to correlate however we do not want them to correlate either  too low (r \\(&lt;\\) .30) or too high (r \\(&gt;\\) .80) across multiple items*"
+    "text": "EFA Assumptions (Fields et al, 2012)\n\nSufficient Sample Size\nNormality of Items\nCorrelation Between Items1\nAppropriate Determinant (Det \\(&gt;\\) 1 x 10-5)\n\n\n\n\n\n\n\nImportant\n\n\n\nWe want variables to correlate however we do not want them to correlate either  too low (r \\(&lt;\\) .30) or too high (r \\(&gt;\\) .80) across multiple items"
   },
   {
     "objectID": "presentations/workshop/index.html#cfa-assumptions-fields-et-al-2012",
@@ -760,7 +760,7 @@
     "href": "presentations/workshop/index.html#assumptions-to-test",
     "title": "R Workshop",
     "section": "Assumptions To Test",
-    "text": "Assumptions To Test\n\nAssumption 1\nAssumption 2\nAssumption 3\nAssumption 4"
+    "text": "Assumptions To Test\n\nOutliers and Influential Cases\nNormality of Residuals\nIndependent Observations1\nHomogeneity of Variance\n\n\n\n\n\n\n\nA Note On Independence\n\n\n\nThis assumption is not necessarily a concern given that MLM assumes observations are nested (Fields et al, 2012)"
   },
   {
     "objectID": "presentations/workshop/index.html#live-coding-3",
@@ -796,5 +796,110 @@
     "title": "R Workshop",
     "section": "",
     "text": "Firstly, thank you for your time this weekend and I hope you’ve learned something\nSecond, this is A LOT. I crammed stuffed about 2 years of statistical analyses time and practice into like 2 days. It’s okay and normal if you’re swimming. I’m here if anyone has any questions after or even if they’re using R and trying to do an actual analysis in R. People ask me for help all the time. I’m happy to help\nFinally, one last “minor” detail. Some of you already know this but lets just check out the following link"
+  },
+  {
+    "objectID": "presentations/workshop/index.html",
+    "href": "presentations/workshop/index.html",
+    "title": "R Workshop",
+    "section": "",
+    "text": "If you’re someone who likes to use\n\n\n\n\n\n\n\n\n\n to run data analysis, you’re using already “using”"
+  },
+  {
+    "objectID": "presentations/workshop/index.html#live-ish-coding",
+    "href": "presentations/workshop/index.html#live-ish-coding",
+    "title": "R Workshop",
+    "section": "Live-ish Coding",
+    "text": "Live-ish Coding\n\nOpen the data_clean.R file provided. We’re going to walk through some example code and then live code a little bit"
+  },
+  {
+    "objectID": "presentations/workshop/index.html#live-ish-coding-1",
+    "href": "presentations/workshop/index.html#live-ish-coding-1",
+    "title": "R Workshop",
+    "section": "Live-ish Coding",
+    "text": "Live-ish Coding\n\nGo back to the data_clean.R file provided. We’re going to walk through some example code and then live code a little bit"
+  },
+  {
+    "objectID": "presentations/workshop/index.html#live-ish-coding-2",
+    "href": "presentations/workshop/index.html#live-ish-coding-2",
+    "title": "R Workshop",
+    "section": "Live-ish Coding",
+    "text": "Live-ish Coding\n\nGo back to the data_clean.R file provided. We’re going to walk through some example code and then live code a little bit"
+  },
+  {
+    "objectID": "presentations/workshop/index.html#live-ish-coding-3",
+    "href": "presentations/workshop/index.html#live-ish-coding-3",
+    "title": "R Workshop",
+    "section": "Live-ish Coding",
+    "text": "Live-ish Coding\n\nPlease see correlation.R file provided"
+  },
+  {
+    "objectID": "presentations/workshop/index.html#live-ish-coding-4",
+    "href": "presentations/workshop/index.html#live-ish-coding-4",
+    "title": "R Workshop",
+    "section": "Live-ish Coding",
+    "text": "Live-ish Coding\n\nPlease see the correlation.R file provided"
+  },
+  {
+    "objectID": "presentations/workshop/index.html#live-ish-coding-5",
+    "href": "presentations/workshop/index.html#live-ish-coding-5",
+    "title": "R Workshop",
+    "section": "Live-ish Coding",
+    "text": "Live-ish Coding"
+  },
+  {
+    "objectID": "presentations/workshop/index.html#live-ish-coding-6",
+    "href": "presentations/workshop/index.html#live-ish-coding-6",
+    "title": "R Workshop",
+    "section": "Live-ish Coding",
+    "text": "Live-ish Coding\n\nPlease open the anova.R file provided"
+  },
+  {
+    "objectID": "presentations/workshop/index.html#live-ish-coding-7",
+    "href": "presentations/workshop/index.html#live-ish-coding-7",
+    "title": "R Workshop",
+    "section": "Live-ish Coding",
+    "text": "Live-ish Coding\n\nPlease open the non_parametric.R file"
+  },
+  {
+    "objectID": "presentations/workshop/index.html#cfa-assumptions",
+    "href": "presentations/workshop/index.html#cfa-assumptions",
+    "title": "R Workshop",
+    "section": "CFA Assumptions",
+    "text": "CFA Assumptions\n\nMultivariate Normality"
+  },
+  {
+    "objectID": "presentations/workshop/index.html#live-ish-coding-8",
+    "href": "presentations/workshop/index.html#live-ish-coding-8",
+    "title": "R Workshop",
+    "section": "Live-ish Coding",
+    "text": "Live-ish Coding\n\nPlease open the efa_cfa.R file"
+  },
+  {
+    "objectID": "presentations/workshop/index.html#assumptions-to-test-kaplan-2001-p.-15218",
+    "href": "presentations/workshop/index.html#assumptions-to-test-kaplan-2001-p.-15218",
+    "title": "R Workshop",
+    "section": "Assumptions To Test (Kaplan, 2001, p. 15218)",
+    "text": "Assumptions To Test (Kaplan, 2001, p. 15218)\n\nMultivariate Normality\nNo Systematic Missing Data\nSufficiently Large Sample Size\nCorrect Model Specification"
+  },
+  {
+    "objectID": "presentations/workshop/index.html#live-ish-coding-9",
+    "href": "presentations/workshop/index.html#live-ish-coding-9",
+    "title": "R Workshop",
+    "section": "Live-ish Coding",
+    "text": "Live-ish Coding\n\nPlease open the sem.R file"
+  },
+  {
+    "objectID": "presentations/workshop/index.html#live-ish-coding-10",
+    "href": "presentations/workshop/index.html#live-ish-coding-10",
+    "title": "R Workshop",
+    "section": "Live-ish Coding",
+    "text": "Live-ish Coding\n\nPlease open the mlm.R file"
+  },
+  {
+    "objectID": "presentations/workshop/index.html#lets-talk-about-quarto",
+    "href": "presentations/workshop/index.html#lets-talk-about-quarto",
+    "title": "R Workshop",
+    "section": "Let’s Talk About Quarto",
+    "text": "Let’s Talk About Quarto\n\nPlease open the quarto.qmd file"
   }
 ]

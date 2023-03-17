@@ -24,10 +24,10 @@
   {
     "listing": "/presentations.html",
     "items": [
+      "/presentations/workshop/index.html",
       "/presentations/intro to r/Intro.html",
       "/presentations/eda/index.html",
-      "/presentations/packages/index.html",
-      "/presentations/workshop/index.html"
+      "/presentations/packages/index.html"
     ]
   }
 ]

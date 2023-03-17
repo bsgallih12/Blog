@@ -1,7 +1,5 @@
 ---
 title: "R Workshop"
-author: "Brier Gallihugh, M.S."
-date: "May 2023"
 date-format: "MMMM YYYY"
 format:
   revealjs:
@@ -12,7 +10,7 @@ warning: FALSE
 image: titlepage.png
 ---
 
-## <span style="color:blue;">Fun Fact</span>
+## Fun Fact
 
 * If you're someone who likes to use
 
@@ -96,11 +94,11 @@ A new install of R will remove all installed packages. You must either re-instal
 :::
 :::
 
-## <span style="color:green;">Importing Data</span>
+## Importing Data
 
 :::{.panel-tabset}
 
-### <span style="color:red;">Commentary</span>
+### Commentary
 * R works best with csv files (smaller in size) but it will take .sav files (SPSS) and other file formats as well (e.g., .tsv)
 
 * Oh and obviously it can read <span style="color:green;">Microsoft Excel</span> files
@@ -147,6 +145,9 @@ data <- read_xls("file_name.xls")
 
 * Logical
   * A `TRUE` or `FALSE` value (e.g., Is X > 1?)
+  
+* Date
+  * Exactly what you think it is
 
 # {dplyr} R package
 
@@ -161,7 +162,7 @@ data <- read_xls("file_name.xls")
 For anyone who might work with database data, you can pull data from external databases with R and RStudio. We won't cover that in this workshop but you can do it
 :::
 
-## "Live"ish Coding
+## Live-ish Coding
 
 * Open the data_clean.R file provided. We're going to walk through some example code and then live code a little bit
 
@@ -173,7 +174,7 @@ For anyone who might work with database data, you can pull data from external da
   * Useful for free response questions
   * Essentially it's the `dplyr` package for string variable types
 
-## "Live"ish Coding
+## Live-ish Coding
 
 * Go back to the data_clean.R file provided. We're going to walk through some example code and then live code a little bit
 
@@ -189,7 +190,7 @@ For anyone who might work with database data, you can pull data from external da
 It won't auto convert your dates to weird incorrect formats like certain spreadsheet programs might.
 :::
 
-## "Live"ish Coding
+## Live-ish Coding
 
 * Go back to the data_clean.R file provided. We're going to walk through some example code and then live code a little bit
 
@@ -276,7 +277,7 @@ write.csv(df, file = "filename.csv")
 * On at least an interval scale
 * Normality of Residuals
 
-## "Live"ish Coding
+## Live-ish Coding
 
 * Please see correlation.R file provided
 
@@ -288,7 +289,7 @@ write.csv(df, file = "filename.csv")
 * Independent Observations
 * Homogeneity of Variance
 
-## "Live"ish Coding
+## Live-ish Coding
 
 * Please see the correlation.R file provided
 
@@ -305,7 +306,7 @@ write.csv(df, file = "filename.csv")
 While important, outliers and influential cases rarely influence results with a sufficient sample size. Also difficult to say what "is" and "isn't" an outlier. Outlier shouldn't always mean removal
 :::
 
-## "Live"ish Coding
+## Live-ish Coding
 
 # End of Day 1
 
@@ -317,7 +318,7 @@ While important, outliers and influential cases rarely influence results with a 
 * Homogeneity of Variance
 * Independent Observations
 
-## Live Coding
+## Live-ish Coding
 
 * Please open the anova.R file provided
 
@@ -332,7 +333,7 @@ While important, outliers and influential cases rarely influence results with a 
 * Friedman’s Test
   * Non-parametric equivalent of a repeated measures ANOVA
 
-## Live Coding
+## Live-ish Coding
 
 * Please open the non_parametric.R file
 
@@ -342,21 +343,18 @@ While important, outliers and influential cases rarely influence results with a 
 
 * Sufficient Sample Size
 * Normality of Items
-* Correlation Between Items*
+* Correlation Between Items~1~
 * Appropriate Determinant (Det $>$ 1 x 10^-5^)
 
 ::: {.callout-important}
-We want variables to correlate however we do not want them to correlate either <br> too low (**r** $<$ .30) or too high (**r** $>$ .80) across multiple items*
+1. We want variables to correlate however we do not want them to correlate either <br> too low (**r** $<$ .30) or too high (**r** $>$ .80) across multiple items
 :::
 
-## CFA Assumptions (Fields et al, 2012)
+## CFA Assumptions
 
-* Assumption 1
-* Assumption 2
-* Assumption 3
-* Assumption 4
+* Multivariate Normality
 
-## Live Coding
+## Live-ish Coding
 
 * Please open the efa_cfa.R file
 
@@ -365,27 +363,32 @@ We want variables to correlate however we do not want them to correlate either <
 
 # SEM
 
-## Assumptions To Test
+## Assumptions To Test (Kaplan, 2001, p. 15218)
 
-* Assumption 1
-* Assumption 2
-* Assumption 3
-* Assumption 4
+* Multivariate Normality
+* No Systematic Missing Data
+* Sufficiently Large Sample Size
+* Correct Model Specification
 
-## Live Coding
+## Live-ish Coding
 
 * Please open the sem.R file
 
-# Multi Level Modeling (MLM)
+# MLM (Fields et al, 2012)
 
 ## Assumptions To Test
 
-* Assumption 1
-* Assumption 2
-* Assumption 3
-* Assumption 4
+* Outliers and Influential Cases
+* Normality of Residuals
+* Independent Observations^1^
+* Homogeneity of Variance
 
-## Live Coding
+::: {.callout-important}
+### A Note On Independence
+1. This assumption is not necessarily a concern given that MLM assumes observations are nested (Fields et al, 2012)
+:::
+
+## Live-ish Coding
 
 * Please open the mlm.R file
 
@@ -395,6 +398,10 @@ We want variables to correlate however we do not want them to correlate either <
 
 * What if I told you that it was possible to generate 95% of what you need for a manuscript within RStudio AND you could integrate your analyses as well?
 * What if I also said you could export this to Microsoft Word?
+
+## Let's Talk About Quarto
+
+* Please open the quarto.qmd file
 
 # Final Thoughts
 
