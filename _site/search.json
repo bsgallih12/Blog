@@ -319,21 +319,21 @@
     "href": "presentations/intro to r/Intro.html#code",
     "title": "An Introduction to R and RStudio",
     "section": "Code",
-    "text": "Code\n\nlibrary(tidyverse)\nlibrary(ggtext)\nlibrary(psych)\n\n# Pull Out Only M & F Sex Participants\ndata <- starwars %>% \n  filter(sex == \"male\" |\n           sex == \"female\")\n\n#Run t-test (ANOVA)\nsummary(aov(mass ~ sex, data))\n\n\n\n\n\n\n\nNote\n\n\nYou have access to the starwars data set when you install the tidyverse package."
+    "text": "Code\n\nlibrary(tidyverse)\nlibrary(ggtext)\nlibrary(psych)\n\n# Pull Out Only M & F Sex Participants\ndata &lt;- starwars %&gt;% \n  filter(sex == \"male\" |\n           sex == \"female\")\n\n#Run t-test (ANOVA)\nsummary(aov(mass ~ sex, data))\n\n\n\n\n\n\n\nNote\n\n\nYou have access to the starwars data set when you install the tidyverse package."
   },
   {
     "objectID": "presentations/intro to r/Intro.html#output",
     "href": "presentations/intro to r/Intro.html#output",
     "title": "An Introduction to R and RStudio",
     "section": "Output",
-    "text": "Output\n\n\n            Df Sum Sq Mean Sq F value  Pr(>F)   \nsex          1   5174    5174   7.574 0.00818 **\nResiduals   51  34843     683                   \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n23 observations deleted due to missingness"
+    "text": "Output\n\n\n            Df Sum Sq Mean Sq F value  Pr(&gt;F)   \nsex          1   5174    5174   7.574 0.00818 **\nResiduals   51  34843     683                   \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n23 observations deleted due to missingness"
   },
   {
     "objectID": "presentations/intro to r/Intro.html#a-brief-tutorial-on-using-r-with-rstudio-graphics",
     "href": "presentations/intro to r/Intro.html#a-brief-tutorial-on-using-r-with-rstudio-graphics",
     "title": "An Introduction to R and RStudio",
     "section": "A Brief Tutorial on Using R with RStudio (Graphics)",
-    "text": "A Brief Tutorial on Using R with RStudio (Graphics)\nCode\n\nlibrary(tidyverse)\nlibrary(ggtext)\nlibrary(psych)\nlibrary(plotrix)\n\n# Data Formatting (Sex as Categorical & Conditional Recode)\ndata <- data %>% \n  mutate(sex = as.factor(sex)) %>% \n  mutate(sex = if_else(sex == \"male\",\"Male\",\"Female\"))\n\ngraph <- data %>% \n  group_by(sex) %>% \n  summarize(mean = mean(height, na.rm = TRUE),\n            se = std.error(height),\n            t = qt(.95/2 + .5, 76 - 1),\n            ci = se * t) %>% \n  ggplot(data = .,aes(x = sex, \n                      y = mean, \n                      fill = sex)) + \n  geom_col() + \n  scale_fill_manual(values = c(\"lightblue\",\"pink\")) + \n  labs(x = \"Sex\",\n       y = \"Mean Height\",\n       title = \"Figure 1. Mean Star Wars Height By Sex\") + \n  theme_classic() + guides(fill = \"none\")"
+    "text": "A Brief Tutorial on Using R with RStudio (Graphics)\nCode\n\nlibrary(tidyverse)\nlibrary(ggtext)\nlibrary(psych)\nlibrary(plotrix)\n\n# Data Formatting (Sex as Categorical & Conditional Recode)\ndata &lt;- data %&gt;% \n  mutate(sex = as.factor(sex)) %&gt;% \n  mutate(sex = if_else(sex == \"male\",\"Male\",\"Female\"))\n\ngraph &lt;- data %&gt;% \n  group_by(sex) %&gt;% \n  summarize(mean = mean(height, na.rm = TRUE),\n            se = std.error(height),\n            t = qt(.95/2 + .5, 76 - 1),\n            ci = se * t) %&gt;% \n  ggplot(data = .,aes(x = sex, \n                      y = mean, \n                      fill = sex)) + \n  geom_col() + \n  scale_fill_manual(values = c(\"lightblue\",\"pink\")) + \n  labs(x = \"Sex\",\n       y = \"Mean Height\",\n       title = \"Figure 1. Mean Star Wars Height By Sex\") + \n  theme_classic() + guides(fill = \"none\")"
   },
   {
     "objectID": "presentations/intro to r/Intro.html#output-1",
@@ -347,7 +347,7 @@
     "href": "presentations/intro to r/Intro.html#error-bars",
     "title": "An Introduction to R and RStudio",
     "section": "Error Bars?",
-    "text": "Error Bars?\n\ngraph <- graph + \n  geom_errorbar(aes(y = mean, \n                    ymax = mean + ci, \n                    ymin = mean - ci), width = .75)"
+    "text": "Error Bars?\n\ngraph &lt;- graph + \n  geom_errorbar(aes(y = mean, \n                    ymax = mean + ci, \n                    ymin = mean - ci), width = .75)"
   },
   {
     "objectID": "presentations/intro to r/Intro.html#output-2",
@@ -389,7 +389,7 @@
     "href": "presentations/eda/index.html#investigating-categorical-count-data",
     "title": "Exploratory Data Analysis: The Basics",
     "section": "Investigating Categorical Count Data",
-    "text": "Investigating Categorical Count Data\n\n# Code\ndata <- data %>% \n  mutate(sex = as.factor(sex))\n\ndata %>% count(species, sort = TRUE)\n\n# A tibble: 31 × 2\n   species      n\n   <chr>    <int>\n 1 Human       22\n 2 Droid        4\n 3 Gungan       2\n 4 Mirialan     2\n 5 Wookiee      2\n 6 Aleena       1\n 7 Besalisk     1\n 8 Cerean       1\n 9 Clawdite     1\n10 Dug          1\n# … with 21 more rows"
+    "text": "Investigating Categorical Count Data\n\n# Code\ndata &lt;- data %&gt;% \n  mutate(sex = as.factor(sex))\n\ndata %&gt;% count(species, sort = TRUE)\n\n# A tibble: 31 × 2\n   species      n\n   &lt;chr&gt;    &lt;int&gt;\n 1 Human       22\n 2 Droid        4\n 3 Gungan       2\n 4 Mirialan     2\n 5 Wookiee      2\n 6 Aleena       1\n 7 Besalisk     1\n 8 Cerean       1\n 9 Clawdite     1\n10 Dug          1\n# … with 21 more rows"
   },
   {
     "objectID": "presentations/eda/index.html#finding-missing-data",
@@ -417,7 +417,7 @@
     "href": "presentations/eda/index.html#running-correlations",
     "title": "Exploratory Data Analysis: The Basics",
     "section": "Running Correlations",
-    "text": "Running Correlations\n\ncorr <- data %>% select(mass,height,birth_year)\n\ncorr.test(corr)\n\nCall:corr.test(x = corr)\nCorrelation matrix \n            mass height birth_year\nmass        1.00   0.76      -0.32\nheight      0.76   1.00      -0.48\nbirth_year -0.32  -0.48       1.00\nSample Size \n           mass height birth_year\nmass         58     58         35\nheight       58     58         35\nbirth_year   35     35         35\nProbability values (Entries above the diagonal are adjusted for multiple tests.) \n           mass height birth_year\nmass       0.00      0       0.06\nheight     0.00      0       0.01\nbirth_year 0.06      0       0.00\n\n To see confidence intervals of the correlations, print with the short=FALSE option"
+    "text": "Running Correlations\n\ncorr &lt;- data %&gt;% select(mass,height,birth_year)\n\ncorr.test(corr)\n\nCall:corr.test(x = corr)\nCorrelation matrix \n            mass height birth_year\nmass        1.00   0.76      -0.32\nheight      0.76   1.00      -0.48\nbirth_year -0.32  -0.48       1.00\nSample Size \n           mass height birth_year\nmass         58     58         35\nheight       58     58         35\nbirth_year   35     35         35\nProbability values (Entries above the diagonal are adjusted for multiple tests.) \n           mass height birth_year\nmass       0.00      0       0.06\nheight     0.00      0       0.01\nbirth_year 0.06      0       0.00\n\n To see confidence intervals of the correlations, print with the short=FALSE option"
   },
   {
     "objectID": "presentations/packages/index.html#what-are-packages",
@@ -445,14 +445,14 @@
     "href": "presentations/packages/index.html#example-creating-variables",
     "title": "R Packages: The Basics",
     "section": "Example (Creating Variables)",
-    "text": "Example (Creating Variables)\n\nlibrary(tidyverse)\n\nstarwars %>% \n  select(name,height,mass,eye_color) %>%  \n  mutate(mass_dbl = mass * 2) %>% \n  head(5)\n\n# A tibble: 5 × 5\n  name           height  mass eye_color mass_dbl\n  <chr>           <int> <dbl> <chr>        <dbl>\n1 Luke Skywalker    172    77 blue           154\n2 C-3PO             167    75 yellow         150\n3 R2-D2              96    32 red             64\n4 Darth Vader       202   136 yellow         272\n5 Leia Organa       150    49 brown           98"
+    "text": "Example (Creating Variables)\n\nlibrary(tidyverse)\n\nstarwars %&gt;% \n  select(name,height,mass,eye_color) %&gt;%  \n  mutate(mass_dbl = mass * 2) %&gt;% \n  head(5)\n\n# A tibble: 5 × 5\n  name           height  mass eye_color mass_dbl\n  &lt;chr&gt;           &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt;\n1 Luke Skywalker    172    77 blue           154\n2 C-3PO             167    75 yellow         150\n3 R2-D2              96    32 red             64\n4 Darth Vader       202   136 yellow         272\n5 Leia Organa       150    49 brown           98"
   },
   {
     "objectID": "presentations/packages/index.html#example-group-summary-statistics",
     "href": "presentations/packages/index.html#example-group-summary-statistics",
     "title": "R Packages: The Basics",
     "section": "Example (Group Summary Statistics)",
-    "text": "Example (Group Summary Statistics)\n\nstarwars %>% \n  na.omit(mass) %>% \n  select(name,height,mass,eye_color) %>% \n  mutate(eye_color = as.factor(eye_color)) %>% \n  group_by(eye_color) %>% \n  summarize(mass_mean = mean(mass, na.rm = TRUE),\n            mass_sd = sd(mass,na.rm = TRUE),\n            mass_min = min(mass),\n            mass_max = max(mass)) %>% \n  head(5)\n\n# A tibble: 5 × 5\n  eye_color mass_mean mass_sd mass_min mass_max\n  <fct>         <dbl>   <dbl>    <dbl>    <dbl>\n1 black          80      NA         80       80\n2 blue           81.6    24.3       50      120\n3 blue-gray      77      NA         77       77\n4 brown          67.8    22.0       20       84\n5 hazel          66      15.6       55       77"
+    "text": "Example (Group Summary Statistics)\n\nstarwars %&gt;% \n  na.omit(mass) %&gt;% \n  select(name,height,mass,eye_color) %&gt;% \n  mutate(eye_color = as.factor(eye_color)) %&gt;% \n  group_by(eye_color) %&gt;% \n  summarize(mass_mean = mean(mass, na.rm = TRUE),\n            mass_sd = sd(mass,na.rm = TRUE),\n            mass_min = min(mass),\n            mass_max = max(mass)) %&gt;% \n  head(5)\n\n# A tibble: 5 × 5\n  eye_color mass_mean mass_sd mass_min mass_max\n  &lt;fct&gt;         &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1 black          80      NA         80       80\n2 blue           81.6    24.3       50      120\n3 blue-gray      77      NA         77       77\n4 brown          67.8    22.0       20       84\n5 hazel          66      15.6       55       77"
   },
   {
     "objectID": "presentations/packages/index.html#ggplot2",
@@ -466,7 +466,7 @@
     "href": "presentations/packages/index.html#bar-plot-example",
     "title": "R Packages: The Basics",
     "section": "Bar Plot Example",
-    "text": "Bar Plot Example\n\nlibrary(tidyverse)\nlibrary(ggtext)\n\nbar_graph <- starwars %>% \n  select(eye_color,mass) %>% \n  filter(eye_color != \"orange\") %>% \n  na.omit(mass) %>% \n  group_by(eye_color) %>% \n  summarize(mean = mean(mass, na.rm = TRUE),\n            sd = sd(mass, na.rm = TRUE),\n            min = min(mass, na.rm = TRUE),\n            max = max(mass, na.rm = TRUE),\n            upper = mean  + sd,\n            lower = mean - sd,\n            n = n()) %>% mutate(eye_color = as.factor(eye_color)) %>% \n  ggplot(aes(x = reorder(eye_color,-mean), y = mean, ymax = upper, ymin = lower)) +\n  geom_col(show.legend = FALSE, fill = \"#2C73A8\") +\n  geom_errorbar(width = .60)"
+    "text": "Bar Plot Example\n\nlibrary(tidyverse)\nlibrary(ggtext)\n\nbar_graph &lt;- starwars %&gt;% \n  select(eye_color,mass) %&gt;% \n  filter(eye_color != \"orange\") %&gt;% \n  na.omit(mass) %&gt;% \n  group_by(eye_color) %&gt;% \n  summarize(mean = mean(mass, na.rm = TRUE),\n            sd = sd(mass, na.rm = TRUE),\n            min = min(mass, na.rm = TRUE),\n            max = max(mass, na.rm = TRUE),\n            upper = mean  + sd,\n            lower = mean - sd,\n            n = n()) %&gt;% mutate(eye_color = as.factor(eye_color)) %&gt;% \n  ggplot(aes(x = reorder(eye_color,-mean), y = mean, ymax = upper, ymin = lower)) +\n  geom_col(show.legend = FALSE, fill = \"#2C73A8\") +\n  geom_errorbar(width = .60)"
   },
   {
     "objectID": "presentations/packages/index.html#output",
@@ -480,7 +480,7 @@
     "href": "presentations/packages/index.html#modify-bar-graph",
     "title": "R Packages: The Basics",
     "section": "Modify Bar Graph",
-    "text": "Modify Bar Graph\n\nbar_graph <- bar_graph +\n  labs(title = \"**Figure 1**. Average Mass By Eye Color\",\n       x = \"Eye Color\",\n       y = \"Mean Mass\",\n       caption = \"**Note**: Error bars are calculated using *SD*\") + \n  theme_classic() + \n  theme(plot.caption = element_markdown(hjust = 0),\n        plot.title = element_markdown())"
+    "text": "Modify Bar Graph\n\nbar_graph &lt;- bar_graph +\n  labs(title = \"**Figure 1**. Average Mass By Eye Color\",\n       x = \"Eye Color\",\n       y = \"Mean Mass\",\n       caption = \"**Note**: Error bars are calculated using *SD*\") + \n  theme_classic() + \n  theme(plot.caption = element_markdown(hjust = 0),\n        plot.title = element_markdown())"
   },
   {
     "objectID": "presentations/packages/index.html#modify-bar-graph-output",
@@ -494,7 +494,7 @@
     "href": "presentations/packages/index.html#point-graph-example",
     "title": "R Packages: The Basics",
     "section": "Point Graph Example",
-    "text": "Point Graph Example\n\nlibrary(tidyverse)\nlibrary(ggtext)\n\npoint_graph <- starwars %>% \n  select(eye_color,mass) %>% \n  filter(eye_color != \"orange\") %>% \n  na.omit(mass) %>% \n  group_by(eye_color) %>% \n  summarize(mean = mean(mass, na.rm = TRUE),\n            sd = sd(mass, na.rm = TRUE),\n            min = min(mass, na.rm = TRUE),\n            max = max(mass, na.rm = TRUE),\n            upper = mean  + sd,\n            lower = mean - sd,\n            n = n()) %>% mutate(eye_color = as.factor(eye_color)) %>% \n  ggplot(aes(x = reorder(eye_color,-mean), y = mean, ymax = upper, ymin = lower)) +\n  geom_errorbar(width = .60) +\n  geom_point(show.legend = FALSE, color = \"#2C73A8\")"
+    "text": "Point Graph Example\n\nlibrary(tidyverse)\nlibrary(ggtext)\n\npoint_graph &lt;- starwars %&gt;% \n  select(eye_color,mass) %&gt;% \n  filter(eye_color != \"orange\") %&gt;% \n  na.omit(mass) %&gt;% \n  group_by(eye_color) %&gt;% \n  summarize(mean = mean(mass, na.rm = TRUE),\n            sd = sd(mass, na.rm = TRUE),\n            min = min(mass, na.rm = TRUE),\n            max = max(mass, na.rm = TRUE),\n            upper = mean  + sd,\n            lower = mean - sd,\n            n = n()) %&gt;% mutate(eye_color = as.factor(eye_color)) %&gt;% \n  ggplot(aes(x = reorder(eye_color,-mean), y = mean, ymax = upper, ymin = lower)) +\n  geom_errorbar(width = .60) +\n  geom_point(show.legend = FALSE, color = \"#2C73A8\")"
   },
   {
     "objectID": "presentations/packages/index.html#line-plot-example",
@@ -508,7 +508,7 @@
     "href": "presentations/packages/index.html#modified-line-graph-code",
     "title": "R Packages: The Basics",
     "section": "Modified Line Graph Code",
-    "text": "Modified Line Graph Code\n\npoint_graph <- point_graph +\n  labs(title = \"**Figure 1**. Average Mass By Eye Color\",\n       x = \"Eye Color\",\n       y = \"Mean Mass\",\n       caption = \"**Note**: Error bars are calculated using *SD*\") + \n  theme_classic() + \n  theme(plot.caption = element_markdown(hjust = 0),\n        plot.title = element_markdown())"
+    "text": "Modified Line Graph Code\n\npoint_graph &lt;- point_graph +\n  labs(title = \"**Figure 1**. Average Mass By Eye Color\",\n       x = \"Eye Color\",\n       y = \"Mean Mass\",\n       caption = \"**Note**: Error bars are calculated using *SD*\") + \n  theme_classic() + \n  theme(plot.caption = element_markdown(hjust = 0),\n        plot.title = element_markdown())"
   },
   {
     "objectID": "presentations/packages/index.html#point-modified-output",
@@ -522,7 +522,7 @@
     "href": "presentations/packages/index.html#violin-plot-example",
     "title": "R Packages: The Basics",
     "section": "Violin Plot Example",
-    "text": "Violin Plot Example\n\nlibrary(tidyverse)\nlibrary(ggtext)\n\nviolin_graph <- starwars %>% \n  select(eye_color,mass) %>% \n  filter(eye_color != \"orange\") %>% \n  mutate(eye_color = as.factor(eye_color)) %>% \n  na.omit(mass) %>% \n  ggplot(aes(x = eye_color, y = mass, fill = eye_color)) +\n  geom_violin(show.legend = FALSE)"
+    "text": "Violin Plot Example\n\nlibrary(tidyverse)\nlibrary(ggtext)\n\nviolin_graph &lt;- starwars %&gt;% \n  select(eye_color,mass) %&gt;% \n  filter(eye_color != \"orange\") %&gt;% \n  mutate(eye_color = as.factor(eye_color)) %&gt;% \n  na.omit(mass) %&gt;% \n  ggplot(aes(x = eye_color, y = mass, fill = eye_color)) +\n  geom_violin(show.legend = FALSE)"
   },
   {
     "objectID": "presentations/packages/index.html#violin-plot-output",
@@ -536,7 +536,7 @@
     "href": "presentations/packages/index.html#violin-plot-modifed-code",
     "title": "R Packages: The Basics",
     "section": "Violin Plot Modifed Code",
-    "text": "Violin Plot Modifed Code\n\nviolin_graph <- violin_graph +\n  labs(title = \"**Figure 1**. Mass Distribution Density By Eye Color\",\n       x = \"Eye Color\",\n       y = \"Mean Mass\",\n       caption = \"**Note**: Error bars are calculated using *SD*\") + \n  theme_classic() + \n  theme(plot.caption = element_markdown(hjust = 0),\n        plot.title = element_markdown())"
+    "text": "Violin Plot Modifed Code\n\nviolin_graph &lt;- violin_graph +\n  labs(title = \"**Figure 1**. Mass Distribution Density By Eye Color\",\n       x = \"Eye Color\",\n       y = \"Mean Mass\",\n       caption = \"**Note**: Error bars are calculated using *SD*\") + \n  theme_classic() + \n  theme(plot.caption = element_markdown(hjust = 0),\n        plot.title = element_markdown())"
   },
   {
     "objectID": "presentations/packages/index.html#violin-plot-modified-output",
