@@ -23,7 +23,9 @@ website:
       - text: "Data Portfolio"
         file: projects.qmd
       - text: "Presentations"
-        file: presentations.qmd
+        menu:
+        - "presentation/MPA2021/MPA2021_Poster.pdf""
+          text: "MPA 2021"
       - icon: github
         href: https://github.com/bsgallih12
       - icon: twitter
