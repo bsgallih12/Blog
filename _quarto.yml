@@ -24,8 +24,18 @@ website:
         file: projects.qmd
       - text: "Presentations"
         menu:
-        - "presentation/MPA2021/MPA2021_Poster.pdf""
-          text: "MPA 2021"
+        - text: "MPA 2021"
+          href: MPA2021_Poster.pdf
+        - text: "MPA 2023"
+          href: Gallihugh_MPA_2023.pptx
+        - text: "OU Department Brown Bag Talk"
+          href: Brown_Bag_BLM_March_25.pptx
+        - text: "SPSP 2021"
+          href: SPSP2021_Poster.pptx
+        - text: "SPSP 2022"
+          href: SPSS_Poster.pdf
+        - text: "SPSP 2023"
+          href: MarleyConfPresentation.html
       - icon: github
         href: https://github.com/bsgallih12
       - icon: twitter
