@@ -5,5 +5,3 @@ format: html
 # resources: 
 image: titlepage.png
 ---
-
-**Insert Link**

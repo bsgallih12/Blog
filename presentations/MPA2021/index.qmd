@@ -5,5 +5,3 @@ format: html
 # resources: "MPA2021_Poster.pdf"
 image: titlepage.png
 ---
-
-**Insert Link**
