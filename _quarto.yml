@@ -9,7 +9,7 @@ website:
     left:
       "Made with [Posit Quarto](https://quarto.org/)"
     right: ""
-    background: "#054231"
+    background: "#1B4132"
   navbar:
     right:
       - text: "Blog"
@@ -35,9 +35,7 @@ website:
         href: mailto:bg464219@ohio.edu
 format:
   html:
-    theme: 
-      light: [custom.scss]
-      dark: [custom.scss,light_custom.scss]
+    theme: custom_dark.scss
     code-link: true
     code-fold: false
     
