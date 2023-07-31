@@ -36,6 +36,44 @@ website:
           href: SPSS_Poster.pdf
         - text: "SPSP 2023"
           href: MarleyConfPresentation.html
+      - text: "R Workshop Videos"
+        menu: 
+          - text: "R Basics"
+            href: https://drive.google.com/file/d/1hQyyQzsf5CjukioO9yyBNdoxxqZUCeYk/view
+          - text: "Data Manipulation"
+            href: https://drive.google.com/file/d/1BcDYFAqAFSMDj1s3Lr_R9Vs1XVZOUBq7/view
+          - text: "Data Visualization"
+            href: https://drive.google.com/file/d/1sn-BKqy1r5HyLuiy_mElJ88_cXrCyFF8/view
+          - text: "Correlations"
+            href: https://drive.google.com/file/d/1MSCdiG0SH64lL0PyClKqrL-xgnxN0fuK/view
+          - text: "T-Test"
+            href: https://drive.google.com/file/d/1tsQogteEQUyBB0ZM9hQTcaUHtPMv8aq7/view
+          - text: "Regression"
+            href: https://drive.google.com/file/d/1rfHlAMCd4A4iKp_YF7zoMXPWQxpk-7yb/view
+          - text: "Logistic Regression"
+            href: https://drive.google.com/file/d/1rfHlAMCd4A4iKp_YF7zoMXPWQxpk-7yb/view
+          - text: "ANOVA"
+            href: https://drive.google.com/file/d/15UrC_I0RGyXDbD5GQs95d3G8Baa-QkTm/view
+          - text: "Factorial ANOVA"
+            href: https://drive.google.com/file/d/1PyIwomVXoN0kFBVgssJE_j7mRGwzixAn/view
+          - text: "Non-Parametric Ind Sample T-Test"
+            href: https://drive.google.com/file/d/1hVjzEMcsq6EH9Kb2tV-pKsRdA7ZFAK5b/view
+          - text: "Non-Parametric Dep Sample T-Test"
+            href: https://drive.google.com/file/d/1hpMw7rfr4hUp9UOWoXMGWy-84ZNu8We4/view
+          - text: "Non-Parametric ANOVA"
+            href: https://drive.google.com/file/d/15bcwCsOTSRuel3ga4S-xdHPcq5gO6ERC/view
+          - text: "Non-Parametric Repeated Measures ANOVA"
+            href: https://drive.google.com/file/d/15bcwCsOTSRuel3ga4S-xdHPcq5gO6ERC/view
+          - text: "Mediation"
+            href: https://drive.google.com/file/d/198SW2REq7CQAHhUYJl6cK0aqZyWpwLwV/view
+          - text: "Moderation"
+            href: https://drive.google.com/file/d/1VgVlRn5GNZxSVHE9GXaT470pjHh9pj6Q/view
+          - text: "Factor Analysis"
+            href: https://drive.google.com/file/d/19RKlYxJ6Hc-v34OO-OcDiRZqUz61bAJy/view
+          - text: "Confirmatory Factor Analysis"
+            href: https://drive.google.com/file/d/1Ljm_We3Q03YTZ4odwEXgSFj0mcDRoc-3/view
+          - text: "Structural Equation Modeling"
+            href: https://drive.google.com/file/d/1EZriRMHGJbFxID39eCjm81IboMGT8mwW/view
       - icon: github
         href: https://github.com/bsgallih12
       - icon: twitter
