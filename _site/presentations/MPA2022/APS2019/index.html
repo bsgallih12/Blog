@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.222">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>The Data Enthusiast Blog - R Workshop</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">The Data Enthusiast Blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../blog.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Gallihugh_Resume.pdf" rel="" target="">
+ <span class="menu-text">Resume</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../CV.pdf" rel="" target="">
+ <span class="menu-text">Academic CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../tidytuesday.html" rel="" target="">
+ <span class="menu-text">Data Visualization Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../projects.html" rel="" target="">
+ <span class="menu-text">Data Portfolio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../presentations.html" rel="" target="">
+ <span class="menu-text">Presentations</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bsgallih12" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/Brier_Gallihugh" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://linkedin.com/in/brier-gallihugh" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto:bg464219@ohio.edu" rel="" target=""><i class="bi bi-envelope" role="img">
+</i> 
+ <span class="menu-text">Email</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">R Workshop</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="fun-fact" class="level2">
+<h2 class="anchored" data-anchor-id="fun-fact">Fun Fact</h2>
+<ul>
+<li>If you’re someone who likes to use</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="jasplogo.png" class="img-fluid figure-img" style="width:30.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><br> <br> to run data analysis, you’re using already “using” <br> <br> <span style="color:#3362B0;"><svg preserveaspectratio="none" aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1.25em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg></span></p>
+</section>
+<section id="downloading-r" class="level2">
+<h2 class="anchored" data-anchor-id="downloading-r">Downloading R</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img src="rlogo.png" class="img-fluid"></p>
+</div><div class="column" style="width:50%;">
+<p>You’ll want to download R first before downloading any additional software</p>
+<p>You can download the newest version of R (4.2) <a href="https://cran.rstudio.com">here</a></p>
+</div>
+</div>
+</section>
+<section id="downloading-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="downloading-rstudio">Downloading RStudio</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img src="rstudiologo.png" class="img-fluid"></p>
+</div><div class="column" style="width:50%;">
+<p>RStudio is the last software program you’ll need to get started</p>
+<p>You can download the newest version of RStudio (Dec 2022) <a href="https://posit.co/download/rstudio-desktop/">here</a></p>
+</div>
+</div>
+</section>
+<section id="r-quirks" class="level2">
+<h2 class="anchored" data-anchor-id="r-quirks">R “Quirks”</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>R is <span style="color:red;">case sensitive</span> so what your spelling and the case you use
+<ul>
+<li>Case =/= case</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>R <span style="color:red;">hates</span> spaces for variable. It will not run with a space
+<ul>
+<li>variable_1 is a <span style="color:green;">GOOD</span> variable name</li>
+<li>variable 1 is a <span style="color:red;">BAD</span> variable name</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="downloading-materials-for-day-1" class="level2">
+<h2 class="anchored" data-anchor-id="downloading-materials-for-day-1">Downloading Materials For Day 1</h2>
+<p>You can download all the materials for Day 1 of this workshop <a href="https://github.com/bsgallih12/R_Workshop/tree/main/Day%201">here</a> * You want the correlation.qmd, data_clean.qmd, ttest.qmd, and regression.qmd files</p>
+</section>
+<section id="installing-and-loading-packages" class="level2">
+<h2 class="anchored" data-anchor-id="installing-and-loading-packages">Installing and Loading Packages</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">R Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Commentary</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To Install a Package</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># To Load a Package</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<ul>
+<li><p>You only have to install a package once (one exception)</p></li>
+<li><p>You must load a library every time you open an R file (.R, .qmd, .rmd, etc) or restart R/RStudio</p></li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A new install of R will remove all installed packages. You must either re-install the packages or save them prior to a new R installation. I’ll cover how to save them at a later date</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="importing-data" class="level2">
+<h2 class="anchored" data-anchor-id="importing-data">Importing Data</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Commentary</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">R Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<ul>
+<li><p>R works best with csv files (smaller in size) but it will take .sav files (SPSS) and other file formats as well (e.g., .tsv)</p></li>
+<li><p>Oh and obviously it can read <span style="color:green;">Microsoft Excel</span> files</p></li>
+</ul>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># For CSV</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"file_name.csv"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># For TSV</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_tsv</span>(<span class="st">"file_name.tsv"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># For SAV</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_sav</span>(<span class="st">"file_name.sav"</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># For EXCEL</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(<span class="st">"file_name.xlsx"</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_xls</span>(<span class="st">"file_name.xls"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="variable-types" class="level2">
+<h2 class="anchored" data-anchor-id="variable-types">Variable Types</h2>
+<ul>
+<li>Numerical
+<ul>
+<li>A positive or negative number between (- <span class="math inline">\(\infty\)</span>, <span class="math inline">\(\infty\)</span>)</li>
+</ul></li>
+<li>Integer
+<ul>
+<li>A positive or negative whole number between (- <span class="math inline">\(\infty\)</span>, <span class="math inline">\(\infty\)</span>)</li>
+</ul></li>
+<li>Factor
+<ul>
+<li>A grouping category</li>
+</ul></li>
+<li>Character
+<ul>
+<li>A text string</li>
+</ul></li>
+<li>Logical
+<ul>
+<li>A <code>TRUE</code> or <code>FALSE</code> value (e.g., Is X &gt; 1?)</li>
+</ul></li>
+<li>Date
+<ul>
+<li>Exactly what you think it is</li>
+</ul></li>
+</ul>
+</section>
+<section id="dplyr-r-package" class="level1">
+<h1>{dplyr} R package</h1>
+<section id="uses-for-the-dplyr-package" class="level2">
+<h2 class="anchored" data-anchor-id="uses-for-the-dplyr-package">Uses for the <code>dplyr</code> package</h2>
+<ul>
+<li>Primary use is to transform and manipulate data in a data set
+<ul>
+<li>Calculate means, log transform, compute basic summary statistics</li>
+</ul></li>
+<li>Anyone here who has maybe used database data will see it mimics SQL programming</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For anyone who might work with database data, you can pull data from external databases with R and RStudio. We won’t cover that in this workshop but you can do it</p>
+</div>
+</div>
+</section>
+<section id="live-ish-coding" class="level2">
+<h2 class="anchored" data-anchor-id="live-ish-coding">Live-ish Coding</h2>
+<ul>
+<li>Open the data_clean.qmd file provided. We’re going to walk through some example code and then live code a little bit</li>
+</ul>
+</section>
+</section>
+<section id="stringr-r-package" class="level1">
+<h1>{stringr} R package</h1>
+<section id="uses-for-the-stringr-package" class="level2">
+<h2 class="anchored" data-anchor-id="uses-for-the-stringr-package">Uses for the <code>stringr</code> package</h2>
+<ul>
+<li>Primarily used for dealing with character or string data
+<ul>
+<li>Useful for free response questions</li>
+<li>Essentially it’s the <code>dplyr</code> package for string variable types</li>
+</ul></li>
+</ul>
+</section>
+<section id="live-ish-coding-1" class="level2">
+<h2 class="anchored" data-anchor-id="live-ish-coding-1">Live-ish Coding</h2>
+<ul>
+<li>Go back to the data_clean.qmd file provided. We’re going to walk through some example code and then live code a little bit</li>
+</ul>
+</section>
+</section>
+<section id="lubridate-r-package" class="level1">
+<h1>{lubridate} R package</h1>
+<section id="uses-for-the-lubridate-package" class="level2">
+<h2 class="anchored" data-anchor-id="uses-for-the-lubridate-package">Uses for the <code>lubridate</code> package</h2>
+<ul>
+<li>Primarily used for dealing with dates</li>
+<li>Provides handy function for converting date formats into other date formats
+<ul>
+<li>E.g., (MM-DD-YY to DD-MM-YY or Month Date, Year)</li>
+</ul></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It won’t auto convert your dates to weird incorrect formats like certain spreadsheet programs might.</p>
+</div>
+</div>
+</section>
+<section id="live-ish-coding-2" class="level2">
+<h2 class="anchored" data-anchor-id="live-ish-coding-2">Live-ish Coding</h2>
+<ul>
+<li>Go back to the data_clean.qmd file provided. We’re going to walk through some example code and then live code a little bit</li>
+</ul>
+</section>
+</section>
+<section id="ggplot2-r-package" class="level1">
+<h1>{ggplot2} R package</h1>
+<section id="uses-for-the-ggplot2-package" class="level2">
+<h2 class="anchored" data-anchor-id="uses-for-the-ggplot2-package">Uses for the <code>ggplot2</code> package</h2>
+<ul>
+<li>This may be the most popular package download in R and it’s probably not close</li>
+<li>This is THE visualization package in R. If you can THINK of a graphic, this package can create it
+<ul>
+<li>E.g. box plots, box and whisker plots, violin plots, bar graphs, etc</li>
+</ul></li>
+<li>If you’re REALLY good, you can do this (credit <span class="citation" data-cites="ralitza_s">@ralitza_s</span>)</li>
+</ul>
+</section>
+<section id="section" class="level2" data-background-image="fancyggplot.png">
+<h2 data-background-image="fancyggplot.png" class="anchored" data-anchor-id="section"></h2>
+</section>
+<section id="liveish-coding" class="level2">
+<h2 class="anchored" data-anchor-id="liveish-coding">“Live”ish Coding</h2>
+<ul>
+<li>Go back to the data_clean.qmd file provided. We’re going to walk through some example code and then live code a little bit</li>
+</ul>
+</section>
+</section>
+<section id="exporting-data" class="level1">
+<h1>Exporting Data</h1>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"></h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Commentary</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Excel</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">SPSS or SAS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false">CSV</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<ul>
+<li><p>Sometimes you want or need to export data you’ve cleaned to another program. Maybe you want to use a program like JASP</p></li>
+<li><p>Or you’re not comfortable using R for analyses yet so you want to use SPSS</p></li>
+<li><p>Or maybe others on your team use a different program</p></li>
+<li><p>R can export to Excel, SPSS, SAS, and CSV files</p></li>
+</ul>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write.xlsx</span>(df,<span class="at">file =</span> <span class="st">"filename.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># For SPSS</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_sav</span>(df, <span class="at">path =</span> <span class="st">"filename.sav"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># For SAS</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">write_sas</span>(df, <span class="at">path =</span> <span class="st">"filename.sas"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
+<div class="cell" data-execute="false">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(df, <span class="at">file =</span> <span class="st">"filename.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="lunch-break" class="level1">
+<h1>Lunch Break</h1>
+<ul>
+<li>Back at 2pm</li>
+</ul>
+</section>
+<section id="putting-it-all-together-from-start-to-finish" class="level1">
+<h1>Putting It All Together From Start To Finish</h1>
+</section>
+<section id="statistical-analyses-in-r" class="level1">
+<h1>Statistical Analyses in R</h1>
+</section>
+<section id="correlation" class="level1">
+<h1>Correlation</h1>
+<section id="assumptions-fields-et-al-2012" class="level2">
+<h2 class="anchored" data-anchor-id="assumptions-fields-et-al-2012">Assumptions (Fields et al, 2012)</h2>
+<ul>
+<li>On at least an interval scale</li>
+<li>Normality of Residuals</li>
+</ul>
+</section>
+<section id="live-ish-coding-3" class="level2">
+<h2 class="anchored" data-anchor-id="live-ish-coding-3">Live-ish Coding</h2>
+<ul>
+<li>Please see correlation.qmd file provided</li>
+</ul>
+</section>
+</section>
+<section id="t-tests" class="level1">
+<h1>T Tests</h1>
+<section id="assumptions-fields-et-al-2012-1" class="level2">
+<h2 class="anchored" data-anchor-id="assumptions-fields-et-al-2012-1">Assumptions (Fields et al, 2012)</h2>
+<ul>
+<li>Normality of Residuals</li>
+<li>Independent Observations</li>
+<li>Homogeneity of Variance</li>
+</ul>
+</section>
+<section id="live-ish-coding-4" class="level2">
+<h2 class="anchored" data-anchor-id="live-ish-coding-4">Live-ish Coding</h2>
+<ul>
+<li>Please see the ttest.qmd file provided</li>
+</ul>
+</section>
+</section>
+<section id="regression" class="level1">
+<h1>Regression</h1>
+<section id="assumptions-fields-et-al-2012-2" class="level2">
+<h2 class="anchored" data-anchor-id="assumptions-fields-et-al-2012-2">Assumptions (Fields et al, 2012)</h2>
+<ul>
+<li>Outliers and Influential Cases</li>
+<li>Normality of Residuals</li>
+<li>Independent Observations</li>
+<li>Homogeneity of Variance</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>While important, outliers and influential cases rarely influence results with a sufficient sample size. Also difficult to say what “is” and “isn’t” an outlier. Outlier shouldn’t always mean removal</p>
+</div>
+</div>
+</section>
+<section id="live-ish-coding-5" class="level2">
+<h2 class="anchored" data-anchor-id="live-ish-coding-5">Live-ish Coding</h2>
+<ul>
+<li>Please open the regression.qmd file provided</li>
+</ul>
+</section>
+</section>
+<section id="end-of-day-1" class="level1">
+<h1>End of Day 1</h1>
+<section id="downloading-material-for-day-2" class="level2">
+<h2 class="anchored" data-anchor-id="downloading-material-for-day-2">Downloading Material For Day 2</h2>
+<p>You can download all the materials for Day 2 of this workshop <a href="https://github.com/bsgallih12/R_Workshop/tree/main/Day%201">here</a> * You want the anova.qmd, nonparametric.qmd, intro_qarto.qmd, mlm.qmd, sem.qmd and factor_analysis.qmd</p>
+</section>
+</section>
+<section id="anova-including-repeated-measures-factorial" class="level1">
+<h1>ANOVA: Including Repeated Measures &amp; Factorial</h1>
+<section id="assumptions-fields-et-al-2012-3" class="level2">
+<h2 class="anchored" data-anchor-id="assumptions-fields-et-al-2012-3">Assumptions (Fields et al, 2012)</h2>
+<ul>
+<li>Normality Within Groups</li>
+<li>Homogeneity of Variance</li>
+<li>Independent Observations</li>
+</ul>
+</section>
+<section id="live-ish-coding-6" class="level2">
+<h2 class="anchored" data-anchor-id="live-ish-coding-6">Live-ish Coding</h2>
+<ul>
+<li>Please open the anova.qmd file provided</li>
+</ul>
+</section>
+</section>
+<section id="non-parametric-tests" class="level1">
+<h1>Non-Parametric Tests</h1>
+<ul>
+<li>Wilcoxon Ranked-Sum Test (i.e., Mann–Whitney Test)
+<ul>
+<li>Non-parametric equivalent of the <strong>independent samples</strong> t-test</li>
+</ul></li>
+<li>Wilcoxon Signed-Rank Test
+<ul>
+<li>Non-parametric equivalent of the <strong>dependent sample</strong> t-test</li>
+</ul></li>
+<li>Kruskal–Wallis Test
+<ul>
+<li>Non-parametric equivalent of an ANOVA</li>
+</ul></li>
+<li>Friedman’s Test
+<ul>
+<li>Non-parametric equivalent of a repeated measures ANOVA</li>
+</ul></li>
+</ul>
+<section id="live-ish-coding-7" class="level2">
+<h2 class="anchored" data-anchor-id="live-ish-coding-7">Live-ish Coding</h2>
+<ul>
+<li>Please open the nonparametric.qmd file</li>
+</ul>
+</section>
+</section>
+<section id="efa-cfa" class="level1">
+<h1>EFA &amp; CFA</h1>
+<section id="efa-assumptions-fields-et-al-2012" class="level2">
+<h2 class="anchored" data-anchor-id="efa-assumptions-fields-et-al-2012">EFA Assumptions (Fields et al, 2012)</h2>
+<ul>
+<li>Sufficient Sample Size</li>
+<li>Normality of Items</li>
+<li>Correlation Between Items<sub>1</sub></li>
+<li>Appropriate Determinant (Det <span class="math inline">\(&gt;\)</span> 1 x 10<sup>-5</sup>)</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>We want variables to correlate however we do not want them to correlate either <br> too low (<strong>r</strong> <span class="math inline">\(&lt;\)</span> .30) or too high (<strong>r</strong> <span class="math inline">\(&gt;\)</span> .80) across multiple items</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="cfa-assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="cfa-assumptions">CFA Assumptions</h2>
+<ul>
+<li>Multivariate Normality</li>
+</ul>
+</section>
+<section id="live-ish-coding-8" class="level2">
+<h2 class="anchored" data-anchor-id="live-ish-coding-8">Live-ish Coding</h2>
+<ul>
+<li>Please open the factor_analysis.qmd file</li>
+</ul>
+</section>
+</section>
+<section id="lunch-break-1" class="level1">
+<h1>Lunch Break</h1>
+<ul>
+<li>Back at 2pm</li>
+</ul>
+</section>
+<section id="sem" class="level1">
+<h1>SEM</h1>
+<section id="assumptions-to-test-kaplan-2001-p.-15218" class="level2">
+<h2 class="anchored" data-anchor-id="assumptions-to-test-kaplan-2001-p.-15218">Assumptions To Test (Kaplan, 2001, p.&nbsp;15218)</h2>
+<ul>
+<li>Multivariate Normality</li>
+<li>No Systematic Missing Data</li>
+<li>Sufficiently Large Sample Size</li>
+<li>Correct Model Specification</li>
+</ul>
+</section>
+<section id="live-ish-coding-9" class="level2">
+<h2 class="anchored" data-anchor-id="live-ish-coding-9">Live-ish Coding</h2>
+<ul>
+<li>Please open the sem.qmd file</li>
+</ul>
+</section>
+</section>
+<section id="mlm-fields-et-al-2012" class="level1">
+<h1>MLM (Fields et al, 2012)</h1>
+<section id="assumptions-to-test" class="level2">
+<h2 class="anchored" data-anchor-id="assumptions-to-test">Assumptions To Test</h2>
+<ul>
+<li>Outliers and Influential Cases</li>
+<li>Normality of Residuals</li>
+<li>Independent Observations<sup>1</sup></li>
+<li>Homogeneity of Variance</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+A Note On Independence
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>This assumption is not necessarily a concern given that MLM assumes observations are nested (Fields et al, 2012)</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="live-ish-coding-10" class="level2">
+<h2 class="anchored" data-anchor-id="live-ish-coding-10">Live-ish Coding</h2>
+<ul>
+<li>Please open the mlm.qmd file</li>
+</ul>
+</section>
+</section>
+<section id="quarto-code-text" class="level1">
+<h1>Quarto: Code + Text</h1>
+<section id="the-holy-grail-of-reproducibility" class="level2">
+<h2 class="anchored" data-anchor-id="the-holy-grail-of-reproducibility">The Holy Grail of Reproducibility</h2>
+<ul>
+<li>What if I told you that it was possible to generate 95% of what you need for a manuscript within RStudio AND you could integrate your analyses as well?</li>
+<li>What if I also said you could export this to Microsoft Word?</li>
+</ul>
+</section>
+<section id="lets-talk-about-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="lets-talk-about-quarto">Let’s Talk About Quarto</h2>
+<ul>
+<li>Please open the intro_quarto.qmd file</li>
+</ul>
+</section>
+</section>
+<section id="final-thoughts" class="level1">
+<h1>Final Thoughts</h1>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2"></h2>
+<p>Firstly, thank you for your time this weekend and I hope you’ve learned something</p>
+<p>Second, this is A LOT. I crammed stuffed about 2 years of statistical analyses time and practice into like 2 days. It’s okay and normal if you’re swimming. I’m here if anyone has any questions after or even if they’re using R and trying to do an actual analysis in R. People ask me for help all the time. I’m happy to help</p>
+<p>Finally, one last “minor” detail. Some of you already know this but lets just check out the following <a href="https://stats-r-workshop.netlify.app">link</a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      try { hash = new URL(url).hash; } catch {}
+      const id = hash.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note !== null) {
+        try {
+          const html = processXRef(id, note);
+          instance.setContent(html);
+        } finally {
+          instance.enable();
+          instance.show();
+        }
+      } else {
+        // See if we can fetch this
+        fetch(url.split('#')[0])
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.getElementById(id);
+          if (note !== null) {
+            const html = processXRef(id, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Made with <a href="https://quarto.org/">Posit Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
