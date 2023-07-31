@@ -18,7 +18,7 @@ about:
       href: mailto:bg464219@ohio.edu
 ---
 
-Hi! My name is Brier Gallihugh and I am currently a social psychology doctoral student who studies prejudice and discrimination directed toward various religious, political and racial/ethnic groups. I am a huge *R* enthusiast. Upon completion of my Ph.D. I hope to go into either UXR or DS/DA. 
+Hi! My name is Brier Gallihugh and I am currently a social psychology doctoral student who studies prejudice and discrimination directed toward various religious, political and racial/ethnic groups. I am a huge *R* enthusiast. Upon completion of my Ph.D. (expected in Summer 2024) I hope to go into industry as either a data analytic or data scientist
 
 ::: {.callout-note}
 
@@ -27,6 +27,7 @@ The photo used for the above image in the tab was taken from My Great Learning. 
 :::
 
 ::: {.callout-tip}
+## Optional Donation Link
 While certainly not required, these blog posts do take some time to put together. If you would like to support this blog, feel free to donate using the following button
 
 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="bgRStats" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
