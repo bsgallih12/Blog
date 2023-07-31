@@ -1,13 +1,11 @@
 ---
-title: "R Workshop"
-date-format: "MMMM YYYY"
-format:
+title: "R Packages: The Basics"
+format: 
   revealjs:
-    theme: dark
-    self-contained: true
     slide-number: true
-warning: FALSE
-image: titlepage.png
+    embed-resources: true
+    theme: Christmas.scss
+image: packages.png
 ---
 
 ## Fun Fact

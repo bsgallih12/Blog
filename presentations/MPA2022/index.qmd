@@ -1,5 +1,5 @@
 ---
-title: "R Workshop"
+title: "MPA 2022"
 date-format: "MMMM YYYY"
 format:
   revealjs:
