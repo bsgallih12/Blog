@@ -16,9 +16,9 @@ website:
         file: blog.qmd
       - text: "Resume"
         file: Gallihugh_Resume.pdf
-      - text: "Academic CV"
+      - text: "CV"
         file: CV.pdf
-      - text: "Data Visualization Projects"
+      - text: "Data Viz Projects"
         file: tidytuesday.qmd
       - text: "Data Portfolio"
         file: projects.qmd
