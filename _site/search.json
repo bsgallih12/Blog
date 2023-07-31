@@ -919,9 +919,9 @@
   {
     "objectID": "presentations/OUDept2022/index.html",
     "href": "presentations/OUDept2022/index.html",
-    "title": "R Workshop",
+    "title": "OU Department Talk",
     "section": "",
-    "text": "If you’re someone who likes to use\n\n\n\n\n\n\n\n\n\n\n  to run data analysis, you’re using already “using”"
+    "text": "Insert Link"
   },
   {
     "objectID": "presentations/OUDept2022/index.html#fun-fact",
@@ -1185,9 +1185,9 @@
   {
     "objectID": "presentations/MPA2023/index.html",
     "href": "presentations/MPA2023/index.html",
-    "title": "R Workshop",
+    "title": "MPA 2023",
     "section": "",
-    "text": "If you’re someone who likes to use\n\n\n\n\n\n\n\n\n\n\n  to run data analysis, you’re using already “using”"
+    "text": "Insert Link"
   },
   {
     "objectID": "presentations/MPA2023/index.html#fun-fact",
@@ -1451,16 +1451,16 @@
   {
     "objectID": "presentations/MPA2022/index.html",
     "href": "presentations/MPA2022/index.html",
-    "title": "R Workshop",
+    "title": "MPA 2022",
     "section": "",
-    "text": "If you’re someone who likes to use\n\n\n\n\n\n\n\n\n\n\n  to run data analysis, you’re using already “using”"
+    "text": "Insert Link"
   },
   {
     "objectID": "presentations/MPA2022/index.html#fun-fact",
     "href": "presentations/MPA2022/index.html#fun-fact",
     "title": "MPA 2022",
-    "section": "Fun Fact",
-    "text": "Fun Fact\n\nIf you’re someone who likes to use\n\n\n  to run data analysis, you’re using already “using”"
+    "section": "",
+    "text": "If you’re someone who likes to use\n\n\n\n\n\n\n\n\n\n\n  to run data analysis, you’re using already “using”"
   },
   {
     "objectID": "presentations/MPA2022/index.html#downloading-r",
@@ -1495,7 +1495,7 @@
     "href": "presentations/MPA2022/index.html#installing-and-loading-packages",
     "title": "MPA 2022",
     "section": "Installing and Loading Packages",
-    "text": "Installing and Loading Packages\n\nR CodeCommentary\n\n\n\n# To Install a Package\ninstall.packages(\"tidyverse\")\n\n# To Load a Package\nlibrary(tidyverse)\n\n\n\n\nYou only have to install a package once (one exception)\nYou must load a library every time you open an R file (.R, .qmd, .rmd, etc) or restart R/RStudio\n\n\n\n\n\n\n\n\n\n\nA new install of R will remove all installed packages. You must either re-install the packages or save them prior to a new R installation. I’ll cover how to save them at a later date"
+    "text": "Installing and Loading Packages\n\nR CodeCommentary\n\n\n\n# To Install a Package\ninstall.packages(\"tidyverse\")\n\n# To Load a Package\nlibrary(tidyverse)\n\n\n\n\nYou only have to install a package once (one exception)\nYou must load a library every time you open an R file (.R, .qmd, .rmd, etc) or restart R/RStudio\n\n\n\n\n\n\n\nImportant\n\n\n\nA new install of R will remove all installed packages. You must either re-install the packages or save them prior to a new R installation. I’ll cover how to save them at a later date"
   },
   {
     "objectID": "presentations/MPA2022/index.html#importing-data",
@@ -1516,7 +1516,7 @@
     "href": "presentations/MPA2022/index.html#uses-for-the-dplyr-package",
     "title": "MPA 2022",
     "section": "Uses for the dplyr package",
-    "text": "Uses for the dplyr package\n\nPrimary use is to transform and manipulate data in a data set\n\nCalculate means, log transform, compute basic summary statistics\n\nAnyone here who has maybe used database data will see it mimics SQL programming\n\n\n\n\n\n\n\n\n\n\nFor anyone who might work with database data, you can pull data from external databases with R and RStudio. We won’t cover that in this workshop but you can do it"
+    "text": "Uses for the dplyr package\n\nPrimary use is to transform and manipulate data in a data set\n\nCalculate means, log transform, compute basic summary statistics\n\nAnyone here who has maybe used database data will see it mimics SQL programming\n\n\n\n\n\n\n\nNote\n\n\n\nFor anyone who might work with database data, you can pull data from external databases with R and RStudio. We won’t cover that in this workshop but you can do it"
   },
   {
     "objectID": "presentations/MPA2022/index.html#live-ish-coding",
@@ -1544,7 +1544,7 @@
     "href": "presentations/MPA2022/index.html#uses-for-the-lubridate-package",
     "title": "MPA 2022",
     "section": "Uses for the lubridate package",
-    "text": "Uses for the lubridate package\n\nPrimarily used for dealing with dates\nProvides handy function for converting date formats into other date formats\n\nE.g., (MM-DD-YY to DD-MM-YY or Month Date, Year)\n\n\n\n\n\n\n\n\n\n\n\nIt won’t auto convert your dates to weird incorrect formats like certain spreadsheet programs might."
+    "text": "Uses for the lubridate package\n\nPrimarily used for dealing with dates\nProvides handy function for converting date formats into other date formats\n\nE.g., (MM-DD-YY to DD-MM-YY or Month Date, Year)\n\n\n\n\n\n\n\n\nTip\n\n\n\nIt won’t auto convert your dates to weird incorrect formats like certain spreadsheet programs might."
   },
   {
     "objectID": "presentations/MPA2022/index.html#live-ish-coding-2",
@@ -1607,7 +1607,7 @@
     "href": "presentations/MPA2022/index.html#assumptions-fields-et-al-2012-2",
     "title": "MPA 2022",
     "section": "Assumptions (Fields et al, 2012)",
-    "text": "Assumptions (Fields et al, 2012)\n\nOutliers and Influential Cases\nNormality of Residuals\nIndependent Observations\nHomogeneity of Variance\n\n\n\n\n\n\n\n\n\n\nWhile important, outliers and influential cases rarely influence results with a sufficient sample size. Also difficult to say what “is” and “isn’t” an outlier. Outlier shouldn’t always mean removal"
+    "text": "Assumptions (Fields et al, 2012)\n\nOutliers and Influential Cases\nNormality of Residuals\nIndependent Observations\nHomogeneity of Variance\n\n\n\n\n\n\n\nImportant\n\n\n\nWhile important, outliers and influential cases rarely influence results with a sufficient sample size. Also difficult to say what “is” and “isn’t” an outlier. Outlier shouldn’t always mean removal"
   },
   {
     "objectID": "presentations/MPA2022/index.html#live-ish-coding-5",
@@ -1649,7 +1649,7 @@
     "href": "presentations/MPA2022/index.html#efa-assumptions-fields-et-al-2012",
     "title": "MPA 2022",
     "section": "EFA Assumptions (Fields et al, 2012)",
-    "text": "EFA Assumptions (Fields et al, 2012)\n\nSufficient Sample Size\nNormality of Items\nCorrelation Between Items1\nAppropriate Determinant (Det \\(&gt;\\) 1 x 10-5)\n\n\n\n\n\n\n\n\n\n\n\nWe want variables to correlate however we do not want them to correlate either  too low (r \\(&lt;\\) .30) or too high (r \\(&gt;\\) .80) across multiple items"
+    "text": "EFA Assumptions (Fields et al, 2012)\n\nSufficient Sample Size\nNormality of Items\nCorrelation Between Items1\nAppropriate Determinant (Det \\(&gt;\\) 1 x 10-5)\n\n\n\n\n\n\n\nImportant\n\n\n\n\nWe want variables to correlate however we do not want them to correlate either  too low (r \\(&lt;\\) .30) or too high (r \\(&gt;\\) .80) across multiple items"
   },
   {
     "objectID": "presentations/MPA2022/index.html#cfa-assumptions",
@@ -1684,7 +1684,7 @@
     "href": "presentations/MPA2022/index.html#assumptions-to-test",
     "title": "MPA 2022",
     "section": "Assumptions To Test",
-    "text": "Assumptions To Test\n\nOutliers and Influential Cases\nNormality of Residuals\nIndependent Observations1\nHomogeneity of Variance\n\n\n\n\n\n\n\nA Note On Independence\n\n\n\nThis assumption is not necessarily a concern given that MLM assumes observations are nested (Fields et al, 2012)"
+    "text": "Assumptions To Test\n\nOutliers and Influential Cases\nNormality of Residuals\nIndependent Observations1\nHomogeneity of Variance\n\n\n\n\n\n\n\nA Note On Independence\n\n\n\n\nThis assumption is not necessarily a concern given that MLM assumes observations are nested (Fields et al, 2012)"
   },
   {
     "objectID": "presentations/MPA2022/index.html#live-ish-coding-10",
@@ -1717,9 +1717,9 @@
   {
     "objectID": "presentations/MPA2021/index.html",
     "href": "presentations/MPA2021/index.html",
-    "title": "R Workshop",
+    "title": "MPA 2021",
     "section": "",
-    "text": "If you’re someone who likes to use\n\n\n\n\n\n\n\n\n\n\n  to run data analysis, you’re using already “using”"
+    "text": "Insert Link"
   },
   {
     "objectID": "presentations/MPA2021/index.html#fun-fact",
@@ -1983,9 +1983,9 @@
   {
     "objectID": "presentations/SPSP2021/index.html",
     "href": "presentations/SPSP2021/index.html",
-    "title": "R Workshop",
+    "title": "SPSP 2021",
     "section": "",
-    "text": "If you’re someone who likes to use\n\n\n\n\n\n\n\n\n\n\n  to run data analysis, you’re using already “using”"
+    "text": "Insert Link"
   },
   {
     "objectID": "presentations/SPSP2021/index.html#fun-fact",
@@ -2781,9 +2781,9 @@
   {
     "objectID": "presentations/APS2019/index.html",
     "href": "presentations/APS2019/index.html",
-    "title": "R Packages: The Basics",
+    "title": "APS 2019",
     "section": "",
-    "text": "If you’re someone who likes to use\n\n\n\n\n\n\n\n\n\n\n  to run data analysis, you’re using already “using”"
+    "text": "Insert Link"
   },
   {
     "objectID": "presentations/APS2019/index.html#fun-fact",

@@ -37,7 +37,7 @@ $body-color:                white !default;
     @return mix($body-bg, $body-color, $weight);
 }
 
-$primary:       #054231 !default;
+$primary:       #1B4132 !default;
 $secondary:     body-mix(85%) !default;
 $success:       $green !default;
 $info:          $cyan !default;
