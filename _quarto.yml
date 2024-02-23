@@ -40,32 +40,27 @@ website:
         menu: 
           - text: "R Basics Video"
             href: https://drive.google.com/file/d/1hQyyQzsf5CjukioO9yyBNdoxxqZUCeYk/view
-          - text: "R Basics Materials"
-          - file: data_clean.qmd
+          - data_clean.qmd
           - text: "Data Manipulation Video"
             href: https://drive.google.com/file/d/1BcDYFAqAFSMDj1s3Lr_R9Vs1XVZOUBq7/view
           - text: "Data Visualization Video"
             href: https://drive.google.com/file/d/1sn-BKqy1r5HyLuiy_mElJ88_cXrCyFF8/view
           - text: "Correlations Video"
             href: https://drive.google.com/file/d/1MSCdiG0SH64lL0PyClKqrL-xgnxN0fuK/view
-          - text: "Correlation Materials"
-          - file: correlation.qmd
+          - correlation.qmd
           - text: "T-Test Video"
             href: https://drive.google.com/file/d/1tsQogteEQUyBB0ZM9hQTcaUHtPMv8aq7/view
-          - text: "T-Test Materials"
-          - file: ttest.qmd
+          - ttest.qmd
           - text: "Regression Video"
             href: https://drive.google.com/file/d/1rfHlAMCd4A4iKp_YF7zoMXPWQxpk-7yb/view
           - text: "Logistic Regression Video"
             href: https://drive.google.com/file/d/1rfHlAMCd4A4iKp_YF7zoMXPWQxpk-7yb/view
-          - text: "Regression Materials"
-          - file: regression.qmd
+          - regression.qmd
           - text: "ANOVA Video"
             href: https://drive.google.com/file/d/15UrC_I0RGyXDbD5GQs95d3G8Baa-QkTm/view
           - text: "Factorial ANOVA Video"
             href: https://drive.google.com/file/d/1PyIwomVXoN0kFBVgssJE_j7mRGwzixAn/view
-          - text: "ANOVA Materials"
-          - file: ANOVA.qmd
+          - ANOVA.qmd
           - text: "Non-Parametric Ind Sample T-Test Video"
             href: https://drive.google.com/file/d/1hVjzEMcsq6EH9Kb2tV-pKsRdA7ZFAK5b/view
           - text: "Non-Parametric Dep Sample T-Test Video"
@@ -74,24 +69,20 @@ website:
             href: https://drive.google.com/file/d/15bcwCsOTSRuel3ga4S-xdHPcq5gO6ERC/view
           - text: "Non-Parametric Repeated Measures ANOVA Video"
             href: https://drive.google.com/file/d/15bcwCsOTSRuel3ga4S-xdHPcq5gO6ERC/view
-          - text: "Non Parametric Materials"
-          - file: nonparametric.qmd
+          - nonparametric.qmd
           - text: "Mediation Video"
             href: https://drive.google.com/file/d/198SW2REq7CQAHhUYJl6cK0aqZyWpwLwV/view
           - text: "Moderation Video"
             href: https://drive.google.com/file/d/1VgVlRn5GNZxSVHE9GXaT470pjHh9pj6Q/view
-          - text: "Mediation and Moderation Materials"
-          - file: moderation_mediation.qmd
+          - moderation_mediation.qmd
           - text: "Factor Analysis Video"
             href: https://drive.google.com/file/d/19RKlYxJ6Hc-v34OO-OcDiRZqUz61bAJy/view
-          - text: "Factor Analysis Materials"
-          - file: factor_analysis.qmd
+          - factor_analysis.qmd
           - text: "Confirmatory Factor Analysis Video"
             href: https://drive.google.com/file/d/1Ljm_We3Q03YTZ4odwEXgSFj0mcDRoc-3/view
           - text: "Structural Equation Modeling Video"
             href: https://drive.google.com/file/d/1EZriRMHGJbFxID39eCjm81IboMGT8mwW/view
-          - text: "EFA, CFA and SEM Materials"
-          - file: SEM.qmd                
+          - SEM.qmd                
       - icon: github
         href: https://github.com/bsgallih12
       - icon: twitter

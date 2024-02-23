@@ -1,5 +1,5 @@
 ---
-title: "R Workshop: Data Visualization and Management"
+title: "Data Cleaning, Manipulation and Visualization Materials"
 author: "Brier Gallihugh, M.S."
 date: today
 format:

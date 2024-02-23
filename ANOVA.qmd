@@ -1,5 +1,5 @@
 ---
-title: "R Workshop: ANOVA, ANCOVA & Factorial ANOVA"
+title: "ANOVA, ANCOVA & Factorial ANOVA Materials"
 author: "Brier Gallihugh, M.S."
 date: today
 format:

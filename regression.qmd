@@ -1,5 +1,5 @@
 ---
-title: "R Workshop: Linear & Logistic Regression"
+title: "Linear & Logistic Regression Materials"
 author: "Brier Gallihugh, M.S."
 date: today
 format:

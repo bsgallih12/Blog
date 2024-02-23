@@ -1,5 +1,5 @@
 ---
-title: "R Workshop: CFA & Structural Equation Modeling"
+title: "CFA & Structural Equation Modeling Materials"
 author: "Brier Gallihugh, M.S."
 date: today
 format:

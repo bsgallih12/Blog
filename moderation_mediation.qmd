@@ -1,5 +1,5 @@
 ---
-title: "R Workshop: Mediation and Moderation"
+title: "Mediation and Moderation Materials"
 author: "Brier Gallihugh, M.S."
 date: today
 format:

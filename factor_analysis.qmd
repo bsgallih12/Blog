@@ -1,5 +1,5 @@
 ---
-title: "R Workshop: Factor Analysis"
+title: "Factor Analysis Materials"
 author: "Brier Gallihugh, M.S."
 date: today
 format:

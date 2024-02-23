@@ -1,5 +1,5 @@
 ---
-title: "R Workshop: T-test"
+title: "T-Test Materials"
 author: "Brier Gallihugh, M.S."
 date: today
 format: 

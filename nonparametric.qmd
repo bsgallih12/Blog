@@ -1,5 +1,5 @@
 ---
-title: "R Workshop: Non-Parametric Tests"
+title: "Non-Parametric Tests Materials"
 author: "Brier Gallihugh, M.S."
 date: today
 format:
