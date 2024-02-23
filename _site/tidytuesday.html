@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.222">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -48,12 +48,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -62,6 +63,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -100,13 +102,40 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
@@ -120,154 +149,154 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="./blog.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Gallihugh_Resume.pdf" rel="" target="">
- <span class="menu-text">Resume</span></a>
+    <a class="nav-link" href="./Gallihugh_Resume.pdf"> 
+<span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./CV.pdf" rel="" target="">
- <span class="menu-text">CV</span></a>
+    <a class="nav-link" href="./CV.pdf"> 
+<span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./tidytuesday.html" rel="" target="" aria-current="page">
- <span class="menu-text">Data Viz Projects</span></a>
+    <a class="nav-link active" href="./tidytuesday.html" aria-current="page"> 
+<span class="menu-text">Data Viz Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html" rel="" target="">
- <span class="menu-text">Data Portfolio</span></a>
+    <a class="nav-link" href="./projects.html"> 
+<span class="menu-text">Data Portfolio</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-presentations" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-presentations" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Presentations</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-presentations">    
         <li>
-    <a class="dropdown-item" href="./MPA2021_Poster.pdf" rel="" target="">
+    <a class="dropdown-item" href="./MPA2021_Poster.pdf">
  <span class="dropdown-text">MPA 2021</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Gallihugh_MPA_2023.pdf" rel="" target="">
+    <a class="dropdown-item" href="./Gallihugh_MPA_2023.pdf">
  <span class="dropdown-text">MPA 2023</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Brown_Bag_BLM_March_25.pdf" rel="" target="">
+    <a class="dropdown-item" href="./Brown_Bag_BLM_March_25.pdf">
  <span class="dropdown-text">OU Department Brown Bag Talk</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./SPSP2021_Poster.pdf" rel="" target="">
+    <a class="dropdown-item" href="./SPSP2021_Poster.pdf">
  <span class="dropdown-text">SPSP 2021</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./SPSS_Poster.pdf" rel="" target="">
+    <a class="dropdown-item" href="./SPSS_Poster.pdf">
  <span class="dropdown-text">SPSP 2022</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./MarleyConfPresentation.html" rel="" target="">
+    <a class="dropdown-item" href="./MarleyConfPresentation.html">
  <span class="dropdown-text">SPSP 2023</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-workshop-videos" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-workshop-videos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">R Workshop Videos</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-r-workshop-videos">    
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/1hQyyQzsf5CjukioO9yyBNdoxxqZUCeYk/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/1hQyyQzsf5CjukioO9yyBNdoxxqZUCeYk/view">
  <span class="dropdown-text">R Basics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/1BcDYFAqAFSMDj1s3Lr_R9Vs1XVZOUBq7/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/1BcDYFAqAFSMDj1s3Lr_R9Vs1XVZOUBq7/view">
  <span class="dropdown-text">Data Manipulation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/1sn-BKqy1r5HyLuiy_mElJ88_cXrCyFF8/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/1sn-BKqy1r5HyLuiy_mElJ88_cXrCyFF8/view">
  <span class="dropdown-text">Data Visualization</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/1MSCdiG0SH64lL0PyClKqrL-xgnxN0fuK/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/1MSCdiG0SH64lL0PyClKqrL-xgnxN0fuK/view">
  <span class="dropdown-text">Correlations</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/1tsQogteEQUyBB0ZM9hQTcaUHtPMv8aq7/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/1tsQogteEQUyBB0ZM9hQTcaUHtPMv8aq7/view">
  <span class="dropdown-text">T-Test</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/1rfHlAMCd4A4iKp_YF7zoMXPWQxpk-7yb/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/1rfHlAMCd4A4iKp_YF7zoMXPWQxpk-7yb/view">
  <span class="dropdown-text">Regression</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/1rfHlAMCd4A4iKp_YF7zoMXPWQxpk-7yb/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/1rfHlAMCd4A4iKp_YF7zoMXPWQxpk-7yb/view">
  <span class="dropdown-text">Logistic Regression</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/15UrC_I0RGyXDbD5GQs95d3G8Baa-QkTm/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/15UrC_I0RGyXDbD5GQs95d3G8Baa-QkTm/view">
  <span class="dropdown-text">ANOVA</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/1PyIwomVXoN0kFBVgssJE_j7mRGwzixAn/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/1PyIwomVXoN0kFBVgssJE_j7mRGwzixAn/view">
  <span class="dropdown-text">Factorial ANOVA</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/1hVjzEMcsq6EH9Kb2tV-pKsRdA7ZFAK5b/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/1hVjzEMcsq6EH9Kb2tV-pKsRdA7ZFAK5b/view">
  <span class="dropdown-text">Non-Parametric Ind Sample T-Test</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/1hpMw7rfr4hUp9UOWoXMGWy-84ZNu8We4/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/1hpMw7rfr4hUp9UOWoXMGWy-84ZNu8We4/view">
  <span class="dropdown-text">Non-Parametric Dep Sample T-Test</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/15bcwCsOTSRuel3ga4S-xdHPcq5gO6ERC/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/15bcwCsOTSRuel3ga4S-xdHPcq5gO6ERC/view">
  <span class="dropdown-text">Non-Parametric ANOVA</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/15bcwCsOTSRuel3ga4S-xdHPcq5gO6ERC/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/15bcwCsOTSRuel3ga4S-xdHPcq5gO6ERC/view">
  <span class="dropdown-text">Non-Parametric Repeated Measures ANOVA</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/198SW2REq7CQAHhUYJl6cK0aqZyWpwLwV/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/198SW2REq7CQAHhUYJl6cK0aqZyWpwLwV/view">
  <span class="dropdown-text">Mediation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/1VgVlRn5GNZxSVHE9GXaT470pjHh9pj6Q/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/1VgVlRn5GNZxSVHE9GXaT470pjHh9pj6Q/view">
  <span class="dropdown-text">Moderation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/19RKlYxJ6Hc-v34OO-OcDiRZqUz61bAJy/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/19RKlYxJ6Hc-v34OO-OcDiRZqUz61bAJy/view">
  <span class="dropdown-text">Factor Analysis</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/1Ljm_We3Q03YTZ4odwEXgSFj0mcDRoc-3/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/1Ljm_We3Q03YTZ4odwEXgSFj0mcDRoc-3/view">
  <span class="dropdown-text">Confirmatory Factor Analysis</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/file/d/1EZriRMHGJbFxID39eCjm81IboMGT8mwW/view" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/file/d/1EZriRMHGJbFxID39eCjm81IboMGT8mwW/view">
  <span class="dropdown-text">Structural Equation Modeling</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/bsgallih12" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/bsgallih12"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/Brier_Gallihugh" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/Brier_Gallihugh"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://linkedin.com/in/brier-gallihugh" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://linkedin.com/in/brier-gallihugh"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="mailto:bg464219@ohio.edu" rel="" target=""><i class="bi bi-envelope" role="img">
+    <a class="nav-link" href="mailto:bg464219@ohio.edu"> <i class="bi bi-envelope" role="img">
 </i> 
- <span class="menu-text">Email</span></a>
+<span class="menu-text">Email</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -309,21 +338,22 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Alone,R,TidyTuesday" data-listing-date-sort="1674622800000" data-listing-file-modified-sort="1674694645452" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="0" data-categories="Alone,R,TidyTuesday" data-listing-date-sort="1674622800000" data-listing-file-modified-sort="1674694645452" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="674">
 <div class="thumbnail">
-<p><a href="./tidytuesday/1_25_23/index.html"> <img src="./tidytuesday/1_25_23/twitter_upload_tt_1_25_23.png" class="thumbnail-image" alt="A word cloud of mostly commonly discarded items on Alone"> </a></p>
+<p><a href="./tidytuesday/1_25_23/index.html" class="no-external"></a></p><a href="./tidytuesday/1_25_23/index.html" class="no-external">
+<p><img src="./tidytuesday/1_25_23/twitter_upload_tt_1_25_23.png" class="thumbnail-image" alt="A word cloud of mostly commonly discarded items on Alone"></p>
+</a><p><a href="./tidytuesday/1_25_23/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./tidytuesday/1_25_23/index.html">
 <h3 class="no-anchor listing-title">
-Tidy Tuesday 1-25-23
+<a href="./tidytuesday/1_25_23/index.html" class="no-external">Tidy Tuesday 1-25-23</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./tidytuesday/1_25_23/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Alone'); return false;">
 Alone
@@ -335,14 +365,12 @@ R
 TidyTuesday
 </div>
 </div>
-<a href="./tidytuesday/1_25_23/index.html">
 <div class="listing-description">
-<p>A #TidyTuesday data visualization of Alone TV data for 1-24-23</p>
+<a href="./tidytuesday/1_25_23/index.html" class="no-external">A #TidyTuesday data visualization of Alone TV data for 1-24-23</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./tidytuesday/1_25_23/index.html">
+<a href="./tidytuesday/1_25_23/index.html" class="no-external">
 <div class="listing-date">
 Jan 25, 2023
 </div>
@@ -475,19 +503,55 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
   const processXRef = (id, note) => {
-    if (id.startsWith('sec-')) {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
         }
         return container.innerHTML
       } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
-      return note.innerHTML;
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -496,27 +560,56 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       instance.disable();
       let url = xref.getAttribute('href');
       let hash = undefined; 
-      try { hash = new URL(url).hash; } catch {}
-      const id = hash.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note !== null) {
-        try {
-          const html = processXRef(id, note);
-          instance.setContent(html);
-        } finally {
-          instance.enable();
-          instance.show();
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
         }
       } else {
-        // See if we can fetch this
-        fetch(url.split('#')[0])
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
         .then(res => res.text())
         .then(html => {
           const parser = new DOMParser();
           const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.getElementById(id);
+          const note = htmlDoc.querySelector('main.content');
           if (note !== null) {
-            const html = processXRef(id, note);
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
             instance.setContent(html);
           } 
         }).finally(() => {
@@ -594,6 +687,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {

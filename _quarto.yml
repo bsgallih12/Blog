@@ -17,7 +17,7 @@ website:
       - text: "Resume"
         file: Gallihugh_Resume.pdf
       - text: "CV"
-        file: CV.pdf
+        file: Gallihugh_CV.pdf
       - text: "Data Viz Projects"
         file: tidytuesday.qmd
       - text: "Data Portfolio"
