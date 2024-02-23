@@ -74,6 +74,17 @@ website:
             href: https://drive.google.com/file/d/1Ljm_We3Q03YTZ4odwEXgSFj0mcDRoc-3/view
           - text: "Structural Equation Modeling"
             href: https://drive.google.com/file/d/1EZriRMHGJbFxID39eCjm81IboMGT8mwW/view
+      - text: R Workshop Materials
+        menu:
+          - data_clean.qmd
+          - correlation.qmd
+          - ttest.qmd
+          - regression.qmd
+          - ANOVA.qmd
+          - factor_analysis.qmd
+          - moderation_mediation.qmd
+          - nonparametric.qmd
+          - SEM.qmd
       - icon: github
         href: https://github.com/bsgallih12
       - icon: twitter
