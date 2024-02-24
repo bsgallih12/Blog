@@ -62,7 +62,7 @@ plot <- ggplot(data=historical_spending,aes(x=Year,y=PerPerson)) +
         axis.ticks = element_line(color="darkred"),
         axis.line.x = element_line(color="darkred"),
         axis.line.y = element_line(color="darkred"),
-        plot.caption = element_text(hjust = 0,color="black"),
+        plot.caption = element_text(hjust = 0,color="purple4"),
         panel.background = element_rect(fill="pink"))
 ```
 
