@@ -4,7 +4,7 @@
     "href": "tidytuesday.html",
     "title": "Tidy Tuesday Projects",
     "section": "",
-    "text": "Tidy Tuesday 1-25-23\n\n\n\n\n\n\nAlone\n\n\nR\n\n\nTidyTuesday\n\n\n\nA #TidyTuesday data visualization of Alone TV data for 1-24-23\n\n\n\n\n\nJan 25, 2023\n\n\nBrier S. Gallihugh\n\n\n\n\n\n\nNo matching items"
+    "text": "Tidy Tuesday 2-13-24\n\n\n\n\n\n\nValentines\n\n\nR\n\n\nTidyTuesday\n\n\n\nA #TidyTuesday data visualization of Valentines Day spending data for 2010-2022\n\n\n\n\n\nFeb 14, 2024\n\n\nBrier S. Gallihugh\n\n\n\n\n\n\n\n\n\n\n\n\nTidy Tuesday 1-25-23\n\n\n\n\n\n\nAlone\n\n\nR\n\n\nTidyTuesday\n\n\n\nA #TidyTuesday data visualization of Alone TV data for 1-24-23\n\n\n\n\n\nJan 25, 2023\n\n\nBrier S. Gallihugh\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "tidytuesday/1_25_23/index.html",
@@ -32,7 +32,7 @@
     "href": "index.html",
     "title": "About Me",
     "section": "",
-    "text": "Hi! My name is Brier Gallihugh and I am currently a social psychology doctoral student who studies prejudice and discrimination directed toward various religious, political and racial/ethnic groups. I am a huge R enthusiast. Upon completion of my Ph.D. (expected in Summer 2024) I hope to go into industry as either a data analytic or data scientist\n\n\n\n\n\n\nNote\n\n\n\nThe photo used for the above image in the tab was taken from My Great Learning. You can find the website here.\n\n\n\n\n\n\n\n\nOptional Donation Link\n\n\n\nWhile certainly not required, these blog posts and resources do take some time to put together. If you would like to support this blog, feel free to donate using the following button"
+    "text": "Hi! My name is Brier Gallihugh and I am currently a social psychology doctoral student who studies prejudice and discrimination directed toward various religious, political and racial/ethnic groups. I am a huge R enthusiast. Upon completion of my Ph.D. (expected in Summer 2024) I hope to go into industry as either a data analyst or data scientist\n\n\n\n\n\n\nNote\n\n\n\nThe photo used for the above image in the tab was taken from My Great Learning. You can find the website here.\n\n\n\n\n\n\n\n\nOptional Donation Link\n\n\n\nWhile certainly not required, these blog posts and resources do take some time to put together. If you would like to support this blog, feel free to donate using the following button"
   },
   {
     "objectID": "presentations/workshop/index.html",
@@ -621,5 +621,12 @@
     "title": "T-Test Materials",
     "section": "Running a T-test",
     "text": "Running a T-test\n\n1t.test(height ~ sex, data = data)\n\n\n1\n\nThe t.test() function will take a DV and IV argument as well as the dataframe used. We can see this here\n\n\n\n\n\n    Welch Two Sample t-test\n\ndata:  height by sex\nt = -1.1817, df = 48.471, p-value = 0.2431\nalternative hypothesis: true difference in means between group female and group male is not equal to 0\n95 percent confidence interval:\n -20.396341   5.293584\nsample estimates:\nmean in group female   mean in group male \n            171.5714             179.1228"
+  },
+  {
+    "objectID": "tidytuesday/2_14_24/index.html",
+    "href": "tidytuesday/2_14_24/index.html",
+    "title": "Tidy Tuesday 2-13-24",
+    "section": "",
+    "text": "tuesdata &lt;- tidytuesdayR::tt_load(2024, week = 7)\n\n--- Compiling #TidyTuesday Information for 2024-02-13 ----\n\n\n--- There are 3 files available ---\n\n\n--- Starting Download ---\n\n\n\n    Downloading file 1 of 3: `historical_spending.csv`\n    Downloading file 2 of 3: `gifts_age.csv`\n    Downloading file 3 of 3: `gifts_gender.csv`\n\n\n--- Download complete ---\n\nhistorical_spending &lt;- tuesdata$historical_spending\ngifts_age &lt;- tuesdata$gifts_age\ngifts_gender &lt;- tuesdata$gifts_gender"
   }
 ]

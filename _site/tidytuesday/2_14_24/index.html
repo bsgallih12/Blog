@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.549">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>The Data Enthusiast Blog - About Me</title>
+<meta name="author" content="Brier S. Gallihugh">
+<meta name="dcterms.date" content="2024-02-14">
+<meta name="description" content="A #TidyTuesday data visualization of Valentines Day spending data for 2010-2022">
+<title>The Data Enthusiast Blog - Tidy Tuesday 2-13-24</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
-
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
-<script id="quarto-search-options" type="application/json">{
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -66,18 +99,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-
-
 </head>
-
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">The Data Enthusiast Blog</span>
     </a>
   </div>
@@ -87,68 +115,68 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+<li class="nav-item">
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Gallihugh_Resume.pdf"> 
+    <a class="nav-link" href="../../Gallihugh_Resume.pdf"> 
 <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Gallihugh_CV.pdf"> 
+    <a class="nav-link" href="../../Gallihugh_CV.pdf"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./tidytuesday.html"> 
+    <a class="nav-link" href="../../tidytuesday.html"> 
 <span class="menu-text">Data Viz Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Portfolio</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-presentations" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Presentations</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-presentations">    
-        <li>
-    <a class="dropdown-item" href="./MPA2021_Poster.pdf">
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-presentations">
+<li>
+    <a class="dropdown-item" href="../../MPA2021_Poster.pdf">
  <span class="dropdown-text">MPA 2021</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Gallihugh_MPA_2023.pdf">
+    <a class="dropdown-item" href="../../Gallihugh_MPA_2023.pdf">
  <span class="dropdown-text">MPA 2023</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Brown_Bag_BLM_March_25.pdf">
+    <a class="dropdown-item" href="../../Brown_Bag_BLM_March_25.pdf">
  <span class="dropdown-text">OU Department Brown Bag Talk</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./SPSP2021_Poster.pdf">
+    <a class="dropdown-item" href="../../SPSP2021_Poster.pdf">
  <span class="dropdown-text">SPSP 2021</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./SPSS_Poster.pdf">
+    <a class="dropdown-item" href="../../SPSS_Poster.pdf">
  <span class="dropdown-text">SPSP 2022</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./MarleyConfPresentation.html">
+    <a class="dropdown-item" href="../../MarleyConfPresentation.html">
  <span class="dropdown-text">SPSP 2023</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-workshop-videos--materials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">R Workshop Videos &amp; Materials</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-r-workshop-videos--materials">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-r-workshop-videos--materials">
+<li>
     <a class="dropdown-item" href="https://drive.google.com/file/d/1hQyyQzsf5CjukioO9yyBNdoxxqZUCeYk/view">
  <span class="dropdown-text">R Basics Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data_clean.html">
+    <a class="dropdown-item" href="../../data_clean.html">
  <span class="dropdown-text">Data Cleaning, Manipulation and Visualization Materials</span></a>
   </li>  
         <li>
@@ -164,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Correlations Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./correlation.html">
+    <a class="dropdown-item" href="../../correlation.html">
  <span class="dropdown-text">Correlation Materials</span></a>
   </li>  
         <li>
@@ -172,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">T-Test Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./ttest.pdf">
+    <a class="dropdown-item" href="../../ttest.pdf">
  <span class="dropdown-text">T-Test Materials</span></a>
   </li>  
         <li>
@@ -184,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Logistic Regression Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./regression.html">
+    <a class="dropdown-item" href="../../regression.html">
  <span class="dropdown-text">Linear &amp; Logistic Regression Materials</span></a>
   </li>  
         <li>
@@ -196,7 +224,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Factorial ANOVA Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./ANOVA.html">
+    <a class="dropdown-item" href="../../ANOVA.html">
  <span class="dropdown-text">ANOVA, ANCOVA &amp; Factorial ANOVA Materials</span></a>
   </li>  
         <li>
@@ -216,7 +244,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Non-Parametric Repeated Measures ANOVA Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./nonparametric.html">
+    <a class="dropdown-item" href="../../nonparametric.html">
  <span class="dropdown-text">Non-Parametric Tests Materials</span></a>
   </li>  
         <li>
@@ -228,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Moderation Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./moderation_mediation.html">
+    <a class="dropdown-item" href="../../moderation_mediation.html">
  <span class="dropdown-text">Mediation and Moderation Materials</span></a>
   </li>  
         <li>
@@ -236,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Factor Analysis Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./factor_analysis.html">
+    <a class="dropdown-item" href="../../factor_analysis.html">
  <span class="dropdown-text">Factor Analysis Materials</span></a>
   </li>  
         <li>
@@ -248,11 +276,11 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Structural Equation Modeling Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./SEM.html">
+    <a class="dropdown-item" href="../../SEM.html">
  <span class="dropdown-text">CFA &amp; Structural Equation Modeling Materials</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/bsgallih12"> <i class="bi bi-github" role="img">
 </i> 
@@ -274,84 +302,80 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Email</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-solana column-body content">
-  <div class="about-entity">
-    <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About Me</h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Tidy Tuesday 2-13-24</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Valentines</div>
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">TidyTuesday</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A #TidyTuesday data visualization of Valentines Day spending data for 2010-2022
+  </div>
 </div>
+
+
 <div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Brier S. Gallihugh </p>
+          </div>
   </div>
-</header> <div class="about-links">
-  <a href="https://twitter.com" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">Twitter</span>
-  </a>
-  <a href="https://linkedin.com" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://github.com" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-  <a href="mailto:bg464219@ohio.edu" class="about-link" rel="" target="">
-    <i class="bi bi-envelope"></i>
-     <span class="about-link-text">Email</span>
-  </a>
-</div>
-      <div class="about-contents"><main class="content" id="quarto-document-content">
-<p>Hi! My name is Brier Gallihugh and I am currently a social psychology doctoral student who studies prejudice and discrimination directed toward various religious, political and racial/ethnic groups. I am a huge <em>R</em> enthusiast. Upon completion of my Ph.D.&nbsp;(expected in Summer 2024) I hope to go into industry as either a data analyst or data scientist</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The photo used for the above image in the tab was taken from My Great Learning. You can find the website <a href="https://www.mygreatlearning.com/blog/what-is-data-science/#what-is-data-science">here</a>.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Optional Donation Link
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>While certainly not required, these blog posts and resources do take some time to put together. If you would like to support this blog, feel free to donate using the following button</p>
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="bgRStats" data-color="#FFDD00" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
-</div>
-</div>
-
-
-</main></div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 14, 2024</p>
     </div>
-    <img src="profile.png" class="about-image
-  rounded " style="width: 15em;">
   </div>
+  
+    
+  </div>
+  
+
+
+</header><div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tuesdata</span> <span class="op">&lt;-</span> <span class="fu">tidytuesdayR</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tidytuesdayR/man/tt_load.html">tt_load</a></span><span class="op">(</span><span class="fl">2024</span>, week <span class="op">=</span> <span class="fl">7</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>--- Compiling #TidyTuesday Information for 2024-02-13 ----</code></pre>
 </div>
- <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+<div class="cell-output cell-output-stderr">
+<pre><code>--- There are 3 files available ---</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>--- Starting Download ---</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Downloading file 1 of 3: `historical_spending.csv`
+    Downloading file 2 of 3: `gifts_age.csv`
+    Downloading file 3 of 3: `gifts_gender.csv`</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>--- Download complete ---</code></pre>
+</div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">historical_spending</span> <span class="op">&lt;-</span> <span class="va">tuesdata</span><span class="op">$</span><span class="va">historical_spending</span></span>
+<span><span class="va">gifts_age</span> <span class="op">&lt;-</span> <span class="va">tuesdata</span><span class="op">$</span><span class="va">gifts_age</span></span>
+<span><span class="va">gifts_gender</span> <span class="op">&lt;-</span> <span class="va">tuesdata</span><span class="op">$</span><span class="va">gifts_gender</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -371,6 +395,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -732,8 +763,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>Made with <a href="https://quarto.org/">Posit Quarto</a></p>
 </div>   
@@ -745,8 +775,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

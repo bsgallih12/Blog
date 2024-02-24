@@ -1,0 +1,21 @@
+---
+title: "Tidy Tuesday 2-13-24"
+author: "Brier S. Gallihugh"
+date: "2024-02-14"
+categories: [Valentines,R,TidyTuesday]
+draft: false
+# image: twitter_upload_tt_1_25_23.png
+# image-alt: "A word cloud of mostly commonly discarded items on Alone"
+description: "A #TidyTuesday data visualization of Valentines Day spending data for 2010-2022"
+---
+
+```{r tidytuesday}
+tuesdata <- tidytuesdayR::tt_load(2024, week = 7)
+
+historical_spending <- tuesdata$historical_spending
+gifts_age <- tuesdata$gifts_age
+gifts_gender <- tuesdata$gifts_gender
+```
+
+
+
