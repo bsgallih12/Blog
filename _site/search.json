@@ -4,7 +4,7 @@
     "href": "tidytuesday.html",
     "title": "Tidy Tuesday Projects",
     "section": "",
-    "text": "Tidy Tuesday 2-27-24\n\n\n\n\n\n\nGrants\n\n\nR\n\n\nTidyTuesday\n\n\n\nA #TidyTuesday data visualization of R grant data\n\n\n\n\n\nFeb 20, 2024\n\n\nBrier S. Gallihugh\n\n\n\n\n\n\n\n\n\n\n\n\nTidy Tuesday 2-13-24\n\n\n\n\n\n\nValentines\n\n\nR\n\n\nTidyTuesday\n\n\n\nA #TidyTuesday data visualization of Valentines Day spending data for 2010-2022\n\n\n\n\n\nFeb 14, 2024\n\n\nBrier S. Gallihugh\n\n\n\n\n\n\n\n\n\n\n\n\nTidy Tuesday 1-25-23\n\n\n\n\n\n\nAlone\n\n\nR\n\n\nTidyTuesday\n\n\n\nA #TidyTuesday data visualization of Alone TV data for 1-24-23\n\n\n\n\n\nJan 25, 2023\n\n\nBrier S. Gallihugh\n\n\n\n\n\n\nNo matching items"
+    "text": "Tidy Tuesday 1-25-23\n\n\n\n\n\n\nAlone\n\n\nR\n\n\nTidyTuesday\n\n\n\nA #TidyTuesday data visualization of Alone TV data for 1-24-23\n\n\n\n\n\nJan 25, 2023\n\n\nBrier S. Gallihugh\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "tidytuesday/1_25_23/index.html",
@@ -621,20 +621,6 @@
     "title": "T-Test Materials",
     "section": "Running a T-test",
     "text": "Running a T-test\n\n1t.test(height ~ sex, data = data)\n\n\n1\n\nThe t.test() function will take a DV and IV argument as well as the dataframe used. We can see this here\n\n\n\n\n\n    Welch Two Sample t-test\n\ndata:  height by sex\nt = -1.1817, df = 48.471, p-value = 0.2431\nalternative hypothesis: true difference in means between group female and group male is not equal to 0\n95 percent confidence interval:\n -20.396341   5.293584\nsample estimates:\nmean in group female   mean in group male \n            171.5714             179.1228"
-  },
-  {
-    "objectID": "tidytuesday/2_14_24/index.html",
-    "href": "tidytuesday/2_14_24/index.html",
-    "title": "Tidy Tuesday 2-13-24",
-    "section": "",
-    "text": "library(tidyverse)\nlibrary(geomtextpath)\n\nhistorical_spending &lt;- read.csv(\"historical_spending_modified.csv\")\n\nhistorical_spending &lt;- historical_spending %&gt;% \n  mutate(PerPerson = as.numeric(PerPerson))\n\nplot &lt;- ggplot(data=historical_spending,aes(x=Year,y=PerPerson)) + \n  scale_x_continuous(breaks = seq(2010,2022,by=1)) + \n  scale_y_continuous(breaks = seq(100,200,by=10)) +\n  geom_line(color=\"darkred\",linetype=\"dashed\") +\n  geom_point(shape = 21, colour = \"black\", fill = \"white\", size = 3) +\n  geom_line(aes(x=Year,y=inflation),color=\"purple4\",linetype=\"dashed\") +\n  geom_point(aes(x=Year,y=inflation), shape = 21, colour = \"black\", fill = \"white\", size = 3) +\n  labs(x = \"Year\",\n       y = \"Average Spending\",\n       title = \"Average Valentines Day Spending Exceeding Inflation\",\n       caption = \"Inflation Adjusted (to 2010) in Purple\") +\n  theme_classic() +\n  theme(plot.title = element_text(color=\"darkred\"),\n        axis.title.x = element_text(color=\"darkred\"),\n        axis.title.y = element_text(color=\"darkred\"),\n        axis.text.x = element_text(color=\"darkred\"),\n        axis.text.y = element_text(color=\"darkred\"),\n        axis.ticks = element_line(color=\"darkred\"),\n        axis.line.x = element_line(color=\"darkred\"),\n        axis.line.y = element_line(color=\"darkred\"),\n        plot.caption = element_text(hjust = 0,color=\"darkred\"),\n        panel.background = element_rect(fill=\"pink\")) +\n  annotate(geom=\"text\", x=2016, y=124, label=\"Inflation Adjusted Cost (2010)\",color=\"purple4\") +\n  annotate(geom=\"text\", x=2016, y=152, label=\"Average Yearly Cost\",color=\"darkred\")"
-  },
-  {
-    "objectID": "tidytuesday/2_27_24/index.html",
-    "href": "tidytuesday/2_27_24/index.html",
-    "title": "Tidy Tuesday 2-27-24",
-    "section": "",
-    "text": "library(tidyverse)\nlibrary(geomtextpath)\n\ndata &lt;- read.csv(\"data.csv\")\n\nplot_data &lt;-data %&gt;% \n  group_by(year) %&gt;% \n  summarize(n = n(),\n            average = round(mean(funded),0),\n            total = average * n)\n\nmyurl = \"https://www.r-project.org/logo/Rlogo.png\"\nR = tempfile()\ndownload.file(myurl,R,mode=\"wb\")\n\nRImage = png::readPNG(R) %&gt;%\n  grid::rasterGrob(interpolate = TRUE)\n\nplot &lt;- plot_data %&gt;% \n  mutate(average = priceR::format_dollars(average),\n         year = as.factor(year)) %&gt;% \n  ggplot(aes(x=year,y=n,label=average)) + \n  geom_point(aes(x=year,y=n),size = 2.5,color=\"#3363B0\",show.legend = FALSE) +\n#  scale_fill_manual(values = rep(c(\"#3363B0\",\"#ACADB1\"),4)) +\n  ggplot2::geom_segment(aes(x=year,xend=year,y=0,yend=n),linewidth=1.25,color=\"#3363B0\") +\n  geom_text(aes(x=year,y= n + 2.2),color=\"#3363B0\",show.legend = FALSE) + \n  geom_label(aes(x=year,y= n + 1,label=glue::glue(\"N = {n}\")),color=\"#3363B0\") +\n  theme_classic() +\n  labs(title = \"Grant Funding By Year\",\n       x = \"Year\",\n       y = \"Number of Grants Funded\",\n       caption = \"Note: Average grant amount awarded by year above columns\") +\n  theme(plot.caption = element_text(hjust = -.10),\n        plot.title = element_text(hjust = .1,vjust = -.3)) +\n  coord_cartesian(clip = 'off') +\n  annotation_custom(RImage, x = -0.10, xmax = 1.40, y = 18.2, ymax = 19.7)\n\nggsave(filename = \"Rgrant.png\")"
   },
   {
     "objectID": "projects.html",
