@@ -4,6 +4,25 @@ author: "Brier S. Gallihugh"
 date: "2023-01-24"
 categories: [R]
 draft: true
+# image: valentines.png
+# image-alt: "A photo with a heart shape"
+# description: "A #TidyTuesday data visualization of Valentines Day spending data for 2010-2022"
+warning: false
 ---
 
-Draft example here
+```{r libraries}
+#| warning: false
+#| output: false
+library(tidymodels)
+library(tidyverse)
+library(palmerpenguins)
+library(caTools)
+```
+
+# Polynomial Regression 
+
+
+
+
+
+

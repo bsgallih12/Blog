@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.549">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>The Data Enthusiast Blog - Tidy Tuesday Projects</title>
+<meta name="author" content="Brier S. Gallihugh">
+<meta name="dcterms.date" content="2024-02-20">
+<meta name="description" content="A #TidyTuesday data visualization of R grant data">
+<title>The Data Enthusiast Blog - Tidy Tuesday 2-27-24</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,29 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
-
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
-<script id="quarto-search-options" type="application/json">{
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -69,76 +99,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
 </head>
-
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">The Data Enthusiast Blog</span>
     </a>
   </div>
@@ -148,68 +115,68 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+<li class="nav-item">
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Gallihugh_Resume.pdf"> 
+    <a class="nav-link" href="../../Gallihugh_Resume.pdf"> 
 <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Gallihugh_CV.pdf"> 
+    <a class="nav-link" href="../../Gallihugh_CV.pdf"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./tidytuesday.html" aria-current="page"> 
+    <a class="nav-link" href="../../tidytuesday.html"> 
 <span class="menu-text">Data Viz Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Portfolio</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-presentations" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Presentations</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-presentations">    
-        <li>
-    <a class="dropdown-item" href="./MPA2021_Poster.pdf">
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-presentations">
+<li>
+    <a class="dropdown-item" href="../../MPA2021_Poster.pdf">
  <span class="dropdown-text">MPA 2021</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Gallihugh_MPA_2023.pdf">
+    <a class="dropdown-item" href="../../Gallihugh_MPA_2023.pdf">
  <span class="dropdown-text">MPA 2023</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Brown_Bag_BLM_March_25.pdf">
+    <a class="dropdown-item" href="../../Brown_Bag_BLM_March_25.pdf">
  <span class="dropdown-text">OU Department Brown Bag Talk</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./SPSP2021_Poster.pdf">
+    <a class="dropdown-item" href="../../SPSP2021_Poster.pdf">
  <span class="dropdown-text">SPSP 2021</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./SPSS_Poster.pdf">
+    <a class="dropdown-item" href="../../SPSS_Poster.pdf">
  <span class="dropdown-text">SPSP 2022</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./MarleyConfPresentation.html">
+    <a class="dropdown-item" href="../../MarleyConfPresentation.html">
  <span class="dropdown-text">SPSP 2023</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-r-workshop-videos--materials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">R Workshop Videos &amp; Materials</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-r-workshop-videos--materials">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-r-workshop-videos--materials">
+<li>
     <a class="dropdown-item" href="https://drive.google.com/file/d/1hQyyQzsf5CjukioO9yyBNdoxxqZUCeYk/view">
  <span class="dropdown-text">R Basics Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data_clean.html">
+    <a class="dropdown-item" href="../../data_clean.html">
  <span class="dropdown-text">Data Cleaning, Manipulation and Visualization Materials</span></a>
   </li>  
         <li>
@@ -225,7 +192,7 @@ window.Quarto = {
  <span class="dropdown-text">Correlations Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./correlation.html">
+    <a class="dropdown-item" href="../../correlation.html">
  <span class="dropdown-text">Correlation Materials</span></a>
   </li>  
         <li>
@@ -233,7 +200,7 @@ window.Quarto = {
  <span class="dropdown-text">T-Test Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./ttest.pdf">
+    <a class="dropdown-item" href="../../ttest.pdf">
  <span class="dropdown-text">T-Test Materials</span></a>
   </li>  
         <li>
@@ -245,7 +212,7 @@ window.Quarto = {
  <span class="dropdown-text">Logistic Regression Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./regression.html">
+    <a class="dropdown-item" href="../../regression.html">
  <span class="dropdown-text">Linear &amp; Logistic Regression Materials</span></a>
   </li>  
         <li>
@@ -257,7 +224,7 @@ window.Quarto = {
  <span class="dropdown-text">Factorial ANOVA Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./ANOVA.html">
+    <a class="dropdown-item" href="../../ANOVA.html">
  <span class="dropdown-text">ANOVA, ANCOVA &amp; Factorial ANOVA Materials</span></a>
   </li>  
         <li>
@@ -277,7 +244,7 @@ window.Quarto = {
  <span class="dropdown-text">Non-Parametric Repeated Measures ANOVA Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./nonparametric.html">
+    <a class="dropdown-item" href="../../nonparametric.html">
  <span class="dropdown-text">Non-Parametric Tests Materials</span></a>
   </li>  
         <li>
@@ -289,7 +256,7 @@ window.Quarto = {
  <span class="dropdown-text">Moderation Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./moderation_mediation.html">
+    <a class="dropdown-item" href="../../moderation_mediation.html">
  <span class="dropdown-text">Mediation and Moderation Materials</span></a>
   </li>  
         <li>
@@ -297,7 +264,7 @@ window.Quarto = {
  <span class="dropdown-text">Factor Analysis Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./factor_analysis.html">
+    <a class="dropdown-item" href="../../factor_analysis.html">
  <span class="dropdown-text">Factor Analysis Materials</span></a>
   </li>  
         <li>
@@ -309,11 +276,11 @@ window.Quarto = {
  <span class="dropdown-text">Structural Equation Modeling Video</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./SEM.html">
+    <a class="dropdown-item" href="../../SEM.html">
  <span class="dropdown-text">CFA &amp; Structural Equation Modeling Materials</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/bsgallih12"> <i class="bi bi-github" role="img">
 </i> 
@@ -335,171 +302,124 @@ window.Quarto = {
 <span class="menu-text">Email</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Tidy Tuesday Projects</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Alone">Alone <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Grants">Grants <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TidyTuesday">TidyTuesday <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Valentines">Valentines <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Tidy Tuesday 2-27-24</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Grants</div>
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">TidyTuesday</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A #TidyTuesday data visualization of R grant data
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Brier S. Gallihugh </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 20, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header><div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://allancameron.github.io/geomtextpath/">geomtextpath</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"data.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 85
+Columns: 8
+$ X           &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,…
+$ year        &lt;int&gt; 2023, 2023, 2023, 2023, 2023, 2022, 2022, 2022, 2022, 2022…
+$ group       &lt;int&gt; 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 1, 1, 2, 2, 2, 2, 1, 1…
+$ title       &lt;chr&gt; "The future of DBI (extension 1)", "Secure TLS Communicati…
+$ funded      &lt;int&gt; 10000, 10000, 12265, 3000, 15750, 8000, 8000, 22000, 6000,…
+$ proposed_by &lt;chr&gt; "Kirill Müller", "Charlie Gao", "Kristina Riemer", "Mark P…
+$ summary     &lt;chr&gt; "This proposal mostly focuses on the maintenance and suppo…
+$ website     &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…</code></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">plot_data</span> <span class="op">&lt;-</span><span class="va">data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>            average <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">funded</span><span class="op">)</span>,<span class="fl">0</span><span class="op">)</span>,</span>
+<span>            total <span class="op">=</span> <span class="va">average</span> <span class="op">*</span> <span class="va">n</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">myurl</span> <span class="op">=</span> <span class="st">"https://www.r-project.org/logo/Rlogo.png"</span></span>
+<span><span class="va">R</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html">tempfile</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/download.file.html">download.file</a></span><span class="op">(</span><span class="va">myurl</span>,<span class="va">R</span>,mode<span class="op">=</span><span class="st">"wb"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">RImage</span> <span class="op">=</span> <span class="fu">png</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/png/man/readPNG.html">readPNG</a></span><span class="op">(</span><span class="va">R</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">grid</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/grid/grid.raster.html">rasterGrob</a></span><span class="op">(</span>interpolate <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">plot</span> <span class="op">&lt;-</span> <span class="va">plot_data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>average <span class="op">=</span> <span class="fu">priceR</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/priceR/man/format_dollars.html">format_dollars</a></span><span class="op">(</span><span class="va">average</span><span class="op">)</span>,</span>
+<span>         year <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">year</span>,y<span class="op">=</span><span class="va">n</span>,label<span class="op">=</span><span class="va">average</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">year</span>,y<span class="op">=</span><span class="va">n</span>,fill<span class="op">=</span><span class="va">year</span><span class="op">)</span>,color<span class="op">=</span><span class="st">"black"</span>,show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"#3363B0"</span>,<span class="st">"#ACADB1"</span><span class="op">)</span>,<span class="fl">4</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">year</span>,y<span class="op">=</span> <span class="va">n</span> <span class="op">+</span> <span class="fl">.75</span><span class="op">)</span>,show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_label</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">year</span>,y<span class="op">=</span> <span class="va">n</span> <span class="op">-</span> <span class="fl">1</span>,label<span class="op">=</span><span class="fu">glue</span><span class="fu">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span><span class="st">"N = {n}"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Grant Funding By Year"</span>,</span>
+<span>       x <span class="op">=</span> <span class="st">"Number of Grants Funded"</span>,</span>
+<span>       y <span class="op">=</span> <span class="st">"Year"</span>,</span>
+<span>       caption <span class="op">=</span> <span class="st">"Note: Average grant amount awarded by year above columns"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>plot.caption <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>hjust <span class="op">=</span> <span class="op">-</span><span class="fl">.10</span><span class="op">)</span>,</span>
+<span>        plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>hjust <span class="op">=</span> <span class="fl">.1</span>,vjust <span class="op">=</span> <span class="op">-</span><span class="fl">.3</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_cartesian.html">coord_cartesian</a></span><span class="op">(</span>clip <span class="op">=</span> <span class="st">'off'</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotation_custom.html">annotation_custom</a></span><span class="op">(</span><span class="va">RImage</span>, x <span class="op">=</span> <span class="op">-</span><span class="fl">0.10</span>, xmax <span class="op">=</span> <span class="fl">1.40</span>, y <span class="op">=</span> <span class="fl">16.7</span>, ymax <span class="op">=</span> <span class="fl">18.2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span>filename <span class="op">=</span> <span class="st">"Rgrant.png"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div>
+
+</div>
+<div class="cell quarto-layout-panel" data-layout="[[-10,80,-10]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 10.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 80.0%;justify-content: center;">
+<p><img src="index_files/figure-html/plot-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 10.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
 
 
 
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Grants,R,TidyTuesday" data-listing-date-sort="1708405200000" data-listing-file-modified-sort="1708998503106" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="215">
-<div class="thumbnail">
-<p><a href="./tidytuesday/2_27_24/index.html" class="no-external"></a></p><a href="./tidytuesday/2_27_24/index.html" class="no-external">
-<p class="card-img-top"><img src="tidytuesday/2_27_24/index_files/figure-html/plot-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./tidytuesday/2_27_24/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./tidytuesday/2_27_24/index.html" class="no-external">Tidy Tuesday 2-27-24</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./tidytuesday/2_27_24/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Grants'); return false;">
-Grants
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TidyTuesday'); return false;">
-TidyTuesday
-</div>
-</div>
-<div class="listing-description">
-<a href="./tidytuesday/2_27_24/index.html" class="no-external">A #TidyTuesday data visualization of R grant data</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./tidytuesday/2_27_24/index.html" class="no-external">
-<div class="listing-date">
-Feb 20, 2024
-</div>
-<div class="listing-author">
-Brier S. Gallihugh
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Valentines,R,TidyTuesday" data-listing-date-sort="1707886800000" data-listing-file-modified-sort="1708808325983" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="278">
-<div class="thumbnail">
-<p><a href="./tidytuesday/2_14_24/index.html" class="no-external"></a></p><a href="./tidytuesday/2_14_24/index.html" class="no-external">
-<p><img src="./tidytuesday/2_14_24/valentines.png" class="thumbnail-image" alt="A photo with a heart shape"></p>
-</a><p><a href="./tidytuesday/2_14_24/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./tidytuesday/2_14_24/index.html" class="no-external">Tidy Tuesday 2-13-24</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./tidytuesday/2_14_24/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Valentines'); return false;">
-Valentines
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TidyTuesday'); return false;">
-TidyTuesday
-</div>
-</div>
-<div class="listing-description">
-<a href="./tidytuesday/2_14_24/index.html" class="no-external">A #TidyTuesday data visualization of Valentines Day spending data for 2010-2022</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./tidytuesday/2_14_24/index.html" class="no-external">
-<div class="listing-date">
-Feb 14, 2024
-</div>
-<div class="listing-author">
-Brier S. Gallihugh
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Alone,R,TidyTuesday" data-listing-date-sort="1674622800000" data-listing-file-modified-sort="1708697370290" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="674">
-<div class="thumbnail">
-<p><a href="./tidytuesday/1_25_23/index.html" class="no-external"></a></p><a href="./tidytuesday/1_25_23/index.html" class="no-external">
-<p><img src="./tidytuesday/1_25_23/twitter_upload_tt_1_25_23.png" class="thumbnail-image" alt="A word cloud of mostly commonly discarded items on Alone"></p>
-</a><p><a href="./tidytuesday/1_25_23/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./tidytuesday/1_25_23/index.html" class="no-external">Tidy Tuesday 1-25-23</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./tidytuesday/1_25_23/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Alone'); return false;">
-Alone
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TidyTuesday'); return false;">
-TidyTuesday
-</div>
-</div>
-<div class="listing-description">
-<a href="./tidytuesday/1_25_23/index.html" class="no-external">A #TidyTuesday data visualization of Alone TV data for 1-24-23</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./tidytuesday/1_25_23/index.html" class="no-external">
-<div class="listing-date">
-Jan 25, 2023
-</div>
-<div class="listing-author">
-Brier S. Gallihugh
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -887,8 +807,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>Made with <a href="https://quarto.org/">Posit Quarto</a></p>
 </div>   
@@ -900,8 +819,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

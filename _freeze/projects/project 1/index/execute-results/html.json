@@ -1,0 +1,15 @@
+{
+  "hash": "eadacefbc2fa19abdd3db1ef3d5b454f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Project 1\"\nauthor: \"Brier S. Gallihugh\"\ndate: \"2023-01-24\"\ncategories: [R]\ndraft: true\n# image: valentines.png\n# image-alt: \"A photo with a heart shape\"\n# description: \"A #TidyTuesday data visualization of Valentines Day spending data for 2010-2022\"\nwarning: false\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidymodels)\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nlibrary(caTools)\n```\n:::\n\n\n# Polynomial Regression \n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
