@@ -23,7 +23,7 @@
   {
     "objectID": "blog.html",
     "href": "blog.html",
-    "title": "Posts",
+    "title": "Blog Posts",
     "section": "",
     "text": "Welcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 22, 2023\n\n\nBrier S. Gallihugh\n\n\n\n\n\n\nNo matching items"
   },
@@ -32,7 +32,7 @@
     "href": "index.html",
     "title": "About Me",
     "section": "",
-    "text": "Hi! My name is Brier Gallihugh and I am currently a social psychology doctoral student who studies prejudice and discrimination directed toward various religious, political and racial/ethnic groups. I am a huge R enthusiast. Upon completion of my Ph.D. (expected in Summer 2024) I hope to go into industry as either a data analyst or data scientist\n\n\n\n\n\n\nNote\n\n\n\nThe photo used for the above image in the tab was taken from My Great Learning. You can find the website here.\n\n\n\n\n\n\n\n\nOptional Donation Link\n\n\n\nWhile certainly not required, these blog posts and resources do take some time to put together. If you would like to support this blog, feel free to donate using the following button"
+    "text": "Hi! My name is Brier Gallihugh and I am currently a social psychology doctoral student who studies prejudice and discrimination directed toward various religious, political and racial/ethnic groups. I am a huge R enthusiast. Upon completion of my Ph.D. (expected in Summer 2024) I hope to go into industry as either a data analyst or data scientist. Due to my advanced training in statistics and research design, I am open to consultation. For more information please see my consultation page.\n\n\n\n\n\n\nNote\n\n\n\nThe photo used for the above image in the tab was taken from My Great Learning. You can find the website here.\n\n\n\n\n\n\n\n\nOptional Donation Link\n\n\n\nWhile certainly not required, these blog posts and resources do take some time to put together. If you would like to support this blog, feel free to donate using the following button"
   },
   {
     "objectID": "presentations/workshop/index.html",
@@ -628,5 +628,19 @@
     "title": "Projects",
     "section": "",
     "text": "No matching items"
+  },
+  {
+    "objectID": "consultation.html",
+    "href": "consultation.html",
+    "title": "Gallihugh Consulting",
+    "section": "",
+    "text": "I provide three main types of consulting services:\n\nStatistical/Experimental Design Consulting\nData Visualization\nAutomated reporting\n\nIf you are interested in learning more about how I can assist with your projects or if you have questions or require advice, please do not hesitate to reach out. I offer a free 15-minute consultation to discuss your specific needs and determine how I can best support you. To schedule this consultation, feel free to contact me at gallihughconsulting@gmail.com. I will be happy to support you in a way that meets your needs.\n\nStatistical and Experimental Design Consulting\nI offer a wide array of services designed to cater to a broad spectrum of statistical needs, whether you are a small mom and pop shop or a large organization (and anywhere in-between). Here is a detailed list of the services I provide:\n\nData-Analysis\nExperimental Design\nData Cleaning and Management\nStatistical Modeling\nPsychometrics & Survey Design\nR Programming\n\nI have structured my pricing to accommodate different client categories to ensure up front pricing. My current hourly rates are as follows:\n\n\n\nClient Category\nPrice (Per Hour)\n\n\n\n\nLarge Organization (&gt; 100 employees)\n$100/hr\n\n\nMedium Business (&lt; 100 employees)\n$50/hr\n\n\nSmall Business (&lt; 10 employees)\n$25/hr\n\n\nNon Profit Organization\n$25/hr\n\n\nStudents\n$20/hr**\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nAll statistical consultation will be rounded up to the next hour. As such the base minimum for any consultation will be billed at the hourly rate listed. **I am willing to adjust this price on a case by case basis.\n\n\n\n\nData Visualization\n\n\n\nVisualization Type\nPrice (Per Project)\n\n\n\n\nInteractive Dashboards\n$150**\n\n\nStatic Dashboards\n$100**\n\n\nStatic Figures (e.g., line/bar graphs)\n$50**\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n**These are the base prices for each individual visualization type. Price will be adjusted to account for visualization complexity.\n\n\n\n\nAutomated Reporting\n\n\n\nReport Type\nPrice (Per Project)\n\n\n\n\nWeb App (Shiny)\n$150**\n\n\nIndustry Report\n$100**\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n**These are the base prices for each individual visualization type. Price will be adjusted to account for visualization complexity."
+  },
+  {
+    "objectID": "consultation.html#note",
+    "href": "consultation.html#note",
+    "title": "Consulting",
+    "section": "Note",
+    "text": "Note\nAll statistical consultation will be rounded up to the next hour. As such the base minimum for any consultation will be billed at the hourly rate listed. **I am willing to adjust this price on a case by case basis."
   }
 ]

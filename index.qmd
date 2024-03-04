@@ -18,7 +18,7 @@ about:
       href: mailto:bg464219@ohio.edu
 ---
 
-Hi! My name is Brier Gallihugh and I am currently a social psychology doctoral student who studies prejudice and discrimination directed toward various religious, political and racial/ethnic groups. I am a huge *R* enthusiast. Upon completion of my Ph.D. (expected in Summer 2024) I hope to go into industry as either a data analyst or data scientist
+Hi! My name is Brier Gallihugh and I am currently a social psychology doctoral student who studies prejudice and discrimination directed toward various religious, political and racial/ethnic groups. I am a huge *R* enthusiast. Upon completion of my Ph.D. (expected in Summer 2024) I hope to go into industry as either a data analyst or data scientist. Due to my advanced training in statistics and research design, I am open to consultation. For more information please see my consultation page.
 
 ::: {.callout-note}
 

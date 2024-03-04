@@ -1,0 +1,85 @@
+---
+title: "Gallihugh Consulting"
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+I provide three main types of consulting services:
+
+1.  Statistical/Experimental Design Consulting
+
+2.  Data Visualization
+
+3.  Automated reporting
+
+If you are interested in learning more about how I can assist with your
+projects or if you have questions or require advice, please do not
+hesitate to reach out. I offer a free 15-minute consultation to discuss
+your specific needs and determine how I can best support you. To
+schedule this consultation, feel free to contact me at <a href="mailto:gallihughconsulting@gmail.com">gallihughconsulting@gmail.com</a>. I will be happy to support you in a way that meets your needs.
+
+### Statistical and Experimental Design Consulting
+
+I offer a wide array of services designed to cater to a broad spectrum
+of statistical needs, whether you are a small mom and pop shop or a
+large organization (and anywhere in-between). Here is a detailed list of
+the services I provide:
+
+-   Data-Analysis
+
+-   Experimental Design
+
+-   Data Cleaning and Management
+
+-   Statistical Modeling
+
+-   Psychometrics & Survey Design
+
+-   R Programming
+
+I have structured my pricing to accommodate different client categories to ensure up front pricing. My current hourly rates are as
+follows:
+
+| Client Category                       | Price (Per Hour) |
+|:--------------------------------------|:----------------:|
+| Large Organization (\> 100 employees) |     \$100/hr     |
+| Medium Business (\< 100 employees)    |     \$50/hr      |
+| Small Business (\< 10 employees)      |     \$25/hr      |
+| Non Profit Organization               |     \$25/hr      |
+| Students                              |   \$20/hr\*\*    |
+
+::: callout-important
+## Note
+All statistical consultation will be rounded up to the next hour. As
+such the base minimum for any consultation will be billed at the hourly
+rate listed. \*\*I am willing to adjust this price on a case by case
+basis.
+:::
+
+### Data Visualization
+
+| Visualization Type                     | Price (Per Project) |
+|:---------------------------------------|:-------------------:|
+| Interactive Dashboards                 |      \$150\*\*      |
+| Static Dashboards                      |      \$100\*\*      |
+| Static Figures (e.g., line/bar graphs) |      \$50\*\*       |
+
+::: callout-important
+## Note
+\*\*These are the base prices for each individual visualization type.
+Price will be adjusted to account for visualization complexity.
+:::
+
+### Automated Reporting
+
+| Report Type     | Price (Per Project) |
+|:----------------|:-------------------:|
+| Web App (Shiny)         |      \$150\*\*      |
+| Industry Report |      \$100\*\*      |
+
+::: callout-important
+## Note
+\*\*These are the base prices for each individual visualization type.
+Price will be adjusted to account for visualization complexity.
+:::

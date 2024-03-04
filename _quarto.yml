@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "The Data Enthusiast Blog"
+  title: "The Data Enthusiast"
   favicon: favicon.png
   page-footer:
     center: ""
@@ -22,6 +22,8 @@ website:
         file: tidytuesday.qmd
       - text: "Portfolio"
         file: projects.qmd
+      - text: "Consultation"
+        file: consultation.qmd
       - text: "Presentations"
         menu:
         - text: "MPA 2021"
@@ -36,7 +38,7 @@ website:
           href: SPSS_Poster.pdf
         - text: "SPSP 2023"
           href: MarleyConfPresentation.html
-      - text: "R Workshop Videos & Materials"
+      - text: "R Workshop"
         menu: 
           - text: "R Basics Video"
             href: https://drive.google.com/file/d/1hQyyQzsf5CjukioO9yyBNdoxxqZUCeYk/view
