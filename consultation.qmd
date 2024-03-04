@@ -7,7 +7,7 @@ editor:
 
 I provide three main types of consulting services:
 
-1.  Statistical/Experimental Design Consulting
+1.  Statistical, Survey & Experimental Design Consulting
 
 2.  Data Visualization
 
@@ -19,7 +19,7 @@ hesitate to reach out. I offer a free 15-minute consultation to discuss
 your specific needs and determine how I can best support you. To
 schedule this consultation, feel free to contact me at <a href="mailto:gallihughconsulting@gmail.com">gallihughconsulting@gmail.com</a>. I will be happy to support you in a way that meets your needs.
 
-### Statistical and Experimental Design Consulting
+### Statistical, Experimental & Survey Design Consulting
 
 I offer a wide array of services designed to cater to a broad spectrum
 of statistical needs, whether you are a small mom and pop shop or a
@@ -30,11 +30,13 @@ the services I provide:
 
 -   Experimental Design
 
+-   Survey Design
+
 -   Data Cleaning and Management
 
 -   Statistical Modeling
 
--   Psychometrics & Survey Design
+-   Psychometrics
 
 -   R Programming
 
