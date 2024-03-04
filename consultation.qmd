@@ -59,11 +59,23 @@ basis.
 
 ### Data Visualization
 
+Along with statistical consulting, it might be necessary for the end result of that consultation to involve visualization of data or results. I can help with this several ways. I offer the creation of interact dashboards (i.e., dashboards that you can provide input to) as well as static dashboards and simple figures (e.g., traditional graphs). 
+
+In order for me to best help you, the following information must also be provided prior to the visualization being created:
+
+1. What kind of visualizatoin do you need?
+
+2. When do you realistically need to have the visualization ready by?
+
+3. Do you have all the information (i.e., data) needed to produce the visualization?
+
+4. Could you provide a mock up of the visualization you wish to have created?
+
 | Visualization Type                     | Price (Per Project) |
 |:---------------------------------------|:-------------------:|
 | Interactive Dashboards                 |      \$150\*\*      |
 | Static Dashboards                      |      \$100\*\*      |
-| Static Figures (e.g., line/bar graphs) |      \$50\*\*       |
+| Static Figures (e.g., line/bar graphs) |      \$20\*\*       |
 
 ::: callout-important
 ## Note
@@ -71,15 +83,18 @@ basis.
 Price will be adjusted to account for visualization complexity.
 :::
 
-### Automated Reporting
+### Static and Automated Reporting
+
+Lastly, I also offer the ability to provide organizations with two types of reports. The first is a static single use report. The report will be provided as a PDF but other formats can also be requested if needed (e.g., Word or HTML) for an additional formatting fee. The second offering, and maybe most beneficial is an automated reporting pipeline. This might be most beneficial for generating reports that consist of the same information but are needed to be consistently run on a regular interval (e.g., monthly or quarterly). This pipeline will consist of a web app which takes in the required information and exports a report with the requirements needed by the organization. I will provide you with the web app for your own use indefinitely.
 
 | Report Type     | Price (Per Project) |
 |:----------------|:-------------------:|
-| Web App (Shiny)         |      \$150\*\*      |
-| Industry Report |      \$100\*\*      |
+| Web App (Shiny)^1^         |      \$300\*\*      |
+| Industry Report |      \$150\*\*      |
 
 ::: callout-important
 ## Note
-\*\*These are the base prices for each individual visualization type.
-Price will be adjusted to account for visualization complexity.
+\*\*These are the base prices for each individual reporting type. Price will be adjusted to account for visualization complexity.
+
+^1^ Please note these reports can break if data entry methods (i.e., the source data) change. Repairing this break would require a new fee to fix and is not included in the original project price.
 :::
