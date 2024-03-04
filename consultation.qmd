@@ -45,18 +45,18 @@ follows:
 
 | Client Category                       | Price (Per Hour) |
 |:--------------------------------------|:----------------:|
-| Large Organization (\> 100 employees) |     \$100/hr     |
+| Large Organization (\> 100 employees) |     \$60/hr     |
 | Medium Business (\< 100 employees)    |     \$50/hr      |
-| Small Business (\< 10 employees)      |     \$25/hr      |
-| Non Profit Organization               |     \$25/hr      |
-| Students                              |   \$20/hr\*\*    |
+| Small Business (\< 10 employees)      |     \$35/hr^a^      |
+| Non Profit Organization               |     \$35/hr^a^      |
+| Students                              |   \$25/hr^a^    |
 
 ::: callout-important
 ## Note
 All statistical consultation will be rounded up to the next hour. As
-such the base minimum for any consultation will be billed at the hourly
-rate listed. \*\*I am willing to adjust this price on a case by case
-basis.
+such the base minimum for any consultation will be billed at the hourly rate listed.
+
+^a^I am willing to adjust this price on a case by case basis.
 :::
 
 ### Data Visualization
@@ -75,13 +75,13 @@ In order for me to best help you, the following information must also be provide
 
 | Visualization Type                     | Price (Per Project) |
 |:---------------------------------------|:-------------------:|
-| Interactive Dashboards                 |      \$150\*\*      |
-| Static Dashboards                      |      \$100\*\*      |
-| Static Figures (e.g., line/bar graphs) |      \$20\*\*       |
+| Interactive Dashboards                 |      \$125^b^     |
+| Static Dashboards                      |      \$75^b^      |
+| Static Figures (e.g., line/bar graphs) |      \$20^b^       |
 
 ::: callout-important
 ## Note
-\*\*These are the base prices for each individual visualization type.
+^b^These are the base prices for each individual visualization type.
 Price will be adjusted to account for visualization complexity.
 :::
 
@@ -91,12 +91,12 @@ Lastly, I also offer the ability to provide organizations with two types of repo
 
 | Report Type     | Price (Per Project) |
 |:----------------|:-------------------:|
-| Web App (Shiny)^1^         |      \$300\*\*      |
-| Industry Report |      \$150\*\*      |
+| Web App (Shiny)^d^         |      \$300^c^      |
+| Industry Report |      \$150^c^      |
 
 ::: callout-important
 ## Note
-\*\*These are the base prices for each individual reporting type. Price will be adjusted to account for visualization complexity.
+^c^These are the base prices for each individual reporting type. Price will be adjusted to account for visualization complexity.
 
-^1^ Please note these reports can break if data entry methods (i.e., the source data) change. Repairing this break would require a new fee to fix and is not included in the original project price.
+^d^Please note these reports can break if data entry methods (i.e., the source data) change. Repairing this break would require a new fee to fix and is not included in the original project price.
 :::
