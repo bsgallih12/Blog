@@ -38,6 +38,8 @@ website:
           href: SPSS_Poster.pdf
         - text: "SPSP 2023"
           href: MarleyConfPresentation.html
+        - text: "MPA 2024"
+          href: MPA2024.html
       - text: "R Workshop"
         menu: 
           - text: "R Basics Video"
